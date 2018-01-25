@@ -8,7 +8,7 @@ Sample App
 ------------------
 https://demos.conterra.de/mapapps/resources/apps/downloads_welcome/index.html
 
-![Screenshot Sample App Welcome](https://github.com/conterra/mapapps-basemap-fader/blob/master/welcome_screenshot.JPG)
+![Screenshot Sample App Welcome](https://github.com/conterra/mapapps-welcome/blob/master/welcome_screenshot.JPG)
 
 Installation Guide
 ------------------
