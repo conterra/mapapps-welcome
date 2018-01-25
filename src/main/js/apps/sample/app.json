@@ -24,7 +24,6 @@
       "map-init",
       "toolset",
       "dn_welcome",
-      "wizard",
       "console"
     ],
     "require": [
