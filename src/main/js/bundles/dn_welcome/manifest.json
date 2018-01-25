@@ -1,0 +1,90 @@
+{
+  "name": "dn_welcome",
+  "version": "1.0.0-SNAPSHOT",
+  "title": "${bundleName}",
+  "description": "${bundleDescription}",
+  "vendor": "con terra GmbH",
+  "productName": "devnet-mapapps-welcome",
+  "dependencies": {
+    "apprt-vue": "^4.2.0",
+    "apprt-binding": "^4.2.0",
+    "apprt-vuetify": "^4.2.0"
+  },
+  "main": "",
+  "Config-Bundle-Location": "/config",
+  "CSS-Themes-Extension": [
+    {
+      "name": "*",
+      "files": [
+        "./css/styles.css"
+      ]
+    }
+  ],
+  "layout-widgets": [
+    {
+      "name": "welcomelayoutwidget",
+      "widgetRole": "welcomeInfo",
+      "template": "seasons",
+      "sublayout": [
+        "desktop"
+      ],
+      "window": {
+        "autofocus": false,
+        "dockTool": "welcomeToggleTool",
+        "dockable": true,
+        "dockingBar": "${id}-dockingBarBottomLeft",
+        "minimizeOnClose": true,
+        "resizable": true,
+        "marginBox": {
+          "w": 700,
+          "h": 420
+        },
+        "modal": true,
+        "windowClass": "noTitleBarAndWindowTools noPadding vue-toc-window"
+      }
+    }
+  ],
+  "components": [
+    {
+      "name": "WelcomeWidgetFactory",
+      "provides": "dijit.Widget",
+      "instanceFactory": true,
+      "properties": {
+        "widgetRole": "welcomeInfo",
+        "title": "${ui.title}",
+        "infotext": "${ui.text}",
+        "imgUrl":"",
+        "buttonText":"${ui.button}",
+        "checkboxText": "${ui.checkbox}",
+        "accept": true
+
+      },
+      "references": [
+        {
+          "name": "_tool",
+          "providing": "ct.tools.Tool",
+          "filter": "(id=welcomeToggleTool)"
+        }
+      ]
+    },
+    {
+      "name": "WelcomeToggleTool",
+      "impl": "ct/tools/Tool",
+      "provides": [
+        "ct.tools.Tool"
+      ],
+      "propertiesConstructor": true,
+      "properties": {
+        "id": "welcomeToggleTool",
+        "title": "${tool.title}",
+        "tooltip": "${tool.tooltip}",
+        "toolRole": "toolset",
+        "iconClass": "icon-custom-info-imprint",
+        "togglable": true,
+        "rules": {
+          "noGroup": true
+        }
+      }
+    }
+  ]
+}

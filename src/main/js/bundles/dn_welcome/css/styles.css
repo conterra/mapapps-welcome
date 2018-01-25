@@ -1,0 +1,48 @@
+.ctAppRoot .vue-toc-window .vue-base,
+.ctAppRoot .vue-toc {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.ctAppRoot .vue-toc {
+    overflow: hidden;
+}
+
+.ctAppRoot .vue-toc .center {
+    overflow: auto;
+}
+
+.ctAppRoot .vue-toc .vue-toc__bottom-nav .btn .btn__content {
+    flex-direction: column;
+}
+
+.ctAppRoot .vue-toc .list--group .list__tile {
+    padding-left: 40px;
+}
+
+.ctAppRoot .vue-toc .center {
+    flex: 1 1 auto;
+}
+
+.ctAppRoot .vue-toc .bottom {
+    flex: 0 0 auto;
+}
+.everlasting .vue-base .btn:not(.btn--icon):not(.btn--flat){  /*überflüssig in map.apps 4.2.3 - only for theme everlasting*/
+    background-color: #2196f3;
+}
+
+.vue-base .input-group.input-group--selection-controls label {
+    font-size: 12px
+}
+
+.vue-base .input-group.input-group--selection-controls .input-group__input .icon {
+    align-self: center;
+    color: inherit;
+    height: 20px;
+    margin: auto;
+}
+
+.vue-base .card__media {
+    margin: 10px;
+}
