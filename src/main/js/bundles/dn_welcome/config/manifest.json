@@ -52,10 +52,13 @@
         "pid": "dn_welcome-WelcomeWidgetFactory",
         "id": "welcomeBuilderWidget",
         "defaultProperties": {
-          "title": "Important Information",
-          "infotext": "Lorem ipsum",
-          "imgURL": "resource('${app}:images/Welcomepicture.JPG')",
-          "accept": true
+          "title": "Wichtige Informationen",
+          "infotext": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+          "buttonText":"Verstanden",
+          "checkboxText": "Ich akzeptiere",
+          "imgUrl": "resource('./DataForm.json')",
+          "accept": true //if set to true the window will be transformed to a disclaimer window
+
         },
         "description": "Settings for Welcome bundle"
       },

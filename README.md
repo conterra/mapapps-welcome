@@ -14,32 +14,38 @@ Installation Guide
 ------------------
 **Requirement: map.apps 4.2.0**
 
-Add the bundle "dn_welcome" to your map.apps 4 app. 
+1. First, you need to add the bundle "dn_welcome" to your app.
+2. After that, you can customize the content of the welcome window.
 
-To customize the window add the following code to your app.json 
+#### Example:
 
-
-  "bundles": {
-    "dn_welcome": {
-      "WelcomeWidgetFactory":{
-        "title": "Your title",
-        "infotext": "Your text",
-        "buttonText":"Your button text",
-        "checkboxText": "Your checkbox text",
-        "accept": false, //if set to true the window will be transformed to a disclaimer window
-        "imgUrl": "Your Image URL"
-      }
-    },
- 
- Or simply adjust the attributes during the live-configuration.
- To adjust the size of the window find the following part in your app.json
-     
-     "templates": {
+  
+      "bundles": {
+        "dn_welcome": {
+          "WelcomeWidgetFactory":{
+            "title": "Your title",
+            "infotext": "Your text",
+            "buttonText":"Your button text",
+            "checkboxText": "Your checkbox text",
+            "accept": false, //if set to true the window will be transformed to a disclaimer window
+            "imgUrl": "Your Image URL"
+          }
+        },
+         "templates": {
        "TemplateModel": {
          "_templates": [
            {
              "name": "seasons",
-             "widgets": [
+             "widgets": [  
+             {
+                  "widgetRole": "welcomeInfo",
+                       "window": {
+                          "marginBox": {
+                             "w": your width,
+                             "h": your height
+                             }
+                          }
+              }
              ]
            }
          ]
@@ -48,17 +54,21 @@ To customize the window add the following code to your app.json
      
 and add the following code:
 
-               {
-                 "widgetRole": "welcomeInfo",
-                 "window": {
-                   "marginBox": {
-                     "w": your width,
-                     "h": your height
-                   }
-                 }
-               }
+
  
+ #### Configurable Components of dn_welcome:
  
+ ###### Properties
+ | Property                       | Type    | Possible Values               | Default            | Description                          |
+ |--------------------------------|---------|-------------------------------|--------------------|--------------------------------------|
+ | title                          | String  |                               |```Welcome Info```  | Object id field                      |
+ | infotext                       | String  |                               |```Lorem Opsum```   | Cluster distance in pixels           |
+ | buttonText                     | String  |                               |```Alles klar```    | Spiderfying distance in pixels       |
+ | checkboxText                   | String  |                               |```Ich akzeptiere```| Service return limit                 |
+ | accept                         | Boolean |```true``` &#124; ```false```  |```true```          | Max cluster scale                    |
+ | imgUrl                         | String  |                               |```30```            | Symbol base size                     |
+ 
+
 #### Restrictions
 You have to enable cookies in your browser, if you want to set the information window to do-not-show-again.
 

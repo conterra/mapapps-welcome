@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 con terra GmbH (info@conterra.de)
+ * Copyright (C) 2018 con terra GmbH (info@conterra.de)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,12 +17,12 @@ module.exports = {
     bundleName: "Welcome Konfiguration",
     bundleDescription: "Konfigurationsbundle f\u00fcr das Welcome-Bundle",
     windowTitle: "Welcome Konfiguration",
-    description: "Einstellungen f\u00fcr das Splash Screen",
+    description: "Einstellungen f\u00fcr das Welcome-Bundle",
     spatialOperator: "R\u00e4umlicher Operator",
     splashScreenTitle: "Fenster Titel",
-    splashScreenText: "Start Fenster text:",
+    splashScreenText: "Start Fenster text",
     imgURL: "Bild URL",
     buttonText: "Text des Buttons",
-    checkboxText: "Text der checkbox",
+    checkboxText: "Text der Checkbox",
     enableAcceptance: "Die Checkbox soll angeglickt werden müssen, um das Fenster schließen zu können."
 };
