@@ -1,6 +1,6 @@
 {
   "name": "dn_welcome",
-  "version": "1.0.0-SNAPSHOT",
+  "version": "$MVN_RELEASE_VERSION",
   "title": "${bundleName}",
   "description": "${bundleDescription}",
   "vendor": "con terra GmbH",
