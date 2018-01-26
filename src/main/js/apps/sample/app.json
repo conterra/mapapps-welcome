@@ -40,7 +40,7 @@
         "buttonText": "${welcome.button}",
         "checkboxText": "${welcome.checkbox}",
         "imgUrl": "resource('${app}:images/Welcomepicture.JPG')",
-        "accept": false
+        "accept": true
       }
     },
     "banner": {
@@ -85,6 +85,11 @@
             "widgets": [
               {
                 "widgetRole": "welcomeWidget",
+                "sublayout": [
+                  "desktop",
+                  "tablet_landscape",
+                  "tablet_portrait"
+                ],
                 "window": {
                   "marginBox": {
                     "w": 700,

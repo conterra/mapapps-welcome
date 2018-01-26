@@ -25,13 +25,13 @@
       "widgetRole": "welcomeWidget",
       "template": "seasons",
       "sublayout": [
-        "desktop"
+        "desktop",
+        "tablet_landscape",
+        "tablet_portrait"
       ],
       "window": {
         "autofocus": false,
         "dockTool": "welcomeToggleTool",
-        "dockable": true,
-        "dockingBar": "${id}-dockingBarBottomLeft",
         "minimizeOnClose": true,
         "resizable": true,
         "modal": true,
@@ -40,6 +40,28 @@
           "h": 420
         },
         "windowClass": "noTitleBarAndWindowTools noPadding"
+      }
+    },
+    {
+      "widgetRole": "welcomeWidget",
+      "template": "seasons",
+      "sublayout": [
+        "mobile_landscape",
+        "mobile_portrait"
+      ],
+      "window": {
+        "autofocus": false,
+        "dockTool": "welcomeToggleTool",
+        "minimizeOnClose": true,
+        "resizable": false,
+        "modal": true,
+        "marginBox": {
+          "w": "100%",
+          "h": "100%",
+          "b": 40,
+          "l": 0
+        },
+        "windowClass": "mobileWindow noTitleBarAndWindowTools noPadding"
       }
     }
   ],
