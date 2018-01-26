@@ -23,8 +23,7 @@
       "theme-autumn",
       "map-init",
       "toolset",
-      "dn_welcome",
-      "console"
+      "dn_welcome"
     ],
     "require": [
       "${app}/app"
@@ -36,7 +35,13 @@
   "bundles": {
     "dn_welcome": {
       "WelcomeWidgetFactory": {
-        "imgUrl": "resource('${app}:images/Welcomepicture.JPG')"
+        "widgetRole": "welcomeWidget",
+        "title": "${ui.title}",
+        "infoText": "${ui.text}",
+        "buttonText": "${ui.button}",
+        "checkboxText": "${ui.checkbox}",
+        "imgUrl": "resource('${app}:images/Welcomepicture.JPG')",
+        "accept": false
       }
     },
     "banner": {
@@ -83,8 +88,7 @@
           {
             "id": "topo",
             "title": "${map.basemaps.topo}",
-            "basemap": "topo",
-            "icon": "filter_hdr"
+            "basemap": "topo"
           }
         ],
         "view": {
@@ -111,7 +115,7 @@
             "name": "seasons",
             "widgets": [
               {
-                "widgetRole": "welcomeInfo",
+                "widgetRole": "welcomeWidget",
                 "window": {
                   "marginBox": {
                     "w": 700,

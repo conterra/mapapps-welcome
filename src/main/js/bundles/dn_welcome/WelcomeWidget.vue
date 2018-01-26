@@ -5,20 +5,19 @@
                 <v-layout row wrap>
                     <v-flex xs12>
                         <v-card color="primary">
-                            <v-card-title class="title">{{title}}
-                            </v-card-title>  <!--in sandbox läuft i18n nicht... {i18n.title}}-->
+                            <v-card-title class="title">{{title}}</v-card-title>
                         </v-card>
                     </v-flex>
                     <v-flex xs12>
                         <v-card dark>
                             <v-card-text>
-                                {{text}}
+                                {{infoText}}
                             </v-card-text>
                             <v-flex xs12>
-                                <v-card-media v-if="img!=''"
+                                <v-card-media v-if="imgUrl"
                                               class="white--text"
-                                              height = '170px'
-                                              v-bind:src="img"
+                                              height='170px'
+                                              v-bind:src="imgUrl"
                                 >
                                     <v-container fill-height fluid>
                                         <v-layout fill-height>
@@ -26,70 +25,50 @@
                                     </v-container>
                                 </v-card-media>
                             </v-flex>
-                            <v-checkbox v-if="accept" v-bind:label="`${checkboxText}`" v-model="checkbox"
+                            <v-checkbox v-if="accept" v-bind:label="checkboxText" v-model="checkBox"
                                         color='blue'></v-checkbox>
                             <div>
-                                <v-btn v-on:click="closeWindow" v-bind:items="checkbox" color='blue'>
+                                <v-btn v-on:click="$emit('close')" v-bind:items="checkbox" color='blue'>
                                     {{buttonText}}
                                 </v-btn>
                             </div>
-                            <v-checkbox v-if="!accept" v-bind:label="`${checkboxText}`" v-model="checkbox"
+                            <v-checkbox v-if="!accept" v-bind:label="checkboxText" v-model="checkBox"
                                         color="blue" class="text-lg-right"></v-checkbox>
                         </v-card>
-                </v-flex>
-            </v-layout>
-        </v-container>
-    </v-app>
-</div>
-        </template>
+                    </v-flex>
+                </v-layout>
+            </v-container>
+        </v-app>
+    </div>
+</template>
 <script>
-import Bindable from "apprt-vue/mixins/Bindable";
+    import Bindable from "apprt-vue/mixins/Bindable";
 
-export default {
-    mixins: [Bindable],
-    data: function () {
-        return {
-            checkbox: false,
-            title: "",
-            text: "",
-            accept: false,
-            tool: {},
-            img: "",
-            buttonText: "",
-            checkboxText: "",
-            i18n: {
-                type: Object,
-                default: function () {
-                    return {}
+    export default {
+        mixins: [Bindable],
+        data: function () {
+            return {
+                checkBox: false,
+                accept: false,
+                title: "",
+                infoText: "",
+                buttonText: "",
+                checkboxText: "",
+                imgUrl: "",
+                i18n: {
+                    type: Object,
+                    default: function () {
+                        return {
+                            title: "Welcome Info",
+                            text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+                            checkbox: "I accept",
+                            button: "Understood"
+                        }
+                    }
                 }
-            }
-        };
-    },
-
-    methods: {
-        closeWindow: function () {
-            if (this.accept) {
-                if (this.checkbox) {
-                    this.tool.set("active", false);
-
-                }
-            } else {
-                if (this.checkbox === true) {
-                    this.setCookie('doNotShowAgain', this.checkbox);
-                }
-                this.tool.set("active", false);
-            }
-
+            };
         },
+        methods: {}
 
-        setCookie: function (cookiename, cookievalue) {
-            var d = new Date();
-            d.setTime(d.getTime() + (14 * 24 * 60 * 60 * 1000));  //how long should the cookie be stored? cookie will be stored 14 days, change the first numbe to set a longer timevalue
-            var expires = "expires=" + d.toUTCString();
-            document.cookie = cookiename + "=" + cookievalue + ";" + expires + ";path=/";  //cookiename = doNotShowAgain
-        }
-
-    }
-
-};
+    };
 </script>

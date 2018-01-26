@@ -16,7 +16,7 @@
 module.exports = {
     root: ({
         bundleName: "Welcome",
-        bundleDescription: "The Welcome Bundle is a new Widget for displaying a Welcome Screen with a Do-Not-Show-Again Option",
+        bundleDescription: "The Welcome Bundle is a new widget for displaying a welcome screen with a Do-Not-Show-Again option",
         ui: {
             title: "Welcome Info",
             text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",

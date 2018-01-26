@@ -22,8 +22,7 @@
   ],
   "layout-widgets": [
     {
-      "name": "welcomelayoutwidget",
-      "widgetRole": "welcomeInfo",
+      "widgetRole": "welcomeWidget",
       "template": "seasons",
       "sublayout": [
         "desktop"
@@ -35,12 +34,12 @@
         "dockingBar": "${id}-dockingBarBottomLeft",
         "minimizeOnClose": true,
         "resizable": true,
+        "modal": true,
         "marginBox": {
           "w": 700,
           "h": 420
         },
-        "modal": true,
-        "windowClass": "noTitleBarAndWindowTools noPadding vue-toc-window"
+        "windowClass": "noTitleBarAndWindowTools noPadding"
       }
     }
   ],
@@ -50,14 +49,13 @@
       "provides": "dijit.Widget",
       "instanceFactory": true,
       "properties": {
-        "widgetRole": "welcomeInfo",
+        "widgetRole": "welcomeWidget",
         "title": "${ui.title}",
-        "infotext": "${ui.text}",
-        "imgUrl":"",
-        "buttonText":"${ui.button}",
+        "infoText": "${ui.text}",
+        "buttonText": "${ui.button}",
         "checkboxText": "${ui.checkbox}",
+        "imgUrl": null,
         "accept": true
-
       },
       "references": [
         {
