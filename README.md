@@ -57,12 +57,12 @@ and add the following code:
 ###### Properties
  | Property                       | Type    | Possible Values               | Default            | Description                          |
  |--------------------------------|---------|-------------------------------|--------------------|--------------------------------------|
- | title                          | String  |                               |```Welcome Info```  | Object id field                      |
- | infotext                       | String  |                               |```Lorem Opsum```   | Cluster distance in pixels           |
- | buttonText                     | String  |                               |```Alles klar```    | Spiderfying distance in pixels       |
- | checkboxText                   | String  |                               |```Ich akzeptiere```| Service return limit                 |
- | accept                         | Boolean |```true``` &#124; ```false```  |```true```          | Max cluster scale                    |
- | imgUrl                         | String  |                               |```30```            | Symbol base size                     |
+ | title                          | String  |                               |                    | Welcome window title                 |
+ | infoText                       | String  |                               |                    | Welcome window info text             |
+ | buttonText                     | String  |                               |                    | Welcome window button text           |
+ | checkboxText                   | String  |                               |                    | Welcome window checkbox text         |
+ | imgUrl                         | String  |                               |                    | Welcome window image URL             |
+ | accept                         | Boolean |```true``` &#124; ```false```  |```true```          | Force user to accept                 |
 
 #### Restrictions
 You have to enable cookies in your browser, if you want to set the information window to do-not-show-again.
