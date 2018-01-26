@@ -14,21 +14,17 @@
  * limitations under the License.
  */
 module.exports = {
-    root:
-        {
-            bundleName: "Welcome Configuration",
-            bundleDescription: "Configuration Bundle for Welcome-Bundle",
-            windowTitle: "Welcome Configuraion",
-            description: "Settings for the Welcome bundle",
-            all: "All",
-            spatialOperator: "Spatial operator",
-            splashScreenTitle: "Important Information",
-            splashScreenText: "Welcome text:",
-            imgURL: "image URL",
-            buttonText: "Text of the button",
-            checkboxText: "Text of the checkbox",
-            enableAcceptance: "Enable checkbox as a must-check before closing information"
-
-        },
+    root: {
+        bundleName: "Welcome Configuration",
+        bundleDescription: "Configuration Bundle for Welcome-Bundle",
+        windowTitle: "Welcome Configuraion",
+        description: "Settings for the Welcome bundle",
+        title: "Important Information",
+        infoText: "Welcome text:",
+        buttonText: "Text of the button",
+        checkboxText: "Text of the checkbox",
+        imgUrl: "image URL",
+        enableAcceptance: "Enable checkbox as a must-check before closing information"
+    },
     de: true
 };

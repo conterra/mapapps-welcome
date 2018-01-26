@@ -54,7 +54,7 @@
         "infoText": "${ui.text}",
         "buttonText": "${ui.button}",
         "checkboxText": "${ui.checkbox}",
-        "imgUrl": null,
+        "imgUrl": "",
         "accept": true
       },
       "references": [

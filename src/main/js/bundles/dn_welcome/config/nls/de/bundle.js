@@ -18,11 +18,10 @@ module.exports = {
     bundleDescription: "Konfigurationsbundle f\u00fcr das Welcome-Bundle",
     windowTitle: "Welcome Konfiguration",
     description: "Einstellungen f\u00fcr das Welcome-Bundle",
-    spatialOperator: "R\u00e4umlicher Operator",
-    splashScreenTitle: "Fenster Titel",
-    splashScreenText: "Start Fenster text",
-    imgURL: "Bild URL",
+    title: "Fenster Titel",
+    infoText: "Start Fenster text",
     buttonText: "Text des Buttons",
     checkboxText: "Text der Checkbox",
+    imgUrl: "Bild URL",
     enableAcceptance: "Die Checkbox soll angeglickt werden müssen, um das Fenster schließen zu können."
 };

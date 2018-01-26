@@ -11,40 +11,40 @@
     {
       "type": "textbox",
       "field": "title",
-      "label": "${splashScreenTitle}",
-      "tooltip": "${splashScreenTitle}",
+      "label": "${title}",
+      "tooltip": "${title}",
       "required": true
     },
     {
       "type": "textbox",
-      "field": "infotext",
-      "label": "${splashScreenText}",
-      "tooltip": "${splashScreenText}",
+      "field": "infoText",
+      "label": "${infoText}",
+      "tooltip": "${infoText}",
       "required": true
-    },
-    {
-      "type": "textbox",
-      "field": "imgURL",
-      "label": "${imgURL}",
-      "tooltip": "${imgURL}"
     },
     {
       "type": "textbox",
       "field": "buttonText",
       "label": "${buttonText}",
-      "tooltip": "button Text"
+      "tooltip": "${buttonText}"
     },
     {
       "type": "textbox",
       "field": "checkboxText",
       "label": "${checkboxText}",
-      "tooltip": "checkboxText"
+      "tooltip": "${checkboxText}"
+    },
+    {
+      "type": "textbox",
+      "field": "imgUrl",
+      "label": "${imgUrl}",
+      "tooltip": "${imgUrl}"
     },
     {
       "type": "checkbox",
       "field": "accept",
-      "label": "${enableAcceptance}"
-
+      "label": "${enableAcceptance}",
+      "tooltip": "${enableAcceptance}"
     }
   ]
 }
