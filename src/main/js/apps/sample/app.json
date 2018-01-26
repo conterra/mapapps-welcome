@@ -1,6 +1,6 @@
 {
   "properties": {
-    "title": "${apptitle}"
+    "title": "${title}"
   },
   "load": {
     "bundleLocations": [
@@ -11,7 +11,6 @@
       "system",
       "banner",
       "console",
-      "custominfo",
       "notifier",
       "splashscreen",
       "templatelayout",
@@ -36,10 +35,10 @@
     "dn_welcome": {
       "WelcomeWidgetFactory": {
         "widgetRole": "welcomeWidget",
-        "title": "${ui.title}",
-        "infoText": "${ui.text}",
-        "buttonText": "${ui.button}",
-        "checkboxText": "${ui.checkbox}",
+        "title": "${welcome.title}",
+        "infoText": "${welcome.text}",
+        "buttonText": "${welcome.button}",
+        "checkboxText": "${welcome.checkbox}",
         "imgUrl": "resource('${app}:images/Welcomepicture.JPG')",
         "accept": false
       }
@@ -51,36 +50,6 @@
         "imagePosition": "above",
         "link": "http://developernetwork.conterra.de"
       }
-    },
-    "custominfo": {
-      "CustomInfoToggleTool": [
-        {
-          "id": "customInfoTool",
-          "activateOnStartup": true,
-          "title": "Information",
-          "tooltip": "Information",
-          "iconClass": "icon-custom-info-info",
-          "toolClass": "ctInfo",
-          "togglable": true,
-          "widgetSettings": {
-            "content": "${custominfo.content}",
-            "window": {
-              "title": "Information",
-              "marginBox": {
-                "w": 300,
-                "h": 250,
-                "l": 25,
-                "b": 70
-              },
-              "draggable": true,
-              "closable": true,
-              "modal": false,
-              "maximizable": false,
-              "resizable": false
-            }
-          }
-        }
-      ]
     },
     "map-init": {
       "Config": {
