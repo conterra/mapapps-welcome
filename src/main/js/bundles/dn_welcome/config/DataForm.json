@@ -41,6 +41,12 @@
       "tooltip": "${imgUrl}"
     },
     {
+      "type": "textbox",
+      "field": "imgHeight",
+      "label": "${imgHeight}",
+      "tooltip": "${imgHeight}"
+    },
+    {
       "type": "checkbox",
       "field": "accept",
       "label": "${enableAcceptance}",

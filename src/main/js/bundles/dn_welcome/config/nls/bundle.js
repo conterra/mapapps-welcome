@@ -24,6 +24,7 @@ module.exports = {
         buttonText: "Text of the button",
         checkboxText: "Text of the checkbox",
         imgUrl: "image URL",
+        imgHeight: "image height",
         enableAcceptance: "Enable checkbox as a must-check before closing information"
     },
     de: true

@@ -1,44 +1,45 @@
 <template>
-    <div id="app">
-        <v-app id="inspire">
-            <v-container grid-list-md text-xs-center fill-height fluid>
-                <v-layout row wrap>
-                    <v-flex xs12>
-                        <v-card color="primary">
-                            <v-card-title class="title">{{title}}</v-card-title>
-                        </v-card>
-                    </v-flex>
-                    <v-flex xs12>
-                        <v-card dark>
-                            <v-card-text>
-                                {{infoText}}
-                            </v-card-text>
-                            <v-flex xs12>
-                                <v-card-media v-if="imgUrl"
-                                              class="white--text"
-                                              height='170px'
-                                              v-bind:src="imgUrl"
-                                >
-                                    <v-container fill-height fluid>
-                                        <v-layout fill-height>
-                                        </v-layout>
-                                    </v-container>
-                                </v-card-media>
-                            </v-flex>
-                            <v-checkbox v-if="accept" v-bind:label="checkboxText" v-model="checkBox"
-                                        color='blue'></v-checkbox>
-                            <div>
-                                <v-btn v-on:click="$emit('close')" v-bind:items="checkbox" color='blue'>
-                                    {{buttonText}}
-                                </v-btn>
-                            </div>
-                            <v-checkbox v-if="!accept" v-bind:label="checkboxText" v-model="checkBox"
-                                        color="blue" class="text-lg-right"></v-checkbox>
-                        </v-card>
-                    </v-flex>
-                </v-layout>
+    <div class="welcome">
+        <div class="top">
+            <v-toolbar class="primary title" dense>
+                <v-toolbar-title>{{title}}</v-toolbar-title>
+            </v-toolbar>
+        </div>
+        <div class="center">
+            <v-container grid-list-md>
+                <v-card-media v-if="imgUrl"
+                              v-bind:height="imgHeight"
+                              v-bind:src="imgUrl">
+                </v-card-media>
+                <v-card-title>
+                    {{infoText}}
+                </v-card-title>
             </v-container>
-        </v-app>
+        </div>
+        <div class="bottom">
+            <v-container grid-list-md text-xs-center>
+                <v-checkbox v-if="accept"
+                            v-bind:label="checkboxText"
+                            v-model="checkBox"
+                            class="pa-2"
+                            color="primary"
+                            hide-details>
+                </v-checkbox>
+                <v-btn v-on:click="$emit('close')"
+                       v-bind:items="checkbox"
+                       ripple
+                       color="primary">
+                    {{buttonText}}
+                </v-btn>
+                <v-checkbox v-if="!accept"
+                            v-bind:label="checkboxText"
+                            v-model="checkBox"
+                            class="pa-2"
+                            color="primary"
+                            hide-details>
+                </v-checkbox>
+            </v-container>
+        </div>
     </div>
 </template>
 <script>
@@ -55,6 +56,7 @@
                 buttonText: "",
                 checkboxText: "",
                 imgUrl: "",
+                imgHeight: "150px",
                 i18n: {
                     type: Object,
                     default: function () {

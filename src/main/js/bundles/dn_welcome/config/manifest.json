@@ -57,6 +57,7 @@
           "buttonText": "Verstanden",
           "checkboxText": "Ich akzeptiere",
           "imgUrl": "",
+          "imgHeight": "150px",
           "accept": true
           //if set to true the window will be transformed to a disclaimer window
         },

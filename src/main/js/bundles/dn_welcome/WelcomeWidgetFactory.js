@@ -39,6 +39,7 @@ class WelcomeWidgetFactory {
         vm.buttonText = properties.buttonText;
         vm.checkboxText = properties.checkboxText;
         vm.imgUrl = properties.imgUrl;
+        vm.imgHeight = properties.imgHeight;
 
         vm.$on('close', () => {
             if (vm.accept) {

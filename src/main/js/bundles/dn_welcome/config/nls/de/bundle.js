@@ -23,5 +23,6 @@ module.exports = {
     buttonText: "Text des Buttons",
     checkboxText: "Text der Checkbox",
     imgUrl: "Bild URL",
+    imgHeight: "Bild H\u00f6he",
     enableAcceptance: "Die Checkbox soll angeglickt werden müssen, um das Fenster schließen zu können."
 };

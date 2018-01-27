@@ -40,6 +40,7 @@
         "buttonText": "${welcome.button}",
         "checkboxText": "${welcome.checkbox}",
         "imgUrl": "resource('${app}:images/Welcomepicture.JPG')",
+        "imgHeight": "150px",
         "accept": true
       }
     },
@@ -92,8 +93,8 @@
                 ],
                 "window": {
                   "marginBox": {
-                    "w": 700,
-                    "h": 500
+                    "w": "50%",
+                    "h": "50%"
                   }
                 }
               }
