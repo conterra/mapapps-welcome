@@ -24,7 +24,8 @@ Installation Guide
             "infoText": "Your text",
             "buttonText":"Your button text",
             "checkboxText": "Your checkbox text",
-            "imgUrl": "Your Image URL"
+            "imgUrl": "Your Image URL",
+            "imgHeight": "150px",
             "accept": false, //if set to true the window will be transformed to a disclaimer window
         }
     },
@@ -36,6 +37,11 @@ Installation Guide
                 "widgets": [  
                     {
                         "widgetRole": "welcomeInfo",
+                            "sublayout": [
+                            "desktop",
+                            "tablet_landscape",
+                            "tablet_portrait"
+                        ],
                         "window": {
                             "marginBox": {
                                 "w": your width,
@@ -62,6 +68,7 @@ and add the following code:
  | buttonText                     | String  |                               |                    | Welcome window button text           |
  | checkboxText                   | String  |                               |                    | Welcome window checkbox text         |
  | imgUrl                         | String  |                               |                    | Welcome window image URL             |
+ | imgHeight                      | String  |                               |```150px```         | Welcome window image height          |
  | accept                         | Boolean |```true``` &#124; ```false```  |```true```          | Force user to accept                 |
 
 #### Restrictions
