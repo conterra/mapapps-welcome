@@ -45,6 +45,8 @@ class WelcomeWidgetFactory {
             if (vm.accept) {
                 if (vm.checkBox) {
                     this._tool.set("active", false);
+                } else {
+                    vm.snackbar = true;
                 }
             } else {
                 if (vm.checkBox) {

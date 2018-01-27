@@ -38,6 +38,16 @@
                             color="primary"
                             hide-details>
                 </v-checkbox>
+                <v-snackbar
+                        v-model="snackbar"
+                        timeout="3000"
+                        color="info"
+                        multi-line
+                        top
+                        absolute>
+                    {{ i18n.snackbarText }}
+                    <v-btn flat color="pink" @click.native="snackbar = false">{{i18n.close}}</v-btn>
+                </v-snackbar>
             </v-container>
         </div>
     </div>
@@ -57,6 +67,7 @@
                 checkboxText: "",
                 imgUrl: "",
                 imgHeight: "150px",
+                snackbar: false,
                 i18n: {
                     type: Object,
                     default: function () {
@@ -64,7 +75,9 @@
                             title: "Welcome Info",
                             text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
                             checkbox: "I accept",
-                            button: "Understood"
+                            button: "Understood",
+                            snackbarText: "First you have to check the checkbox",
+                            close: "Close"
                         }
                     }
                 }
