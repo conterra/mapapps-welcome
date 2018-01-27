@@ -21,7 +21,7 @@ module.exports = {
         text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
         checkbox: "Ich akzeptiere",
         button: "Alles klar",
-        snackbarText: "Zun\u00e4chst müssen sie die checkbox anhaken",
+        snackbarText: "Zun\u00e4chst müssen Sie die checkbox anhaken",
         close: "Schließen"
     },
     tool: {

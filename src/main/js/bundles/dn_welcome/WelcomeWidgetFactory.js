@@ -24,7 +24,7 @@ class WelcomeWidgetFactory {
     activate() {
         this.cookieKey = "doNotShowAgain";
         this._initComponent();
-        this._checkForCookie(this.welcomeWidget);
+        this._checkForCookie();
     }
 
     _initComponent() {
@@ -71,8 +71,7 @@ class WelcomeWidgetFactory {
 
     _checkForCookie() {
         let doNotShowAgain = d_cookie(this.cookieKey);
-        if (doNotShowAgain === "true") {
-            this._tool.set("active", false);
+        if (doNotShowAgain === "true" && !this._properties.accept) {
             this.welcomeWidget.checkBox = true;
         } else {
             this._tool.set("active", true);
