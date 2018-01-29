@@ -5,7 +5,7 @@ Sample App
 ------------------
 https://demos.conterra.de/mapapps/resources/apps/downloads_welcome/index.html
 
-![Screenshot Sample App Welcome](https://github.com/conterra/mapapps-welcome/blob/master/Screenshot.JPG)
+![Screenshot Sample App Welcome](https://github.com/conterra/mapapps-welcome/blob/master/Screenshot.PNG)
 
 Installation Guide
 ------------------
