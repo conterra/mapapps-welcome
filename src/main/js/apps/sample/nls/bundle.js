@@ -18,7 +18,7 @@ module.exports = {
         title: "Welcome Bundle Sample",
         welcome: {
             title: "Welcome",
-            text: "This app shows the functionality of the welcome bundle. You can either configure it as a disclaimer, with a I agree-checkbox, or as a general start screen with a Do-Not-Show-Again-checkbox.",
+            text: "The new Welcome Bundle for Line 4 of map. apps allows you to include a welcome window that opens to launch the app. Two variants are available for each configuration: for displaying a disclaimer text that has to be explicitly confirmed by the user and for displaying information.",
             checkbox: "I accept",
             button: "Understood"
         }

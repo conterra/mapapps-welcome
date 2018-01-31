@@ -18,8 +18,8 @@ module.exports = {
         bundleName: "Welcome",
         bundleDescription: "The Welcome Bundle is a new widget for displaying a welcome screen with a Do-Not-Show-Again option",
         ui: {
-            title: "Welcome Info",
-            text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+            title: "Welcome",
+            text: "The new Welcome Bundle for line 4 of map.apps allows you to include a welcome window that opens to launch the app. Two variants are available for each configuration: for displaying a disclaimer text that has to be explicitly confirmed by the user and for displaying information.",
             checkbox: "I accept",
             button: "Understood",
             snackbarText: "First you have to check the checkbox",

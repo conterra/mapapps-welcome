@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 module.exports = {
-    bundleName: "Start Fenster",
+    bundleName: "Welcome",
     bundleDescription: "Das Welcome Bundele ist ein neues Widget mit dem man ein Startfenster konfigurieren kann.",
     ui: {
-        title: "Welcome Info",
-        text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+        title: "Willkommen",
+        text: "Das neue Welcome Bundle für Linie 4 von map.apps ermöglicht das Einbinden eines Willkommensfensters, das zum Start der App geöffnet wird. Per Konfiguration stehen zwei Varianten zur Verfügung: zur Anzeige eines Disclaimer-Textes, der explizit vom Nutzer bestätigt werden muss und zur Anzeige von Informationen.",
         checkbox: "Ich akzeptiere",
         button: "Alles klar",
         snackbarText: "Zun\u00e4chst müssen Sie die checkbox anhaken",

@@ -17,8 +17,8 @@ module.exports = {
     title: "Welcome Bundle Sample",
     welcome: {
         title: "Willkommen",
-        text: "Diese App zeigt das Welcome Bundle, welches es erm\u00F6glicht, Informationen beim Start der App anzuzeigen. Zusätzlich besteht die Möglichkeit, die checkbox zu konfigurieren, sodass sie entweder dazu dient einen Cookie zu speichern, sodass diese Information beim nächsten Starten der App nicht wieder gezeigt werden, oder so, dass sie angeklickt werden muss um das Fenster zu schließen.",
+        text: "Das neue Welcome Bundle für Linie 4 von map.apps ermöglicht das Einbinden eines Willkommensfensters, das zum Start der App geöffnet wird. Per Konfiguration stehen zwei Varianten zur Verfügung: zur Anzeige eines Disclaimer-Textes, der explizit vom Nutzer bestätigt werden muss und zur Anzeige von Informationen.",
         checkbox: "Ich akzeptiere",
-        button: "Alles klar"
+        button: "Verstanden"
     }
 };
