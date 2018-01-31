@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 module.exports = {
-    title: "Welcome Sample",
+    title: "Welcome Bundle Sample",
     welcome: {
-        title: "Wilkommen",
+        title: "Willkommen",
         text: "Diese App zeigt das Welcome Bundle, welches es erm\u00F6glicht, Informationen beim Start der App anzuzeigen. Zusätzlich besteht die Möglichkeit, die checkbox zu konfigurieren, sodass sie entweder dazu dient einen Cookie zu speichern, sodass diese Information beim nächsten Starten der App nicht wieder gezeigt werden, oder so, dass sie angeklickt werden muss um das Fenster zu schließen.",
         checkbox: "Ich akzeptiere",
         button: "Alles klar"

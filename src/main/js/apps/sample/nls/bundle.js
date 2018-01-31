@@ -15,7 +15,7 @@
  */
 module.exports = {
     root: {
-        title: "Welcome Sample",
+        title: "Welcome Bundle Sample",
         welcome: {
             title: "Welcome",
             text: "This app shows the functionality of the welcome bundle. You can either configure it as a disclaimer, with a I agree-checkbox, or as a general start screen with a Do-Not-Show-Again-checkbox.",
