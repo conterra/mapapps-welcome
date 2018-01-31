@@ -21,7 +21,6 @@ module.exports = {
         text: "Das neue Welcome Bundle für Linie 4 von map.apps ermöglicht das Einbinden eines Willkommensfensters, das zum Start der App geöffnet wird. Per Konfiguration stehen zwei Varianten zur Verfügung: zur Anzeige eines Disclaimer-Textes, der explizit vom Nutzer bestätigt werden muss und zur Anzeige von Informationen.",
         checkbox: "Ich akzeptiere",
         button: "Alles klar",
-        snackbarText: "Zun\u00e4chst müssen Sie die checkbox anhaken",
         close: "Schließen"
     },
     tool: {
