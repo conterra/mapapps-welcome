@@ -11,8 +11,7 @@
                               v-bind:height="imgHeight"
                               v-bind:src="imgUrl">
                 </v-card-media>
-                <v-card-title>
-                    {{infoText}}
+                <v-card-title v-html="infoText">
                 </v-card-title>
             </v-container>
         </div>
@@ -69,7 +68,7 @@
                     default: function () {
                         return {
                             title: "Welcome",
-                            text: "The new Welcome Bundle for line 4 of map.apps allows you to include a welcome window that opens to launch the app. Two variants are available for each configuration: for displaying a disclaimer text that has to be explicitly confirmed by the user and for displaying information.",
+                            text: "The new <b>Welcome Bundle<b> for line 4 of map.apps allows you to include a welcome window that opens to launch the app. Two variants are available for each configuration: for displaying a disclaimer text that has to be explicitly confirmed by the user and for displaying information.",
                             checkbox: "I accept",
                             button: "Understood",
                             close: "Close"
