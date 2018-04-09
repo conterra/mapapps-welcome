@@ -24,5 +24,5 @@ module.exports = {
     checkboxText: "Text der Checkbox",
     imgUrl: "Bild URL",
     imgHeight: "Bild H\u00f6he",
-    enableAcceptance: "Die Checkbox soll angeglickt werden müssen, um das Fenster schließen zu können."
+    enableAcceptance: "Die Checkbox soll angeglickt werden m\u00fcssen, um das Fenster schlie\u00dfen zu k\u00f6nnen."
 };

@@ -30,10 +30,8 @@ class WelcomeWidgetFactory {
     _initComponent() {
         let properties = this._properties;
         const vm = this.welcomeWidget = new Vue(WelcomeWidget);
-        vm.i18n = this._i18n.get().ui;
         vm.checkBox = false;
         vm.accept = properties.accept;
-
         vm.title = properties.title;
         vm.infoText = properties.infoText;
         vm.buttonText = properties.buttonText;

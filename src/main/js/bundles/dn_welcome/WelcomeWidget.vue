@@ -62,19 +62,7 @@
                 buttonText: "",
                 checkboxText: "",
                 imgUrl: "",
-                imgHeight: "150px",
-                i18n: {
-                    type: Object,
-                    default: function () {
-                        return {
-                            title: "Welcome",
-                            text: "The new <b>Welcome Bundle<b> for line 4 of map.apps allows you to include a welcome window that opens to launch the app. Two variants are available for each configuration: for displaying a disclaimer text that has to be explicitly confirmed by the user and for displaying information.",
-                            checkbox: "I accept",
-                            button: "Understood",
-                            close: "Close"
-                        }
-                    }
-                }
+                imgHeight: "150px"
             };
         },
         methods: {}
