@@ -18,7 +18,6 @@ define({
     bundleDescription: "Konfigurationsbundle f\u00fcr das Welcome-Bundle",
     windowTitle: "Welcome Konfiguration",
     description: "Einstellungen f\u00fcr das Welcome-Bundle",
-    title: "Fenster Titel",
     infoText: "Start Fenster text",
     buttonText: "Text des Buttons",
     checkboxText: "Text der Checkbox",

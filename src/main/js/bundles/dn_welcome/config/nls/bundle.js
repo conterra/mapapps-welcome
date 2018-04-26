@@ -19,7 +19,6 @@ define({
         bundleDescription: "Configuration Bundle for Welcome-Bundle",
         windowTitle: "Welcome Configuration",
         description: "Settings for the Welcome bundle",
-        title: "Important Information",
         infoText: "Welcome text:",
         buttonText: "Text of the button",
         checkboxText: "Text of the checkbox",

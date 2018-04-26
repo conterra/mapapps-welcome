@@ -14,11 +14,14 @@
  * limitations under the License.
  */
 
-.everlasting .ctWindow.ctWindow.noTitleBar, .everlasting .ctWindow.ctWindow.noTitleBarAndWindowTools{
-    width: 500px;
+.welcomeWidget {
     font-size: 15px;
 }
 
-.everlasting .input-success .dijitButtonNode{
-    background-color: #5bc1f7;
+.welcomeWidget img {
+    margin-bottom: 10px;
+}
+
+.welcomeWidget p {
+    margin-top: 0;
 }

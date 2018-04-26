@@ -8,7 +8,7 @@
   "Bundle-License": {},
   "Require-Bundle": [],
   "Product-Name": "devnet-mapapps-welcome",
-  "Config-Bundle-Location" : "/config",
+  "Config-Bundle-Location": "/config",
   "CSS-Themes-Extension": [
     {
       "name": "*",
@@ -27,17 +27,18 @@
         "tablet_portrait"
       ],
       "window": {
-        "title": "welcome",
+        "title": "Welcome",
         "autofocus": false,
         "dockTool": "welcomeToggleTool",
         "minimizeOnClose": true,
         "resizable": true,
         "modal": true,
+        "closable": false,
         "marginBox": {
-          "w": "600",
-          "h": "460"
+          "w": "800",
+          "h": "600"
         },
-        "windowClass": "noTitleBarAndWindowTools noPadding welcome-window"
+        "windowClass": "noPadding"
       }
     }
   ],
@@ -48,10 +49,9 @@
       "instanceFactory": true,
       "properties": {
         "widgetRole": "welcomeWidget",
-        "title": "${ui.title}",
-        "infoText": "${ui.text}",
-        "buttonText": "${ui.button}",
-        "checkboxText": "${ui.checkbox}",
+        "infoText": "",
+        "buttonText": "",
+        "checkboxText": "",
         "imgUrl": "",
         "imgHeight": "200",
         "accept": false

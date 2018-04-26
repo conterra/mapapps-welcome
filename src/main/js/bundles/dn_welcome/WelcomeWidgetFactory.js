@@ -25,7 +25,6 @@ define([
             var i18n = this._i18n.get().ui;
             var props = this._properties || {};
             var tool = this._tool;
-                tool.active = true;
 
             return new WelcomeWidget({
                 i18n: i18n,

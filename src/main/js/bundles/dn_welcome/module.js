@@ -15,5 +15,6 @@
  */
 define([
     ".",
-    "./WelcomeWidgetFactory"
-    ], {});
+    "./WelcomeWidgetFactory",
+    "ct/tools/Tool"
+], {});

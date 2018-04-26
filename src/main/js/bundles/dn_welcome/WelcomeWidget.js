@@ -16,88 +16,85 @@
 define([
     "dojo/_base/declare",
     "dojo/_base/array",
+    "dojo/dom-construct",
+    "dojo/cookie",
     "dijit/_Widget",
     "dijit/_TemplatedMixin",
     "dijit/_WidgetsInTemplateMixin",
-    "dojo/text!./templates/welcomeWidget.html",
-    "dojo/cookie",
-    "dojo/dom",
-    "dojo/_base/fx",
-    "ct/util/css",
-    "ct/_lang",
-    "dojo/parser",
+    "dojo/text!./templates/WelcomeWidget.html",
     "dijit/form/CheckBox",
     "dijit/layout/BorderContainer",
-    "dijit/layout/ContentPane",
-    "dijit/form/Select",
-    "dijit/TitlePane"
-
-
-], function (declare, d_array, _Widget, _TemplatedMixin, _WidgetsInTemplateMixin, template, d_cookie) {
+    "dijit/layout/ContentPane"
+], function (declare, d_array, domConstruct, d_cookie, _Widget, _TemplatedMixin, _WidgetsInTemplateMixin, template, CheckBox) {
     return declare([_Widget, _TemplatedMixin, _WidgetsInTemplateMixin], {
-
-        baseClass: "dnWelcomeWidget",
+        baseClass: "welcomeWidget",
         templateString: template,
-        _initialized: null,
-        _watchHandlers: null,
         cookieKey: "doNotShowAgain",
 
         constructor: function () {
-            this._watchHandlers = [];
+            this.inherited(arguments);
         },
 
         postCreate: function () {
             this.inherited(arguments);
+
+            var checkBox = this.checkbox = new CheckBox({
+                checked: false
+            });
+            var labelCheckbox = domConstruct.create('label', {
+                innerHTML: this.checkboxText,
+                for: checkBox.id
+            });
+
+            if (this.accept) {
+                domConstruct.place(checkBox.domNode, this._centerContentPane.domNode, "last");
+                domConstruct.place(labelCheckbox, this._centerContentPane.domNode, "last");
+            } else {
+                domConstruct.place(checkBox.domNode, this._bottomContentPane.domNode, "last");
+                domConstruct.place(labelCheckbox, this._bottomContentPane.domNode, "last");
+            }
+
             this._checkForCookie();
         },
 
         startup: function () {
             this.inherited(arguments);
-            this._initialized = true;
-            this._checkIfAccept();
+        },
+
+        resize: function (dims) {
+            this._container.resize(dims);
         },
 
         close: function () {
             if (this.accept) {
-                if (this.acceptCheckbox.checked) {
+                if (this.checkbox.checked) {
                     this.tool.set('active', false);
                 }
             } else {
-                if (this.doNotShowAgain.checked) {
-                    this.setCookie();
+                if (this.checkbox.checked) {
+                    this._setCookie();
                 } else {
-                    this.deleteCookie();
+                    this._deleteCookie();
                 }
                 this.tool.set('active', false);
             }
         },
 
-        setCookie: function () {
+        _setCookie: function () {
             d_cookie(this.cookieKey, true, {expires: 365});
         },
 
-        deleteCookie: function () {
+        _deleteCookie: function () {
             d_cookie(this.cookieKey, null, {expires: -1});
         },
 
         _checkForCookie: function () {
             var doNotShowAgain = d_cookie(this.cookieKey);
             if (doNotShowAgain === "true") {
-                this.tool.set('active', false)
+                this.checkbox.set("checked", true);
             } else {
                 this.tool.set("active", true);
             }
-        },
-        _checkIfAccept: function () {
-            if (this.accept) {
-                dojo.destroy("_doNotShowAgain");
-            } else {
-                dojo.destroy("_accept");
-            }
-        },
-
-        deactivate: function () {
-            this.splashScreen._clear();
         }
 
     });

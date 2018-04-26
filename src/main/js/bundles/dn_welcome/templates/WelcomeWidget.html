@@ -1,0 +1,17 @@
+<div>
+    <div data-dojo-type="dijit/layout/BorderContainer" data-dojo-attach-point="_container"
+         data-dojo-props="design:'headline',gutters:false">
+        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center'"
+             data-dojo-attach-point="_centerContentPane">
+            <p>${infoText}</p>
+            <img src="${imgUrl}" alt="custom image" height="${imgHeight}"><br>
+        </div>
+        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'bottom'"
+             data-dojo-attach-point="_bottomContentPane">
+            <button data-dojo-type="dijit.form.Button" class="input-large input-block"
+                    data-dojo-attach-point="closeButton" data-dojo-attach-event="onClick:close">
+                ${buttonText}
+            </button>
+        </div>
+    </div>
+</div>

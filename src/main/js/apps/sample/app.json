@@ -25,12 +25,23 @@
       "wizard@^3.x",
       "dn_welcome"
     ],
-    "skipBundles": []
+    "skipBundles": [],
+    "require": [
+      "${app}.app"
+    ],
+    "i18n": [
+      "bundle"
+    ]
   },
   "bundles": {
     "dn_welcome": {
       "WelcomeWidgetFactory": {
-        "imgUrl": "resource('${app}:images/Welcomepicture.JPG')"
+        "infoText": "${welcome.infoText}",
+        "buttonText": "${welcome.buttonText}",
+        "checkboxText": "${welcome.checkboxText}",
+        "imgUrl": "resource('${app}:images/Welcomepicture.JPG')",
+        "imgHeight": "350",
+        "accept": false
       }
     },
     "banner": {
@@ -78,25 +89,17 @@
             "name": "seasons",
             "widgets": [
               {
-                "role": "printDialogAGSPrinting",
+                "role": "welcomeWidget",
                 "window": {
+                  "title": "${welcome.title}",
                   "marginBox": {
-                    "w": 360,
-                    "h": 250,
-                    "l": 20,
-                    "t": 50
+                    "w": "800",
+                    "h": "600"
                   }
                 }
               }
             ]
           }
-        ]
-      }
-    },
-    "toolrules": {
-      "ToolActiveStateManager": {
-        "activateOnStartToolIds": [
-          "agsprinttool"
         ]
       }
     },

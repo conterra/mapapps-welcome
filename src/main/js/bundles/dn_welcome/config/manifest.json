@@ -55,14 +55,13 @@
         "pid": "dn_welcome-WelcomeWidgetFactory",
         "id": "welcomeBuilderWidget",
         "defaultProperties": {
-          "title": "Wichtige Informationen",
           "infoText": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
           "buttonText": "Verstanden",
           "checkboxText": "Ich akzeptiere",
           "imgUrl": "",
-          "imgHeight": "150px",
-          "accept": true
+          "imgHeight": "200",
           //if set to true the window will be transformed to a disclaimer window
+          "accept": false
         },
         "description": "Settings for Welcome bundle"
       },

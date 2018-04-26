@@ -15,16 +15,7 @@
  */
 define({
     bundleName: "Welcome",
-    bundleDescription: "Das Welcome Bundele ist ein neues Widget mit dem man ein Startfenster konfigurieren kann.",
-    ui: {
-        title: "Willkommen",
-        text: "Das neue Welcome Bundle für Linie 4 von map.apps ermöglicht das Einbinden eines Willkommensfensters, das zum Start der App geöffnet wird. Per Konfiguration stehen zwei Varianten zur Verfügung: zur Anzeige eines Disclaimer-Textes, der explizit vom Nutzer bestätigt werden muss und zur Anzeige von Informationen.",
-        checkbox: "Ich akzeptiere",
-        button: "Schließen",
-        close: "Schließen",
-        windowHeight: 200,
-        windowWidth: 500
-    },
+    bundleDescription: "Das Welcome Bundle ist ein neues Widget mit dem man ein Startfenster konfigurieren kann.",
     tool: {
         title: "Welcome Info",
         tooltip: "Welcome Info"

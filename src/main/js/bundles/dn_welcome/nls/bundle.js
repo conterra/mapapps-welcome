@@ -17,15 +17,6 @@ define({
     root: ({
         bundleName: "Welcome",
         bundleDescription: "The Welcome Bundle is a new widget for displaying a welcome screen with a Do-Not-Show-Again option",
-        ui: {
-            title: "Welcome",
-            text: "The new Welcome Bundle for line 4 of map.apps allows you to include a welcome window that opens to launch the app. Two variants are available for each configuration: for displaying a disclaimer text that has to be explicitly confirmed by the user and for displaying information.",
-            checkbox: "I accept",
-            button: "Done",
-            close: "Close",
-            windowHeight: 200,
-            windowWidth: 500
-        },
         tool: {
             title: "Welcome Info",
             tooltip: "Welcome Info"
