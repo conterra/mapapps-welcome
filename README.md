@@ -7,7 +7,7 @@ The Welcome Bundle is a new Widget for displaying a Welcome Screen. You can eith
 Sample App
 ------------------
 
-![alt text](https://github.com/conterra/mapapps-agsprinting-enhanced/blob/master/screenshoot.JPG)
+![alt text](https://github.com/conterra/mapapps-welcome/blob/3.x/screenshoot.JPG)
 
 Installation Guide
 ------------------
