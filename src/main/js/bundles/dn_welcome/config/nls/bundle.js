@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 con terra GmbH (info@conterra.de)
+ * Copyright (C) 2017 con terra GmbH (info@conterra.de)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-module.exports = {
+define({
     root: {
         bundleName: "Welcome Configuration",
         bundleDescription: "Configuration Bundle for Welcome-Bundle",
-        windowTitle: "Welcome Configuraion",
+        windowTitle: "Welcome Configuration",
         description: "Settings for the Welcome bundle",
         title: "Important Information",
         infoText: "Welcome text:",
@@ -28,4 +28,4 @@ module.exports = {
         enableAcceptance: "Enable checkbox as a must-check before closing information"
     },
     de: true
-};
+});

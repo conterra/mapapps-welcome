@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 con terra GmbH (info@conterra.de)
+ * Copyright (C) 2017 con terra GmbH (info@conterra.de)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,11 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-module.exports = {
+define({
     bundleName: "Welcome",
-    bundleDescription: "Das Welcome Bundle ist ein neues Widget mit dem man ein Startfenster konfigurieren kann.",
+    bundleDescription: "Das Welcome Bundele ist ein neues Widget mit dem man ein Startfenster konfigurieren kann.",
+    ui: {
+        title: "Willkommen",
+        text: "Das neue Welcome Bundle für Linie 4 von map.apps ermöglicht das Einbinden eines Willkommensfensters, das zum Start der App geöffnet wird. Per Konfiguration stehen zwei Varianten zur Verfügung: zur Anzeige eines Disclaimer-Textes, der explizit vom Nutzer bestätigt werden muss und zur Anzeige von Informationen.",
+        checkbox: "Ich akzeptiere",
+        button: "Schließen",
+        close: "Schließen",
+        windowHeight: 200,
+        windowWidth: 500
+    },
     tool: {
         title: "Welcome Info",
         tooltip: "Welcome Info"
     }
-};
+});

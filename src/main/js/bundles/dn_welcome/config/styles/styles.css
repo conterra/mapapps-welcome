@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-.queryBuilderWizard .inputContainer label {
+.welcomeWizard .inputContainer label {
     display: inline-block;
     min-width: 200px;
     max-width: 300px;
@@ -22,21 +22,21 @@
     vertical-align: middle;
 }
 
-.queryBuilderWizard .inputContainer .settingsDiv {
+.welcomeWizard .inputContainer .settingsDiv {
     margin-bottom: 2px;
 }
 
-.queryBuilderWizard .inputContainer .dijitButton {
+.welcomeWizard .inputContainer .dijitButton {
     margin-left: 5px;
     margin-top: 0;
     margin-bottom: 0;
 }
 
-.queryBuilderWizard .settings {
+.welcomeWizard .settings {
     height: 90px;
 }
 
-.queryBuilderWizard .settings label {
+.welcomeWizard .settings label {
     display: inline-block;
     min-width: 200px;
     max-width: 300px;
@@ -45,42 +45,42 @@
     vertical-align: middle;
 }
 
-.queryBuilderWizard .settings .settingsDiv {
+.welcomeWizard .settings .settingsDiv {
     margin-bottom: 2px;
 }
 
-.queryBuilderWizard .settings .dijitButton {
+.welcomeWizard .settings .dijitButton {
     margin-left: 5px;
     margin-top: 0;
     margin-bottom: 0;
 }
 
-.queryBuilderWizard .head {
+.welcomeWizard .head {
     margin-bottom: 8px;
 }
 
-.queryBuilderWizard .rightFloatingButton {
+.welcomeWizard .rightFloatingButton {
     float: right;
 }
 
-.queryBuilderWizard .inline {
+.welcomeWizard .inline {
     display: inline;
 }
 
-.queryBuilderWizard .fieldWidget {
+.welcomeWizard .fieldWidget {
     margin-bottom: 5px;
 }
 
-.queryBuilderWizard .fieldWidget .buttonContainer .dijitButtonNode {
+.welcomeWizard .fieldWidget .buttonContainer .dijitButtonNode {
     font-size: 15px;
     padding: 0px 8px 3px !important;
 }
 
-.queryBuilderWizard .fieldWidget .buttonContainer .dijitIcon {
+.welcomeWizard .fieldWidget .buttonContainer .dijitIcon {
     font-size: 14px !important;
 }
 
-.queryBuilderWizard .fieldWidget {
+.welcomeWizard .fieldWidget {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: row;
@@ -89,46 +89,46 @@
     align-items: center;
 }
 
-.queryBuilderWizard .fieldWidget .fieldWidgetItem {
+.welcomeWizard .fieldWidget .fieldWidgetItem {
     flex: 1 1 auto;
     padding: 0 2px
 }
 
-.queryBuilderWizard .fieldWidget .fieldWidgetItem:first-child {
+.welcomeWizard .fieldWidget .fieldWidgetItem:first-child {
     padding-left: 0;
 }
 
-.queryBuilderWizard .fieldWidget .buttonContainer {
+.welcomeWizard .fieldWidget .buttonContainer {
     flex: 0 0 70px;
     display: inline-block;
 }
 
-.queryBuilderWizard .fieldWidget .dijitTextBox {
+.welcomeWizard .fieldWidget .dijitTextBox {
     width: 100%;
 }
 
-.ctEnv_IE_8 .queryBuilderWizard .fieldWidget .notSelect,
-.ctEnv_IE_9 .queryBuilderWizard .fieldWidget .notSelect {
+.ctEnv_IE_8 .welcomeWizard .fieldWidget .notSelect,
+.ctEnv_IE_9 .welcomeWizard .fieldWidget .notSelect {
     width: 16%;
 }
 
-.ctEnv_IE_8 .queryBuilderWizard .fieldWidget .fieldSelect,
-.ctEnv_IE_9 .queryBuilderWizard .fieldWidget .fieldSelect {
+.ctEnv_IE_8 .welcomeWizard .fieldWidget .fieldSelect,
+.ctEnv_IE_9 .welcomeWizard .fieldWidget .fieldSelect {
     width: 22%;
 }
 
-.ctEnv_IE_8 .queryBuilderWizard .fieldWidget .relationalOperatorSelect,
-.ctEnv_IE_9 .queryBuilderWizard .fieldWidget .relationalOperatorSelect {
+.ctEnv_IE_8 .welcomeWizard .fieldWidget .relationalOperatorSelect,
+.ctEnv_IE_9 .welcomeWizard .fieldWidget .relationalOperatorSelect {
     width: 16%;
 }
 
-.ctEnv_IE_8 .queryBuilderWizard .fieldWidget .valueField,
-.ctEnv_IE_9 .queryBuilderWizard .fieldWidget .valueField {
+.ctEnv_IE_8 .welcomeWizard .fieldWidget .valueField,
+.ctEnv_IE_9 .welcomeWizard .fieldWidget .valueField {
     width: 22%;
 }
 
-.ctEnv_IE_8 .queryBuilderWizard .fieldWidget .buttonContainer,
-.ctEnv_IE_9 .queryBuilderWizard .fieldWidget .buttonContainer {
+.ctEnv_IE_8 .welcomeWizard .fieldWidget .buttonContainer,
+.ctEnv_IE_9 .welcomeWizard .fieldWidget .buttonContainer {
     width: 70px;
 }
 

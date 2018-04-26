@@ -1,18 +1,20 @@
-# Welcome Widget
+# Welcome
 The Welcome Bundle is a new Widget for displaying a Welcome Screen. You can either configure it as a disclaimer, with a "I agree"-checkbox, or as a general start screen with a "Do-Not-Show-Again"-checkbox.
+
+
+
 
 Sample App
 ------------------
-https://demos.conterra.de/mapapps/resources/apps/downloads_welcome/index.html
 
-![Screenshot Sample App Welcome](https://github.com/conterra/mapapps-welcome/blob/master/Screenshot.PNG)
+![alt text](https://github.com/conterra/mapapps-agsprinting-enhanced/blob/master/screenshoot.JPG)
 
 Installation Guide
 ------------------
-**Requirement: map.apps 4.2.0**
-
 1. First, you need to add the bundle "dn_welcome" to your app.
 2. After that, you can customize the content of the welcome window.
+
+**Requirement: map.apps 3.9.1**
 
 #### Example:
 
@@ -55,11 +57,9 @@ Installation Guide
     }
 }
 ```
-     
-and add the following code:
 
-#### Configurable Components of dn_welcome:
- 
+#### Configurable Components of dn_welcome: 
+
 ###### Properties
  | Property                       | Type    | Possible Values               | Default            | Description                          |
  |--------------------------------|---------|-------------------------------|--------------------|--------------------------------------|

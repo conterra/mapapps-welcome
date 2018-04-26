@@ -1,0 +1,35 @@
+<div data-dojo-type="dijit/layout/BorderContainer" data-dojo-attach-point="borderContainerNode"
+     data-dojo-props="design:'headline',gutters:false,class:'fullwidthAndHeight'">
+    <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center'"
+         data-dojo-attach-point="leftRegionNode">
+        <div>
+            <p>${infoText}</p>
+        </div>
+        <div>
+            <img src="${imgUrl}" alt="custom image" height="${imgHeight}">
+        </div>
+        <div data-dojo-attach-point="_accept" id="_accept">
+            <label for="acceptCheckbox">${checkboxText}</label>
+            <input id="acceptCheckbox" data-dojo-type="dijit/form/CheckBox" checked=true
+                   data-dojo-attach-point="acceptCheckbox"/> <!-- adjust event -->
+        </div>
+    </div>
+    <div data-dojo-attach-point="_bottomNode" data-dojo-type="dijit/layout/ContentPane"
+         data-dojo-props="region: 'bottom-center'">
+        <button id="closeButton" data-dojo-type="dijit.form.Button" class="input-large input-block input-success"
+                type="button"
+                data-dojo-props="iconClass:'icon-default'" data-dojo-attach-point="closeButton"
+                data-dojo-attach-event="onClick:close"> <!--Template does not know function setCookie!!
+                    -->
+            ${buttonText}
+        </button>
+    </div>
+    <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center'"
+         data-dojo-attach-point="leftRegionNode">
+        <div data-dojo-attach-point="_doNotShowAgain" id="_doNotShowAgain">
+            <label for="donotshowagain">${checkboxText}</label>
+            <input id="donotshowagain" data-dojo-type="dijit/form/CheckBox" value="false" checked=true
+                   data-dojo-attach-point="doNotShowAgain"/> <!-- adjust event -->
+        </div>
+    </div>
+</div>

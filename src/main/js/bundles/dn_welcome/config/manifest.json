@@ -1,18 +1,22 @@
 {
-  "name": "dn_welcome-config",
-  "version": "1.1.4-SNAPSHOT",
-  "title": "${bundleName}",
-  "description": "${bundleDescription}",
-  "vendor": "con terra GmbH",
-  "productName": "dn_welcome",
-  "layer": "module",
+  "Bundle-SymbolicName": "dn_welcome-config",
+  "Bundle-Version": "1.1.3-SNAPSHOT",
+  "Bundle-Name": "${bundleName}",
+  "Bundle-Description": "${bundleDescription}",
+  "Bundle-Vendor": "con terra GmbH",
+  "Require-Bundle": [
+    {
+      "name": "dataform",
+      "version": "^3.x"
+    },
+    {
+      "name": "wizard",
+      "version": "^3.x"
+    }
+  ],
   "i18n": [
     "bundle"
   ],
-  "dependencies": {
-    "dataform": "^4.2.0",
-    "wizard": "^4.2.0"
-  },
   "CSS-Themes-Extension": [
     {
       "name": "*",
@@ -31,7 +35,6 @@
       "propertiesConstructor": true,
       "properties": {
         "menuNode": {
-          "priority": 0,
           "title": "${windowTitle}",
           "widget": "welcomeBuilderWidget",
           "iconUrl": "resource('styles/images/bundleIcon.png')"

@@ -1,21 +1,19 @@
 {
-  "name": "dn_welcome",
-  "version": "1.1.4-SNAPSHOT",
-  "title": "${bundleName}",
-  "description": "${bundleDescription}",
-  "vendor": "con terra GmbH",
-  "productName": "devnet-mapapps-welcome",
-  "dependencies": {
-    "apprt-vue": "^4.2.0",
-    "apprt-binding": "^4.2.0",
-    "apprt-vuetify": "^4.2.0"
-  },
-  "Config-Bundle-Location": "/config",
+  "Bundle-SymbolicName": "dn_welcome",
+  "Bundle-Version": "1.0.0-SNAPSHOT",
+  "Bundle-Name": "${bundleName}",
+  "Bundle-Description": "${bundleDescription}",
+  "Bundle-Vendor": "con terra GmbH",
+  "Bundle-Icon": {},
+  "Bundle-License": {},
+  "Require-Bundle": [],
+  "Product-Name": "devnet-mapapps-welcome",
+  "Config-Bundle-Location" : "/config",
   "CSS-Themes-Extension": [
     {
       "name": "*",
       "files": [
-        "./css/styles.css"
+        "./css/style.css"
       ]
     }
   ],
@@ -29,38 +27,17 @@
         "tablet_portrait"
       ],
       "window": {
+        "title": "welcome",
         "autofocus": false,
         "dockTool": "welcomeToggleTool",
         "minimizeOnClose": true,
         "resizable": true,
         "modal": true,
         "marginBox": {
-          "w": "60%",
-          "h": "60%"
+          "w": "600",
+          "h": "460"
         },
         "windowClass": "noTitleBarAndWindowTools noPadding welcome-window"
-      }
-    },
-    {
-      "widgetRole": "welcomeWidget",
-      "template": "seasons",
-      "sublayout": [
-        "mobile_landscape",
-        "mobile_portrait"
-      ],
-      "window": {
-        "autofocus": false,
-        "dockTool": "welcomeToggleTool",
-        "minimizeOnClose": true,
-        "resizable": false,
-        "modal": true,
-        "marginBox": {
-          "w": "100%",
-          "h": "100%",
-          "b": 40,
-          "l": 0
-        },
-        "windowClass": "mobileWindow noTitleBarAndWindowTools noPadding welcome-window"
       }
     }
   ],
@@ -76,8 +53,8 @@
         "buttonText": "${ui.button}",
         "checkboxText": "${ui.checkbox}",
         "imgUrl": "",
-        "imgHeight": "200px",
-        "accept": true
+        "imgHeight": "200",
+        "accept": false
       },
       "references": [
         {

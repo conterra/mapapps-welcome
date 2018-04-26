@@ -1,5 +1,5 @@
-/*
- * Copyright (C) 2018 con terra GmbH (info@conterra.de)
+/**
+ * Copyright (C) 2017 con terra GmbH (info@conterra.de)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-module.exports = {
-    title: "Welcome Bundle Sample",
-    welcome: {
-        title: "Willkommen",
-        text: "Das neue Welcome Bundle für Linie 4 von map.apps ermöglicht das Einbinden eines Willkommensfensters, das zum Start der App geöffnet wird. Per Konfiguration stehen zwei Varianten zur Verfügung: zur Anzeige eines Disclaimer-Textes, der explizit vom Nutzer bestätigt werden muss und zur Anzeige von Informationen.",
-        checkbox: "Ich akzeptiere",
-        button: "Verstanden"
-    }
-};
+
+.everlasting .ctWindow.ctWindow.noTitleBar, .everlasting .ctWindow.ctWindow.noTitleBarAndWindowTools{
+    width: 500px;
+    font-size: 15px;
+}
+
+.everlasting .input-success .dijitButtonNode{
+    background-color: #5bc1f7;
+}

@@ -1,6 +1,6 @@
 {
   "properties": {
-    "title": "${title}"
+    "amdPackages": "apprt@^3.x"
   },
   "load": {
     "bundleLocations": [
@@ -8,40 +8,28 @@
       "bundles"
     ],
     "allowedBundles": [
-      "system",
-      "banner",
-      "console",
-      "notifier",
-      "splashscreen",
-      "templatelayout",
-      "template-seasons",
-      "theme-everlasting",
-      "theme-winter",
-      "theme-spring",
-      "theme-summer",
-      "theme-autumn",
-      "map-init",
-      "toolset",
+      "system@^3.x",
+      "splashscreen@^3.x",
+      "map@^3.x",
+      "themes@^3.x",
+      "templates@^3.x",
+      "templatelayout@^3.x",
+      "windowmanager@^3.x",
+      "toolset@^3.x",
+      "toolrules@^3.x",
+      "basemaptoggler@^3.x",
+      "console@^3.x",
+      "banner@^3.x",
+      "coordinateviewer@^3.x",
+      "wizard@^3.x",
       "dn_welcome"
     ],
-    "require": [
-      "${app}/app"
-    ],
-    "i18n": [
-      "bundle"
-    ]
+    "skipBundles": []
   },
   "bundles": {
     "dn_welcome": {
       "WelcomeWidgetFactory": {
-        "widgetRole": "welcomeWidget",
-        "title": "${welcome.title}",
-        "infoText": "${welcome.text}",
-        "buttonText": "${welcome.button}",
-        "checkboxText": "${welcome.checkbox}",
-        "imgUrl": "resource('${app}:images/Welcomepicture.JPG')",
-        "imgHeight": "300px",
-        "accept": true
+        "imgUrl": "resource('${app}:images/Welcomepicture.JPG')"
       }
     },
     "banner": {
@@ -52,49 +40,50 @@
         "link": "http://developernetwork.conterra.de"
       }
     },
-    "map-init": {
-      "Config": {
-        "basemaps": [
+    "toolset": {
+      "ToolsetManager": {
+        "toolsets": [
           {
-            "id": "topo",
-            "title": "${map.basemaps.topo}",
-            "basemap": "topo"
+            "id": "toolset_1450282105829",
+            "title": "Werkzeuge",
+            "container": "map",
+            "window": {
+              "closable": true
+            },
+            "tooltip": "Werkzeuge",
+            "__isDirty": true,
+            "cssClass": "notitle",
+            "windowType": "fixed",
+            "position": {
+              "rel_l": 20,
+              "rel_b": 80
+            },
+            "tools": [
+              "*"
+            ]
           }
-        ],
-        "view": {
-          "viewmode": "2D",
-          "extent": {
-            "xmin": 753914,
-            "ymin": 6590000,
-            "xmax": 797273,
-            "ymax": 6635000,
-            "spatialReference": 3857
-          }
-        }
-      }
-    },
-    "themes": {
-      "ThemeModel": {
-        "_selectedTheme": "everlasting"
-      }
+        ]
+      },
+      "enabled": true
     },
     "templates": {
+      "TemplateSelector": {
+        "componentEnabled": false
+      },
       "TemplateModel": {
+        "_selectedTemplate": "seasons",
         "_templates": [
           {
             "name": "seasons",
             "widgets": [
               {
-                "widgetRole": "welcomeWidget",
-                "sublayout": [
-                  "desktop",
-                  "tablet_landscape",
-                  "tablet_portrait"
-                ],
+                "role": "printDialogAGSPrinting",
                 "window": {
                   "marginBox": {
-                    "w": "60%",
-                    "h": "60%"
+                    "w": 360,
+                    "h": 250,
+                    "l": 20,
+                    "t": 50
                   }
                 }
               }
@@ -103,22 +92,104 @@
         ]
       }
     },
-    "toolset": {
-      "ToolsetManager": {
-        "toolsets": [
-          {
-            "id": "mapview_tools",
-            "tools": [
-              "*"
-            ],
-            "registerWidget": {
-              "widgetRole": "mapview_tools"
-            },
-            "container": "ignore",
-            "windowType": "container",
-            "cssClass": "muted"
-          }
+    "toolrules": {
+      "ToolActiveStateManager": {
+        "activateOnStartToolIds": [
+          "agsprinttool"
         ]
+      }
+    },
+    "map": {
+      "MapState": {
+        "initialExtent": {
+          "xmin": -1100000,
+          "ymin": 4000000,
+          "xmax": 3500000,
+          "ymax": 8800000,
+          "spatialReference": {
+            "wkid": 3857
+          }
+        }
+      },
+      "MapModelFactory": {
+        "_configData": {
+          "maps": [
+            {
+              "id": "default",
+              "glass_pane": [],
+              "operationalLayer": [
+                {
+                  "title": "Standorte",
+                  "enabled": true,
+                  "service": "standorte",
+                  "category": {
+                    "title": "Standorte",
+                    "description": "",
+                    "imgUrl": ""
+                  },
+                  "layers": [
+                    "*"
+                  ],
+                  "id": "standorte0",
+                  "options": {}
+                }
+              ],
+              "baseLayer": [
+                {
+                  "title": "Streets",
+                  "service": "streets",
+                  "enabled": true
+                },
+                {
+                  "title": "Topo",
+                  "service": "worldTopo",
+                  "enabled": false
+                },
+                {
+                  "title": "Dark Canvas",
+                  "service": "darkcanvas",
+                  "enabled": false
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "MappingResourceRegistryFactory": {
+        "_knownServices": {
+          "services": [
+            {
+              "id": "worldTopo",
+              "type": "AGS_TILED",
+              "url": "http://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer"
+            },
+            {
+              "id": "streets",
+              "type": "AGS_TILED",
+              "url": "http://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer"
+            },
+            {
+              "id": "darkcanvas",
+              "type": "AGS_TILED",
+              "url": "http://services.arcgisonline.com/arcgis/rest/services/Canvas/World_Dark_Gray_Base/MapServer"
+            },
+            {
+              "id": "standorte",
+              "url": "https://services.conterra.de/arcgis/rest/services/common/standorte/FeatureServer",
+              "type": "AGS_FEATURE",
+              "title": "Standorte",
+              "description": "",
+              "layers": [
+                {
+                  "id": "0",
+                  "title": "Standorte",
+                  "enabled": true
+                }
+              ],
+              "options": {}
+            }
+          ]
+        }
       }
     }
   }

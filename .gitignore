@@ -1,13 +1,4 @@
-/.idea
-**/nbactions.xml
-**/*.iml
-**/*.lnk
-**/target
-/build.properties
-/node_modules
-/node
-/nb-configuration.xml
-/.classpath
-/.project
-/.settings/
-/.externalToolBuilders/
+target/*
+.idea/*
+*.iml
+nbactions.xml

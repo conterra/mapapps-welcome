@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 con terra GmbH (info@conterra.de)
+ * Copyright (C) 2017 con terra GmbH (info@conterra.de)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-module.exports = {
+define({
     bundleName: "Welcome Konfiguration",
     bundleDescription: "Konfigurationsbundle f\u00fcr das Welcome-Bundle",
     windowTitle: "Welcome Konfiguration",
@@ -24,5 +24,5 @@ module.exports = {
     checkboxText: "Text der Checkbox",
     imgUrl: "Bild URL",
     imgHeight: "Bild H\u00f6he",
-    enableAcceptance: "Die Checkbox soll angeglickt werden m\u00fcssen, um das Fenster schlie\u00dfen zu k\u00f6nnen."
-};
+    enableAcceptance: "Die Checkbox soll angeglickt werden müssen, um das Fenster schließen zu können."
+});
