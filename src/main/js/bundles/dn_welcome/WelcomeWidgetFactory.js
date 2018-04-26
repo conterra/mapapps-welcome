@@ -22,12 +22,12 @@ define([
         _instance: undefined,
 
         createInstance: function () {
-            let i18n = this._i18n.get().ui;
-            let props = this._properties || {};
-            let tool = this._tool;
+            var i18n = this._i18n.get().ui;
+            var props = this._properties || {};
+            var tool = this._tool;
                 tool.active = true;
 
-            let welcomeWidget = new WelcomeWidget({
+            return new WelcomeWidget({
                 i18n: i18n,
                 tool: tool,
                 _watchHandlers: null,
@@ -37,11 +37,8 @@ define([
                 infoText: props.infoText,
                 title: props.title,
                 imgHeight: props.imgHeight,
-                accept:  props.accept
+                accept: props.accept
             });
-
-
-            return welcomeWidget;
         }
 
     });

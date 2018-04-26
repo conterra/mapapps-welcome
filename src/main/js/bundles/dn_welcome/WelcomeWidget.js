@@ -81,7 +81,7 @@ define([
         },
 
         _checkForCookie: function () {
-            let doNotShowAgain = d_cookie(this.cookieKey);
+            var doNotShowAgain = d_cookie(this.cookieKey);
             if (doNotShowAgain === "true") {
                 this.tool.set('active', false)
             } else {
