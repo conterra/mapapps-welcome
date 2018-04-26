@@ -1,6 +1,7 @@
 {
   "properties": {
-    "amdPackages": "apprt@^3.x"
+    "amdPackages": "apprt@^3.x",
+    "title": "Welcome Bundle Sample"
   },
   "load": {
     "bundleLocations": [
