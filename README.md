@@ -14,15 +14,12 @@ Installation Guide
 1. First, you need to add the bundle "dn_welcome" to your app.
 2. After that, you can customize the content of the welcome window.
 
-**Requirement: map.apps 3.9.1**
-
 #### Example:
 
 ```
 "bundles": {
     "dn_welcome": {
         "WelcomeWidgetFactory":{
-            "title": "Your title",
             "infoText": "Your text",
             "buttonText":"Your button text",
             "checkboxText": "Your checkbox text",
@@ -45,6 +42,7 @@ Installation Guide
                             "tablet_portrait"
                         ],
                         "window": {
+                            "title": "${welcome.title}",
                             "marginBox": {
                                 "w": your width,
                                 "h": your height
@@ -63,7 +61,6 @@ Installation Guide
 ###### Properties
  | Property                       | Type    | Possible Values               | Default            | Description                          |
  |--------------------------------|---------|-------------------------------|--------------------|--------------------------------------|
- | title                          | String  |                               |                    | Welcome window title                 |
  | infoText                       | String  |                               |                    | Welcome window info text             |
  | buttonText                     | String  |                               |                    | Welcome window button text           |
  | checkboxText                   | String  |                               |                    | Welcome window checkbox text         |
