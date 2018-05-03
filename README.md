@@ -1,9 +1,6 @@
 # Welcome
 The Welcome Bundle is a new Widget for displaying a Welcome Screen. You can either configure it as a disclaimer, with a "I agree"-checkbox, or as a general start screen with a "Do-Not-Show-Again"-checkbox.
 
-
-
-
 Sample App
 ------------------
 
