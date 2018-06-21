@@ -36,7 +36,7 @@ Installation Guide
                 "name": "seasons",
                 "widgets": [  
                     {
-                        "widgetRole": "welcomeInfo",
+                        "widgetRole": "welcomeWidget",
                             "sublayout": [
                             "desktop",
                             "tablet_landscape",
