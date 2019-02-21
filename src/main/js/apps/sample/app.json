@@ -58,7 +58,8 @@
           {
             "id": "topo",
             "title": "${map.basemaps.topo}",
-            "basemap": "topo"
+            "basemap": "Topo",
+            "selected": true
           }
         ],
         "view": {
