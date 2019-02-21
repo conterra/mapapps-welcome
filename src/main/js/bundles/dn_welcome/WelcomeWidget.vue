@@ -6,17 +6,17 @@
             </v-toolbar>
         </div>
         <div class="center">
-            <v-container grid-list-md>
-                <v-card-media v-if="imgUrl"
+            <v-container grid-list-md class="pa-1">
+                <v-img v-if="imgUrl"
                               v-bind:height="imgHeight"
                               v-bind:src="imgUrl">
-                </v-card-media>
+                </v-img>
                 <v-card-title v-html="infoText">
                 </v-card-title>
             </v-container>
         </div>
         <div class="bottom">
-            <v-container v-if="accept" grid-list-md text-xs-center>
+            <v-container v-if="accept" grid-list-md text-xs-center class="pa-1">
                 <v-checkbox v-if="accept"
                             v-bind:label="checkboxText"
                             v-model="checkBox"
@@ -31,7 +31,7 @@
                     {{buttonText}}
                 </v-btn>
             </v-container>
-            <v-container v-else grid-list-md text-xs-center>
+            <v-container v-else grid-list-md text-xs-center class="pa-1">
                 <v-btn v-on:click="$emit('close')"
                        ripple
                        color="primary">
