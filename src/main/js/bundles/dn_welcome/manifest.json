@@ -1,110 +1,110 @@
 {
-  "name": "dn_welcome",
-  "version": "1.1.4-SNAPSHOT",
-  "title": "${bundleName}",
-  "description": "${bundleDescription}",
-  "vendor": "con terra GmbH",
-  "productName": "devnet-mapapps-welcome",
-  "dependencies": {
-    "apprt-vue": "^4.2.0",
-    "apprt-binding": "^4.2.0",
-    "apprt-vuetify": "^4.2.0"
-  },
-  "Config-Bundle-Location": "/config",
-  "CSS-Themes-Extension": [
-    {
-      "name": "*",
-      "files": [
-        "./css/styles.css"
-      ]
-    }
-  ],
-  "layout-widgets": [
-    {
-      "widgetRole": "welcomeWidget",
-      "template": "seasons",
-      "sublayout": [
-        "desktop",
-        "tablet_landscape",
-        "tablet_portrait"
-      ],
-      "window": {
-        "autofocus": false,
-        "dockTool": "welcomeToggleTool",
-        "minimizeOnClose": true,
-        "resizable": true,
-        "modal": true,
-        "marginBox": {
-          "w": "60%",
-          "h": "60%"
-        },
-        "windowClass": "noTitleBarAndWindowTools welcome-window"
-      }
+    "name": "dn_welcome",
+    "version": "1.1.4-SNAPSHOT",
+    "title": "${bundleName}",
+    "description": "${bundleDescription}",
+    "vendor": "con terra GmbH",
+    "productName": "devnet-mapapps-welcome",
+    "dependencies": {
+        "apprt-vue": "^4.2.0",
+        "apprt-binding": "^4.2.0",
+        "apprt-vuetify": "^4.2.0"
     },
-    {
-      "widgetRole": "welcomeWidget",
-      "template": "seasons",
-      "sublayout": [
-        "mobile_landscape",
-        "mobile_portrait"
-      ],
-      "window": {
-        "autofocus": false,
-        "dockTool": "welcomeToggleTool",
-        "minimizeOnClose": true,
-        "resizable": false,
-        "modal": true,
-        "marginBox": {
-          "w": "100%",
-          "h": "100%",
-          "b": 40,
-          "l": 0
-        },
-        "windowClass": "mobileWindow noTitleBarAndWindowTools welcome-window"
-      }
-    }
-  ],
-  "components": [
-    {
-      "name": "WelcomeWidgetFactory",
-      "provides": "dijit.Widget",
-      "instanceFactory": true,
-      "properties": {
-        "widgetRole": "welcomeWidget",
-        "title": "${ui.title}",
-        "infoText": "${ui.text}",
-        "buttonText": "${ui.button}",
-        "checkboxText": "${ui.checkbox}",
-        "imgUrl": "",
-        "imgHeight": "200px",
-        "accept": true
-      },
-      "references": [
+    "Config-Bundle-Location": "/config",
+    "CSS-Themes-Extension": [
         {
-          "name": "_tool",
-          "providing": "ct.tools.Tool",
-          "filter": "(id=welcomeToggleTool)"
+            "name": "*",
+            "files": [
+                "./css/styles.css"
+            ]
         }
-      ]
-    },
-    {
-      "name": "WelcomeToggleTool",
-      "impl": "ct/tools/Tool",
-      "provides": [
-        "ct.tools.Tool"
-      ],
-      "propertiesConstructor": true,
-      "properties": {
-        "id": "welcomeToggleTool",
-        "title": "${tool.title}",
-        "tooltip": "${tool.tooltip}",
-        "toolRole": "toolset",
-        "iconClass": "icon-custom-info-imprint",
-        "togglable": true,
-        "rules": {
-          "noGroup": true
+    ],
+    "layout-widgets": [
+        {
+            "widgetRole": "welcomeWidget",
+            "template": "seasons",
+            "sublayout": [
+                "desktop",
+                "tablet_landscape",
+                "tablet_portrait"
+            ],
+            "window": {
+                "autofocus": false,
+                "dockTool": "welcomeToggleTool",
+                "minimizeOnClose": true,
+                "resizable": true,
+                "modal": true,
+                "marginBox": {
+                    "w": "60%",
+                    "h": "60%"
+                },
+                "windowClass": "noTitleBarAndWindowTools welcome-window"
+            }
+        },
+        {
+            "widgetRole": "welcomeWidget",
+            "template": "seasons",
+            "sublayout": [
+                "mobile_landscape",
+                "mobile_portrait"
+            ],
+            "window": {
+                "autofocus": false,
+                "dockTool": "welcomeToggleTool",
+                "minimizeOnClose": true,
+                "resizable": false,
+                "modal": true,
+                "marginBox": {
+                    "w": "100%",
+                    "h": "100%",
+                    "b": 40,
+                    "l": 0
+                },
+                "windowClass": "mobileWindow noTitleBarAndWindowTools welcome-window"
+            }
         }
-      }
-    }
-  ]
+    ],
+    "components": [
+        {
+            "name": "WelcomeWidgetFactory",
+            "provides": "dijit.Widget",
+            "instanceFactory": true,
+            "properties": {
+                "widgetRole": "welcomeWidget",
+                "title": "${ui.title}",
+                "infoText": "${ui.text}",
+                "buttonText": "${ui.button}",
+                "checkboxText": "${ui.checkbox}",
+                "imgUrl": "",
+                "imgHeight": "200px",
+                "accept": true
+            },
+            "references": [
+                {
+                    "name": "_tool",
+                    "providing": "ct.tools.Tool",
+                    "filter": "(id=welcomeToggleTool)"
+                }
+            ]
+        },
+        {
+            "name": "WelcomeToggleTool",
+            "impl": "ct/tools/Tool",
+            "provides": [
+                "ct.tools.Tool"
+            ],
+            "propertiesConstructor": true,
+            "properties": {
+                "id": "welcomeToggleTool",
+                "title": "${tool.title}",
+                "tooltip": "${tool.tooltip}",
+                "toolRole": "toolset",
+                "iconClass": "icon-custom-info-imprint",
+                "togglable": true,
+                "rules": {
+                    "noGroup": true
+                }
+            }
+        }
+    ]
 }

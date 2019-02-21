@@ -8,8 +8,8 @@
         <div class="center">
             <v-container grid-list-md class="pa-1">
                 <v-img v-if="imgUrl"
-                              v-bind:height="imgHeight"
-                              v-bind:src="imgUrl">
+                       v-bind:height="imgHeight"
+                       v-bind:src="imgUrl">
                 </v-img>
                 <v-card-title v-html="infoText">
                 </v-card-title>

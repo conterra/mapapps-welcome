@@ -1,126 +1,126 @@
 {
-  "properties": {
-    "title": "${title}"
-  },
-  "load": {
-    "bundleLocations": [
-      "localbundles",
-      "bundles"
-    ],
-    "allowedBundles": [
-      "system",
-      "banner",
-      "console",
-      "notifier",
-      "splashscreen",
-      "templatelayout",
-      "template-seasons",
-      "theme-everlasting",
-      "theme-winter",
-      "theme-spring",
-      "theme-summer",
-      "theme-autumn",
-      "map-init",
-      "toolset",
-      "dn_welcome"
-    ],
-    "require": [
-      "${app}/app"
-    ],
-    "i18n": [
-      "bundle"
-    ]
-  },
-  "bundles": {
-    "dn_welcome": {
-      "WelcomeWidgetFactory": {
-        "widgetRole": "welcomeWidget",
-        "title": "${welcome.title}",
-        "infoText": "${welcome.text}",
-        "buttonText": "${welcome.button}",
-        "checkboxText": "${welcome.checkbox}",
-        "imgUrl": "resource('${app}:images/Welcomepicture.JPG')",
-        "imgHeight": "300px",
-        "accept": true
-      }
+    "properties": {
+        "title": "${title}"
     },
-    "banner": {
-      "BannerWidget": {
-        "label": "Developer Network",
-        "image": "https://www.conterra.de/~/media/conterra/images/site_logos/conterra-logo.ashx",
-        "imagePosition": "above",
-        "link": "http://developernetwork.conterra.de"
-      }
-    },
-    "map-init": {
-      "Config": {
-        "basemaps": [
-          {
-            "id": "topo",
-            "title": "Topo",
-            "basemap": "topo",
-            "selected": true
-          }
+    "load": {
+        "bundleLocations": [
+            "localbundles",
+            "bundles"
         ],
-        "view": {
-          "viewmode": "2D",
-          "extent": {
-            "xmin": 753914,
-            "ymin": 6590000,
-            "xmax": 797273,
-            "ymax": 6635000,
-            "spatialReference": 3857
-          }
-        }
-      }
+        "allowedBundles": [
+            "system",
+            "banner",
+            "console",
+            "notifier",
+            "splashscreen",
+            "templatelayout",
+            "template-seasons",
+            "theme-everlasting",
+            "theme-winter",
+            "theme-spring",
+            "theme-summer",
+            "theme-autumn",
+            "map-init",
+            "toolset",
+            "dn_welcome"
+        ],
+        "require": [
+            "${app}/app"
+        ],
+        "i18n": [
+            "bundle"
+        ]
     },
-    "themes": {
-      "ThemeModel": {
-        "_selectedTheme": "everlasting"
-      }
-    },
-    "templates": {
-      "TemplateModel": {
-        "_templates": [
-          {
-            "name": "seasons",
-            "widgets": [
-              {
+    "bundles": {
+        "dn_welcome": {
+            "WelcomeWidgetFactory": {
                 "widgetRole": "welcomeWidget",
-                "sublayout": [
-                  "desktop",
-                  "tablet_landscape",
-                  "tablet_portrait"
+                "title": "${welcome.title}",
+                "infoText": "${welcome.text}",
+                "buttonText": "${welcome.button}",
+                "checkboxText": "${welcome.checkbox}",
+                "imgUrl": "resource('${app}:images/Welcomepicture.JPG')",
+                "imgHeight": "300px",
+                "accept": true
+            }
+        },
+        "banner": {
+            "BannerWidget": {
+                "label": "Developer Network",
+                "image": "https://www.conterra.de/~/media/conterra/images/site_logos/conterra-logo.ashx",
+                "imagePosition": "above",
+                "link": "http://developernetwork.conterra.de"
+            }
+        },
+        "map-init": {
+            "Config": {
+                "basemaps": [
+                    {
+                        "id": "topo",
+                        "title": "Topo",
+                        "basemap": "topo",
+                        "selected": true
+                    }
                 ],
-                "window": {
-                  "marginBox": {
-                    "w": "60%",
-                    "h": "60%"
-                  }
+                "view": {
+                    "viewmode": "2D",
+                    "extent": {
+                        "xmin": 753914,
+                        "ymin": 6590000,
+                        "xmax": 797273,
+                        "ymax": 6635000,
+                        "spatialReference": 3857
+                    }
                 }
-              }
-            ]
-          }
-        ]
-      }
-    },
-    "toolset": {
-      "ToolsetManager": {
-        "toolsets": [
-          {
-            "id": "mapview_tools",
-            "tools": [
-              "*"
-            ],
-            "registerWidget": {
-              "widgetRole": "mapview_tools"
-            },
-            "container": "ignore",
-            "windowType": "container",
-            "cssClass": "muted"
-          }
-        ]
-      }
+            }
+        },
+        "themes": {
+            "ThemeModel": {
+                "_selectedTheme": "everlasting"
+            }
+        },
+        "templates": {
+            "TemplateModel": {
+                "_templates": [
+                    {
+                        "name": "seasons",
+                        "widgets": [
+                            {
+                                "widgetRole": "welcomeWidget",
+                                "sublayout": [
+                                    "desktop",
+                                    "tablet_landscape",
+                                    "tablet_portrait"
+                                ],
+                                "window": {
+                                    "marginBox": {
+                                        "w": "60%",
+                                        "h": "60%"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "toolset": {
+            "ToolsetManager": {
+                "toolsets": [
+                    {
+                        "id": "mapview_tools",
+                        "tools": [
+                            "*"
+                        ],
+                        "registerWidget": {
+                            "widgetRole": "mapview_tools"
+                        },
+                        "container": "ignore",
+                        "windowType": "container",
+                        "cssClass": "muted"
+                    }
+                ]
+            }
+        }
     }
-  }
 }
