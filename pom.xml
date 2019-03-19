@@ -22,7 +22,6 @@
     <artifactId>mapapps-welcome</artifactId>
     <version>1.1.4-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <!-- DISABLE repositories and pluginRepositories if inside the con terra! -->
     <repositories>
         <repository>
             <id>52n-dependencies</id>
@@ -50,7 +49,6 @@
         </dependencies>
     </dependencyManagement>
     <dependencies>
-        <!-- used for test env in jetty -->
         <dependency>
             <groupId>de.conterra.jsregistry</groupId>
             <artifactId>ct-jsregistry-embedded</artifactId>
@@ -132,7 +130,6 @@
                     </configuration>
                 </plugin>
                 <plugin>
-                    <!-- we jar the ct/* js sources so that we have it present for dependency unpack goal in projects -->
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-jar-plugin</artifactId>
                     <version>3.0.2</version>
@@ -220,7 +217,6 @@
                 </plugin>
             </plugins>
         </pluginManagement>
-        <!-- set as source dir, so that you can edit it correctly in netbeans -->
         <sourceDirectory>src/main/js</sourceDirectory>
         <resources>
             <resource>
@@ -311,7 +307,6 @@
                             <stripVersion>true</stripVersion>
                             <artifactItems>
                                 <artifactItem>
-                                    <!-- unpack mapapps sources -->
                                     <groupId>de.conterra.mapapps</groupId>
                                     <artifactId>ct-mapapps-js-api</artifactId>
                                     <version>${mapapps.version}</version>
@@ -335,11 +330,9 @@
                 </executions>
             </plugin>
             <plugin>
-                <!-- JavaScript files must be encoded with UTF-8! -->
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
                 <configuration>
-                    <!-- JavaScript files must be encoded with UTF-8! -->
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
@@ -554,12 +547,10 @@
         <!-- dojo custom build parameters -->
         <root.build.outputPath>${project.build.directory}/webapp</root.build.outputPath>
         <js.build.outputPath>${root.build.outputPath}/js</js.build.outputPath>
-        <netbeans.hint.jdkPlatform>JDK_1.7</netbeans.hint.jdkPlatform>
 
         <!-- JS lib versions -->
         <mapapps.version>4.6.0</mapapps.version>
         <apprt.version>${mapapps.version}</apprt.version>
-
         <!-- java lib versions -->
         <ct.jsregistry.version>1.2.6</ct.jsregistry.version>
         <ct.jsrt-test.version>1.1.5</ct.jsrt-test.version>
