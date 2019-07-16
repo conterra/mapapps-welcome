@@ -75,7 +75,8 @@ class WelcomeWidgetFactory {
     }
 
     setCookie() {
-        d_cookie(this.cookieKey, true, {expires: 365});
+        let properties = this._properties;
+        d_cookie(this.cookieKey, true, {expires: properties.expirationTime});
     }
 
     deleteCookie() {

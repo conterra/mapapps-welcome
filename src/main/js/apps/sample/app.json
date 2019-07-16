@@ -41,7 +41,8 @@
                 "checkboxText": "${welcome.checkbox}",
                 "imgUrl": "resource('${app}:images/Welcomepicture.JPG')",
                 "imgHeight": "300px",
-                "accept": true
+                "accept": true,
+                "expirationTime": 7
             }
         },
         "banner": {

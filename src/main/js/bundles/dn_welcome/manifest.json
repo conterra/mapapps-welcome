@@ -77,7 +77,8 @@
                 "checkboxText": "${ui.checkbox}",
                 "imgUrl": "",
                 "imgHeight": "200px",
-                "accept": true
+                "accept": true,
+                "expirationTime": 365
             },
             "references": [
                 {

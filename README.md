@@ -26,7 +26,8 @@ Installation Guide
             "checkboxText": "Your checkbox text",
             "imgUrl": "Your Image URL",
             "imgHeight": "150px",
-            "accept": false, //if set to true the window will be transformed to a disclaimer window
+            "accept": false, // if set to true the window will be transformed to a disclaimer window,
+            "expirationTime": 7
         }
     },
     "templates": {
@@ -61,15 +62,16 @@ and add the following code:
 #### Configurable Components of dn_welcome:
  
 ###### Properties
- | Property                       | Type    | Possible Values               | Default            | Description                          |
- |--------------------------------|---------|-------------------------------|--------------------|--------------------------------------|
- | title                          | String  |                               |                    | Welcome window title                 |
- | infoText                       | String  |                               |                    | Welcome window info text             |
- | buttonText                     | String  |                               |                    | Welcome window button text           |
- | checkboxText                   | String  |                               |                    | Welcome window checkbox text         |
- | imgUrl                         | String  |                               |                    | Welcome window image URL             |
- | imgHeight                      | String  |                               |```150px```         | Welcome window image height          |
- | accept                         | Boolean |```true``` &#124; ```false```  |```true```          | Force user to accept                 |
+ | Property                       | Type    | Possible Values               | Default            | Description                           |
+ |--------------------------------|---------|-------------------------------|--------------------|---------------------------------------|
+ | title                          | String  |                               |                    | Welcome window title                  |
+ | infoText                       | String  |                               |                    | Welcome window info text              |
+ | buttonText                     | String  |                               |                    | Welcome window button text            |
+ | checkboxText                   | String  |                               |                    | Welcome window checkbox text          |
+ | imgUrl                         | String  |                               |                    | Welcome window image URL              |
+ | imgHeight                      | String  |                               |```150px```         | Welcome window image height           |
+ | accept                         | Boolean |```true``` &#124; ```false```  |```true```          | Force user to accept                  |
+ | expirationTime                 | Boolean |                               |```365```           | Expiration time of the cookie in days |
 
 #### Restrictions
 You have to enable cookies in your browser, if you want to set the information window to do-not-show-again.
