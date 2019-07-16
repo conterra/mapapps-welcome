@@ -37,7 +37,7 @@ define([
                 title: props.title,
                 imgHeight: props.imgHeight,
                 accept: props.accept,
-                expireTime: props.expireTime
+                expirationTime: props.expirationTime
             });
         }
 

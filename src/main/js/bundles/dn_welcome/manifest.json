@@ -55,7 +55,7 @@
         "imgUrl": "",
         "imgHeight": "200",
         "accept": false,
-        "expireTime": 365
+        "expirationTime": 365
       },
       "references": [
         {

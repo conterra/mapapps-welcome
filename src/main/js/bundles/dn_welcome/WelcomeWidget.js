@@ -81,7 +81,7 @@ define([
         },
 
         _setCookie: function () {
-            d_cookie(this.cookieKey, true, {expires: this.expireTime});
+            d_cookie(this.cookieKey, true, {expires: this.expirationTime});
         },
 
         _deleteCookie: function () {
