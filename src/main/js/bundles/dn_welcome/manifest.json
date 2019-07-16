@@ -54,7 +54,8 @@
         "checkboxText": "",
         "imgUrl": "",
         "imgHeight": "200",
-        "accept": false
+        "accept": false,
+        "expireTime": 365
       },
       "references": [
         {
