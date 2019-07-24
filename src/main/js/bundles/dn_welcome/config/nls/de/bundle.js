@@ -18,11 +18,14 @@ module.exports = {
     bundleDescription: "Konfigurationsbundle f\u00fcr das Welcome-Bundle",
     windowTitle: "Welcome Konfiguration",
     description: "Einstellungen f\u00fcr das Welcome-Bundle",
-    title: "Fenster Titel",
-    infoText: "Start Fenster text",
-    buttonText: "Text des Buttons",
-    checkboxText: "Text der Checkbox",
-    imgUrl: "Bild URL",
-    imgHeight: "Bild H\u00f6he",
-    enableAcceptance: "Die Checkbox soll angeglickt werden m\u00fcssen, um das Fenster schlie\u00dfen zu k\u00f6nnen."
+    dataForm: {
+        title: "Fenstertitel",
+        infoText: "Info-Text",
+        buttonText: "Text des Buttons",
+        checkboxText: "Text der Checkbox",
+        imgUrl: "Bild URL",
+        imgHeight: "Bild H\u00f6he",
+        enableAcceptance: "Die Checkbox soll angeglickt werden m\u00fcssen, um das Fenster schlie\u00dfen zu k\u00f6nnen",
+        expirationTime: "Ablaufzeit des Cookies in Tagen"
+    }
 };

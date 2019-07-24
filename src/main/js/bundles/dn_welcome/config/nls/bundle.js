@@ -19,13 +19,16 @@ module.exports = {
         bundleDescription: "Configuration Bundle for Welcome-Bundle",
         windowTitle: "Welcome Configuraion",
         description: "Settings for the Welcome bundle",
-        title: "Important Information",
-        infoText: "Welcome text:",
-        buttonText: "Text of the button",
-        checkboxText: "Text of the checkbox",
-        imgUrl: "image URL",
-        imgHeight: "image height",
-        enableAcceptance: "Enable checkbox as a must-check before closing information"
+        dataForm: {
+            title: "Window title",
+            infoText: "Info text",
+            buttonText: "Text of the button",
+            checkboxText: "Text of the checkbox",
+            imgUrl: "image URL",
+            imgHeight: "image height",
+            enableAcceptance: "Enable checkbox as a must-check before closing information",
+            expirationTime: "Expiration time of the cookie in days"
+        }
     },
     de: true
 };

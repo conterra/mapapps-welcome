@@ -1,9 +1,5 @@
 {
     "dataform-version": "1.0.0",
-    "size": {
-        "h": 300,
-        "w": 400
-    },
     "type": "gridpanel",
     "showLabels": true,
     "cols": 1,
@@ -11,46 +7,78 @@
         {
             "type": "textbox",
             "field": "title",
-            "label": "${title}",
-            "tooltip": "${title}",
-            "required": true
+            "label": "${dataForm.title}",
+            "tooltip": "${dataForm.title}",
+            "required": true,
+            "size": {
+                "w": 300
+            }
         },
         {
-            "type": "textbox",
+            "type": "textarea",
             "field": "infoText",
-            "label": "${infoText}",
-            "tooltip": "${infoText}",
-            "required": true
+            "label": "${dataForm.infoText}",
+            "tooltip": "${dataForm.infoText}",
+            "required": true,
+            "size": {
+                "w": 300,
+                "h": 100
+            }
         },
         {
             "type": "textbox",
             "field": "buttonText",
-            "label": "${buttonText}",
-            "tooltip": "${buttonText}"
+            "label": "${dataForm.buttonText}",
+            "tooltip": "${dataForm.buttonText}",
+            "size": {
+                "w": 300
+            }
         },
         {
             "type": "textbox",
             "field": "checkboxText",
-            "label": "${checkboxText}",
-            "tooltip": "${checkboxText}"
+            "label": "${dataForm.checkboxText}",
+            "tooltip": "${dataForm.checkboxText}",
+            "size": {
+                "w": 300
+            }
         },
         {
             "type": "textbox",
             "field": "imgUrl",
-            "label": "${imgUrl}",
-            "tooltip": "${imgUrl}"
+            "label": "${dataForm.imgUrl}",
+            "tooltip": "${dataForm.imgUrl}",
+            "size": {
+                "w": 300
+            }
         },
         {
             "type": "textbox",
             "field": "imgHeight",
-            "label": "${imgHeight}",
-            "tooltip": "${imgHeight}"
+            "label": "${dataForm.imgHeight}",
+            "tooltip": "${dataForm.imgHeight}",
+            "size": {
+                "w": 300
+            }
         },
         {
             "type": "checkbox",
             "field": "accept",
-            "label": "${enableAcceptance}",
-            "tooltip": "${enableAcceptance}"
+            "label": "${dataForm.enableAcceptance}",
+            "tooltip": "${dataForm.enableAcceptance}",
+            "size": {
+                "w": 300
+            }
+        },
+        {
+            "type": "numberspinner",
+            "field": "expirationTime",
+            "label": "${dataForm.expirationTime}",
+            "tooltip": "${dataForm.expirationTime}",
+            "min": 1,
+            "size": {
+                "w": 300
+            }
         }
     ]
 }

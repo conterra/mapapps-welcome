@@ -30,6 +30,7 @@
             ],
             "propertiesConstructor": true,
             "properties": {
+                "parentNodeId" : "appBuilderDesignNode",
                 "menuNode": {
                     "priority": 0,
                     "title": "${windowTitle}",
@@ -52,16 +53,16 @@
                 "pid": "dn_welcome-WelcomeWidgetFactory",
                 "id": "welcomeBuilderWidget",
                 "defaultProperties": {
-                    "title": "Wichtige Informationen",
+                    "title": "Welcome",
                     "infoText": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-                    "buttonText": "Verstanden",
-                    "checkboxText": "Ich akzeptiere",
+                    "buttonText": "I got it",
+                    "checkboxText": "I accept",
                     "imgUrl": "",
-                    "imgHeight": "150px",
-                    "accept": true
-                    //if set to true the window will be transformed to a disclaimer window
+                    "imgHeight": "200px",
+                    "accept": true,
+                    "expirationTime": 365
                 },
-                "description": "Settings for Welcome bundle"
+                "description": "${description}"
             },
             "references": [
                 {
