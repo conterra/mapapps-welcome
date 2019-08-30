@@ -79,10 +79,7 @@
     </div>
 </template>
 <script>
-    import Bindable from "apprt-vue/mixins/Bindable";
-
     export default {
-        mixins: [Bindable],
         data: function () {
             return {
                 checkBox: false,

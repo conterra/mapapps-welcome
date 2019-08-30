@@ -16,7 +16,6 @@
 import WelcomeWidget from "./WelcomeWidget.vue";
 import Vue from "apprt-vue/Vue";
 import VueDijit from "apprt-vue/VueDijit";
-import Binding from "apprt-binding/Binding";
 import d_cookie from "dojo/cookie";
 
 class WelcomeWidgetFactory {
@@ -28,7 +27,7 @@ class WelcomeWidgetFactory {
     }
 
     _initComponent() {
-        let properties = this._properties;
+        const properties = this._properties;
         const vm = this.welcomeWidget = new Vue(WelcomeWidget);
         vm.checkBox = false;
         vm.accept = properties.accept;
@@ -53,12 +52,6 @@ class WelcomeWidgetFactory {
                 this._tool.set("active", false);
             }
         });
-
-        Binding
-            .create()
-            .bindTo(vm)
-            .syncAll("checkBox")
-            .enable();
     }
 
     createInstance() {
@@ -66,7 +59,7 @@ class WelcomeWidgetFactory {
     }
 
     _checkForCookie() {
-        let doNotShowAgain = d_cookie(this.cookieKey);
+        const doNotShowAgain = d_cookie(this.cookieKey);
         if (doNotShowAgain === "true" && !this._properties.accept) {
             this.welcomeWidget.checkBox = true;
         } else {
@@ -75,7 +68,7 @@ class WelcomeWidgetFactory {
     }
 
     setCookie() {
-        let properties = this._properties;
+        const properties = this._properties;
         d_cookie(this.cookieKey, true, {expires: properties.expirationTime});
     }
 
