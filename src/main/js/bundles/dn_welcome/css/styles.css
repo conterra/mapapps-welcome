@@ -6,9 +6,6 @@
     overflow: hidden;
 }
 
-.ctAppRoot .welcome {
-}
-
 .ctAppRoot .welcome .center {
     overflow: auto;
     flex: 1 1 auto;
