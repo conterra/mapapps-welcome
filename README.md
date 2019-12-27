@@ -1,88 +1,25 @@
-# Welcome Widget
+# Welcome Bundle
 The Welcome Bundle is a new Widget for displaying a Welcome Screen. You can either configure it as a disclaimer, with a "I agree"-checkbox, or as a general start screen with a "Do-Not-Show-Again"-checkbox.
 
-Sample App
-------------------
+## Sample App
 https://demos.conterra.de/mapapps/resources/apps/downloads_welcome/index.html
 
 ![Screenshot App](https://github.com/conterra/mapapps-welcome/blob/master/screenshot.JPG)
 
-Installation Guide
-------------------
+## Installation Guide
 **Requirement: map.apps 4.2.0**
 
 1. First, you need to add the bundle "dn_welcome" to your app.
 2. After that, you can customize the content of the welcome window.
 
-#### Example:
+[dn_welcome Documentation](https://github.com/conterra/mapapps-welcome/tree/master/src/main/js/bundles/dn_welcome)
 
-```
-"bundles": {
-    "dn_welcome": {
-        "WelcomeWidgetFactory":{
-            "title": "Your title",
-            "infoText": "Your text",
-            "buttonText":"Your button text",
-            "checkboxText": "Your checkbox text",
-            "imgUrl": "Your Image URL",
-            "imgHeight": "150px",
-            "accept": false, // if set to true the window will be transformed to a disclaimer window,
-            "expirationTime": 7
-        }
-    },
-    "templates": {
-        "TemplateModel": {
-        "_templates": [
-            {
-                "name": "seasons",
-                "widgets": [  
-                    {
-                        "widgetRole": "welcomeWidget",
-                            "sublayout": [
-                            "desktop",
-                            "tablet_landscape",
-                            "tablet_portrait"
-                        ],
-                        "window": {
-                            "marginBox": {
-                                "w": your width,
-                                "h": your height
-                            }
-                        }
-                    }
-                ]
-            }
-        ]
-    }
-}
-```
-     
-and add the following code:
-
-#### Configurable Components of dn_welcome:
- 
-###### Properties
- | Property                       | Type    | Possible Values               | Default            | Description                           |
- |--------------------------------|---------|-------------------------------|--------------------|---------------------------------------|
- | title                          | String  |                               |                    | Welcome window title                  |
- | infoText                       | String  |                               |                    | Welcome window info text              |
- | buttonText                     | String  |                               |                    | Welcome window button text            |
- | checkboxText                   | String  |                               |                    | Welcome window checkbox text          |
- | imgUrl                         | String  |                               |                    | Welcome window image URL              |
- | imgHeight                      | String  |                               |```150px```         | Welcome window image height           |
- | accept                         | Boolean |```true``` &#124; ```false```  |```true```          | Force user to accept                  |
- | expirationTime                 | Boolean |                               |```365```           | Expiration time of the cookie in days |
-
-#### Restrictions
-You have to enable cookies in your browser, if you want to set the information window to do-not-show-again.
-
-Development Guide
-------------------
+## Development Guide
 ### Define the mapapps remote base
 Before you can run the project you have to define the mapapps.remote.base property in the pom.xml-file:
 `<mapapps.remote.base>http://%YOURSERVER%/ct-mapapps-webapp-%VERSION%</mapapps.remote.base>`
 
-##### Other methods to to define the mapapps.remote.base property.
+### Other methods to to define the mapapps.remote.base property.
 1. Goal parameters
 `mvn install -Dmapapps.remote.base=http://%YOURSERVER%/ct-mapapps-webapp-%VERSION%`
 
