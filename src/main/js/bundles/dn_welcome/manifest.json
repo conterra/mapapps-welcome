@@ -22,7 +22,6 @@
     "layout-widgets": [
         {
             "widgetRole": "welcomeWidget",
-            "template": "seasons",
             "sublayout": [
                 "desktop",
                 "tablet_landscape",
@@ -43,7 +42,6 @@
         },
         {
             "widgetRole": "welcomeWidget",
-            "template": "seasons",
             "sublayout": [
                 "mobile_landscape",
                 "mobile_portrait"
