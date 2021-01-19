@@ -43,8 +43,8 @@
                 class="pa-1">
                 <v-checkbox
                     v-if="accept"
-                    :label="checkboxText"
                     v-model="checkBox"
+                    :label="checkboxText"
                     class="pa-2"
                     color="primary"
                     hide-details/>
@@ -69,8 +69,8 @@
                 </v-btn>
                 <v-checkbox
                     v-if="!accept"
-                    :label="checkboxText"
                     v-model="checkBox"
+                    :label="checkboxText"
                     class="pa-2"
                     color="primary"
                     hide-details/>
