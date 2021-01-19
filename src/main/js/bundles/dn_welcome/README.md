@@ -21,21 +21,23 @@ The Welcome Bundle is a new Widget for displaying a Welcome Screen. You can eith
         "imgUrl": "Your Image URL",
         "imgHeight": "150px",
         "accept": false,
-        "expirationTime": 7
+        "expirationTime": 7,
+        "cookieName": "dn_welcome_hide"
     }
 }
 ```
 
-| Property                       | Type    | Possible Values               | Default            | Description                                                                                 |
-|--------------------------------|---------|-------------------------------|--------------------|---------------------------------------------------------------------------------------------|
-| title                          | String  |                               |                    | Welcome window title.                                                                       |
-| infoText                       | String  |                               |                    | Welcome window info text.                                                                   |
-| buttonText                     | String  |                               |                    | Welcome window button text.                                                                 |
-| checkboxText                   | String  |                               |                    | Welcome window checkbox text.                                                               |
-| imgUrl                         | String  |                               |                    | Welcome window image URL.                                                                   |
-| imgHeight                      | String  |                               | ```150px```        | Welcome window image height.                                                                |
-| accept                         | Boolean | ```true``` &#124; ```false``` | ```true```         | Force user to accept. If set to true the window will be transformed to a disclaimer window. |
-| expirationTime                 | Boolean |                               | ```365```          | Expiration time of the cookie in days.                                                      |
+| Property                       | Type    | Possible Values               | Default               | Description                                                                                 |
+|--------------------------------|---------|-------------------------------|-----------------------|---------------------------------------------------------------------------------------------|
+| title                          | String  |                               |                       | Welcome window title.                                                                       |
+| infoText                       | String  |                               |                       | Welcome window info text.                                                                   |
+| buttonText                     | String  |                               |                       | Welcome window button text.                                                                 |
+| checkboxText                   | String  |                               |                       | Welcome window checkbox text.                                                               |
+| imgUrl                         | String  |                               |                       | Welcome window image URL.                                                                   |
+| imgHeight                      | String  |                               | ```150px```           | Welcome window image height.                                                                |
+| accept                         | Boolean | ```true``` &#124; ```false``` | ```true```            | Force user to accept. If set to true the window will be transformed to a disclaimer window. |
+| expirationTime                 | Boolean |                               | ```365```             | Expiration time of the cookie in days.                                                      |
+| cookieName                     | String  |                               | ```dn_welcome_hide``` | Name of the cookie. Changing the name will cause the cookie to be displayed again.          |
 
 ### template configuration
 ```json

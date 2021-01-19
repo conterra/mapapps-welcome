@@ -18,10 +18,9 @@ import Vue from "apprt-vue/Vue";
 import VueDijit from "apprt-vue/VueDijit";
 import d_cookie from "dojo/cookie";
 
-class WelcomeWidgetFactory {
+export default class WelcomeWidgetFactory {
 
     activate() {
-        this.cookieKey = "doNotShowAgain";
         this._initComponent();
         this._checkForCookie();
     }
@@ -59,7 +58,8 @@ class WelcomeWidgetFactory {
     }
 
     _checkForCookie() {
-        const doNotShowAgain = d_cookie(this.cookieKey);
+        const properties = this._properties;
+        const doNotShowAgain = d_cookie(properties.cookieName);
         if (doNotShowAgain === "true" && !this._properties.accept) {
             this.welcomeWidget.checkBox = true;
         } else {
@@ -69,13 +69,12 @@ class WelcomeWidgetFactory {
 
     setCookie() {
         const properties = this._properties;
-        d_cookie(this.cookieKey, true, {expires: properties.expirationTime});
+        d_cookie(properties.cookieName, true, {expires: properties.expirationTime});
     }
 
     deleteCookie() {
-        d_cookie(this.cookieKey, null, {expires: -1});
+        const properties = this._properties;
+        d_cookie(properties.cookieName, null, {expires: -1});
     }
 
 }
-
-module.exports = WelcomeWidgetFactory;

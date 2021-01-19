@@ -76,7 +76,8 @@
                 "imgUrl": "",
                 "imgHeight": "200px",
                 "accept": true,
-                "expirationTime": 365
+                "expirationTime": 365,
+                "cookieName": "dn_welcome_hide"
             },
             "references": [
                 {
