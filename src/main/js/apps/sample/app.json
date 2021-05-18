@@ -34,7 +34,6 @@
     "bundles": {
         "dn_welcome": {
             "WelcomeWidgetFactory": {
-                "widgetRole": "welcomeWidget",
                 "title": "${welcome.title}",
                 "infoText": "${welcome.text}",
                 "buttonText": "${welcome.button}",
