@@ -59,7 +59,7 @@
                     {
                         "id": "topo",
                         "title": "Topo",
-                        "basemap": "topo",
+                        "basemap": "topo-vector",
                         "selected": true
                     }
                 ],
