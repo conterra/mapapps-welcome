@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-.ctAppRoot .welcomeWidget .vue-base,
-.ctAppRoot .welcomeWidget .layout {
+.ctAppRoot .ctWindow.welcomeWidget .vue-base,
+.ctAppRoot .ctWindow.welcomeWidget .layout {
     height: 100%;
 }
