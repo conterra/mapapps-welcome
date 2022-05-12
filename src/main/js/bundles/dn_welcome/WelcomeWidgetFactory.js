@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 import WelcomeWidget from "./WelcomeWidget.vue";
 import Vue from "apprt-vue/Vue";
 import VueDijit from "apprt-vue/VueDijit";
@@ -76,5 +77,4 @@ export default class WelcomeWidgetFactory {
         const properties = this._properties;
         d_cookie(properties.cookieName, null, {expires: -1});
     }
-
 }

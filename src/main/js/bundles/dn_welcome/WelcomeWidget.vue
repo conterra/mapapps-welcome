@@ -15,24 +15,28 @@
     limitations under the License.
 
 -->
+
 <template>
     <div class="welcome">
         <div class="top">
             <v-toolbar
                 class="primary title"
-                dense>
+                dense
+            >
                 <v-toolbar-title>{{ title }}</v-toolbar-title>
             </v-toolbar>
         </div>
         <div class="center">
             <v-container
                 grid-list-md
-                class="pa-1">
+                class="pa-1"
+            >
                 <v-img
                     v-if="imgUrl"
                     :height="imgHeight"
-                    :src="imgUrl"/>
-                <v-card-title v-html="infoText"/>
+                    :src="imgUrl"
+                />
+                <v-card-title>{{ infoText }}</v-card-title>
             </v-container>
         </div>
         <div class="bottom">
@@ -40,19 +44,22 @@
                 v-if="accept"
                 grid-list-md
                 text-xs-center
-                class="pa-1">
+                class="pa-1"
+            >
                 <v-checkbox
                     v-if="accept"
                     v-model="checkBox"
                     :label="checkboxText"
                     class="pa-2"
                     color="primary"
-                    hide-details/>
+                    hide-details
+                />
                 <v-btn
                     :disabled="!checkBox"
                     ripple
                     color="primary"
-                    @click="$emit('close')">
+                    @click="$emit('close')"
+                >
                     {{ buttonText }}
                 </v-btn>
             </v-container>
@@ -60,11 +67,13 @@
                 v-else
                 grid-list-md
                 text-xs-center
-                class="pa-1">
+                class="pa-1"
+            >
                 <v-btn
                     ripple
                     color="primary"
-                    @click="$emit('close')">
+                    @click="$emit('close')"
+                >
                     {{ buttonText }}
                 </v-btn>
                 <v-checkbox
@@ -73,12 +82,14 @@
                     :label="checkboxText"
                     class="pa-2"
                     color="primary"
-                    hide-details/>
+                    hide-details
+                />
             </v-container>
         </div>
     </div>
 </template>
 <script>
+
     export default {
         data: function () {
             return {

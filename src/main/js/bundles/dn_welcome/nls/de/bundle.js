@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 module.exports = {
     bundleName: "Welcome",
     bundleDescription: "Das Welcome Bundle ist ein neues Widget mit dem man ein Startfenster konfigurieren kann.",

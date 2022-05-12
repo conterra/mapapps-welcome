@@ -10,23 +10,17 @@
         "apprt-binding": "^4.2.0",
         "apprt-vuetify": "^4.2.0"
     },
-    "Config-Bundle-Location": "/config",
+    "configBundleLocation": "/config",
     "CSS-Themes-Extension": [
         {
             "name": "*",
-            "files": [
-                "./css/styles.css"
-            ]
+            "files": ["./css/styles.css"]
         }
     ],
     "layout-widgets": [
         {
             "widgetRole": "welcomeWidget",
-            "sublayout": [
-                "desktop",
-                "tablet_landscape",
-                "tablet_portrait"
-            ],
+            "sublayout": ["desktop", "tablet_landscape", "tablet_portrait"],
             "window": {
                 "autofocus": false,
                 "dockTool": "welcomeToggleTool",
@@ -42,10 +36,7 @@
         },
         {
             "widgetRole": "welcomeWidget",
-            "sublayout": [
-                "mobile_landscape",
-                "mobile_portrait"
-            ],
+            "sublayout": ["mobile_landscape", "mobile_portrait"],
             "window": {
                 "autofocus": false,
                 "dockTool": "welcomeToggleTool",
@@ -90,9 +81,7 @@
         {
             "name": "WelcomeToggleTool",
             "impl": "ct/tools/Tool",
-            "provides": [
-                "ct.tools.Tool"
-            ],
+            "provides": ["ct.tools.Tool"],
             "propertiesConstructor": true,
             "properties": {
                 "id": "welcomeToggleTool",
