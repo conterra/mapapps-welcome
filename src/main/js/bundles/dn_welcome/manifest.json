@@ -28,10 +28,10 @@
                 "resizable": true,
                 "modal": true,
                 "marginBox": {
-                    "w": "60%",
+                    "w": "40%",
                     "h": "60%"
                 },
-                "windowClass": "noTitleBarAndWindowTools welcome-window"
+                "windowClass": "noPadding noTitleBarAndWindowTools"
             }
         },
         {
@@ -49,7 +49,7 @@
                     "b": 40,
                     "l": 0
                 },
-                "windowClass": "mobileWindow noTitleBarAndWindowTools welcome-window"
+                "windowClass": "noPadding mobileWindow noTitleBarAndWindowTools"
             }
         }
     ],
