@@ -38,7 +38,7 @@
                 "infoText": "${welcome.text}",
                 "buttonText": "${welcome.button}",
                 "checkboxText": "${welcome.checkbox}",
-                "imgUrl": "resource('${app}:images/Welcomepicture.JPG')",
+                "imgUrl": "resource('${app}:images/welcome.jpg')",
                 "imgHeight": "300px",
                 "accept": true,
                 "expirationTime": 7
@@ -77,7 +77,7 @@
         },
         "themes": {
             "ThemeModel": {
-                "_selectedTheme": "everlasting"
+                "_selectedTheme": "autumn"
             }
         },
         "templates": {
