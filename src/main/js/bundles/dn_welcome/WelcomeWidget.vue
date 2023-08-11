@@ -30,7 +30,7 @@
                     <h3 class="headline mb-0">
                         {{ title }}
                     </h3>
-                    <div> {{ infoText }} </div>
+                    <div v-html="infoText" />
                 </div>
             </v-card-title>
 

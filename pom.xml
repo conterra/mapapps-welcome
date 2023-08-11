@@ -87,6 +87,12 @@
             <scope>test</scope>
         </dependency>
 
+          <dependency>
+            <groupId>de.conterra.devnet</groupId>
+            <artifactId>mapapps-arcgis-html-sanitizer</artifactId>
+            <version>3.0.1</version>
+        </dependency>
+
     </dependencies>
     <build>
         <pluginManagement>

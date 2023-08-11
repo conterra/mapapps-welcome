@@ -18,6 +18,7 @@ import WelcomeWidget from "./WelcomeWidget.vue";
 import Vue from "apprt-vue/Vue";
 import VueDijit from "apprt-vue/VueDijit";
 import d_cookie from "dojo/cookie";
+import Sanitizer from "arcgishtmlsanitizer";
 
 export default class WelcomeWidgetFactory {
 
@@ -32,11 +33,12 @@ export default class WelcomeWidgetFactory {
         vm.checkBox = false;
         vm.accept = properties.accept;
         vm.title = properties.title;
-        vm.infoText = properties.infoText;
         vm.buttonText = properties.buttonText;
         vm.checkboxText = properties.checkboxText;
         vm.imgUrl = properties.imgUrl;
         vm.imgHeight = properties.imgHeight;
+
+        vm.infoText = this.sanitizeInfoText(properties.infoText);
 
         vm.$on('close', () => {
             if (vm.accept) {
@@ -76,5 +78,10 @@ export default class WelcomeWidgetFactory {
     deleteCookie() {
         const properties = this._properties;
         d_cookie(properties.cookieName, null, {expires: -1});
+    }
+
+    sanitizeInfoText(infotext){
+        const sanitizer = new Sanitizer();
+        return sanitizer.sanitize(infotext);
     }
 }
