@@ -3,6 +3,7 @@
     "version": "2.0.0-SNAPSHOT",
     "title": "${bundleName}",
     "description": "${bundleDescription}",
+    "i18n": ["bundle"],
     "vendor": "con terra GmbH",
     "productName": "devnet-mapapps-welcome",
     "dependencies": {
