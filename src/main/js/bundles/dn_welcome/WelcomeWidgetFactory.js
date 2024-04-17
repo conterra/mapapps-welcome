@@ -16,14 +16,13 @@
 import WelcomeWidget from "./WelcomeWidget.vue";
 import Vue from "apprt-vue/Vue";
 import VueDijit from "apprt-vue/VueDijit";
-import d_cookie from "dojo/cookie";
 import Sanitizer from "arcgishtmlsanitizer";
 
 export default class WelcomeWidgetFactory {
 
     activate() {
         this._initComponent();
-        this._checkForCookie();
+        this._applySavedDoNotShowAgainState();
     }
 
     _initComponent() {
@@ -46,9 +45,9 @@ export default class WelcomeWidgetFactory {
                 }
             } else {
                 if (vm.checkBox) {
-                    this.setCookie();
+                    localStorage.setItem("doNotShowAgain", "1");
                 } else {
-                    this.deleteCookie();
+                    localStorage.removeItem("doNotShowAgain");
                 }
                 this._tool.set("active", false);
             }
@@ -59,28 +58,16 @@ export default class WelcomeWidgetFactory {
         return VueDijit(this.welcomeWidget);
     }
 
-    _checkForCookie() {
-        const properties = this._properties;
-        const doNotShowAgain = d_cookie(properties.cookieName);
-        if (doNotShowAgain === "true" && !this._properties.accept) {
+    _applySavedDoNotShowAgainState() {
+        const doNotShowAgain = localStorage.getItem("doNotShowAgain");
+        if (doNotShowAgain === "1" && !this._properties.accept) {
             this.welcomeWidget.checkBox = true;
         } else {
             this._tool.set("active", true);
         }
     }
 
-    setCookie() {
-        const properties = this._properties;
-        d_cookie(properties.cookieName, true, {expires: properties.expirationTime});
-    }
-
-    deleteCookie() {
-        const properties = this._properties;
-        d_cookie(properties.cookieName, null, {expires: -1});
-    }
-
     sanitizeInfoText(infotext){
-        const sanitizer = new Sanitizer();
-        return sanitizer.sanitize(infotext);
+        return new Sanitizer().sanitize(infotext);
     }
 }
