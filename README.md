@@ -1,28 +1,29 @@
-# Welcome Bundle
-The Welcome Bundle is a new Widget for displaying a Welcome Screen. You can either configure it as a disclaimer, with a "I agree"-checkbox, or as a general start screen with a "Do-Not-Show-Again"-checkbox.
+# Welcome bundle
+The Welcome Bundle is a widget for displaying a welcome screen. You can either configure it as a disclaimer, with a "I agree"-checkbox, or as a general start screen with a "Do-Not-Show-Again"-checkbox.
 
-## Sample App
+## Sample app
 https://demos.conterra.de/mapapps/resources/apps/downloads_welcome/index.html
 
 ![Screenshot App](https://github.com/conterra/mapapps-welcome/blob/master/screenshot.JPG)
 
-## Installation Guide
-**Requirement: map.apps 4.2.0**
+## Installation guide
+**Requirement: map.apps 4.12.0**
 
-1. First, you need to add the bundle "dn_welcome" to your app.
-2. After that, you can customize the content of the welcome window.
+1. Add the bundle `dn_welcome` to your app.
+2. Customize the content of the welcome window as described in the [Documentation](https://github.com/conterra/mapapps-welcome/tree/master/src/main/js/bundles/dn_welcome) of the `dn_welcome` bundle.
 
-[dn_welcome Documentation](https://github.com/conterra/mapapps-welcome/tree/master/src/main/js/bundles/dn_welcome)
 
-## Development Guide
-### Define the mapapps remote base
-Before you can run the project you have to define the mapapps.remote.base property in the pom.xml-file:
-`<mapapps.remote.base>http://%YOURSERVER%/ct-mapapps-webapp-%VERSION%</mapapps.remote.base>`
 
-### Other methods to to define the mapapps.remote.base property.
-1. Goal parameters
-`mvn install -Dmapapps.remote.base=http://%YOURSERVER%/ct-mapapps-webapp-%VERSION%`
+## Development guide
+Run the following commands from the project root directory to start a local development server:
 
-2. Build properties
-Change the mapapps.remote.base in the build.properties file and run:
-`mvn install -Denv=dev -Dlocal.configfile=%ABSOLUTEPATHTOPROJECTROOT%/build.properties`
+```bash
+# install all required node modules
+$ mvn initialize
+
+# start dev server
+$ mvn compile -Denv=dev -Pinclude-mapapps-deps
+
+# run unit tests
+$ mvn test -P run-js-tests,include-mapapps-deps
+```
