@@ -67,7 +67,7 @@ export default class WelcomeWidgetFactory {
 
     #applySavedDoNotShowWindowState(): void {
         const doNotShowAgain = localStorage.getItem(this.#doNotShowStorageKey);
-        if (!doNotShowAgain) {
+        if (doNotShowAgain !== "1") {
             this.#windowToggleTool.set("active", true);
         }
     }
