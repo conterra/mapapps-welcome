@@ -32,30 +32,33 @@
                     <div v-html="infoText" />
                 </div>
             </v-card-title>
-
             <v-card-actions>
                 <v-container
-                    grid-list-md
-                    text-xs-center
-                    class="pa-1"
+                    pa-2
+                    fluid
                 >
-                    <v-checkbox
-                        v-if="showCheckbox"
-                        v-model="checkboxChecked"
-                        :label="checkboxText"
-                        class="pa-2"
-                        color="primary"
-                        hide-details
-                    />
-                    <v-btn
-                        v-if="showButton"
-                        :disabled="buttonDependsOnCheckbox && !checkboxChecked"
-                        ripple
-                        color="primary"
-                        @click="$emit('close')"
-                    >
-                        {{ buttonText }}
-                    </v-btn>
+                    <v-layout>
+                        <v-checkbox
+                            v-if="showCheckbox"
+                            v-model="checkboxChecked"
+                            right
+                            :label="checkboxText"
+                            color="primary"
+                            hide-details
+                        />
+                    </v-layout>
+                    <v-layout justify-end>
+                        <v-btn
+                            v-if="showButton"
+                            large
+                            :disabled="buttonDependsOnCheckbox && !checkboxChecked"
+                            ripple
+                            color="primary"
+                            @click="$emit('close')"
+                        >
+                            {{ buttonText }}
+                        </v-btn>
+                    </v-layout>
                 </v-container>
             </v-card-actions>
         </v-card>

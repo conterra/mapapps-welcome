@@ -41,7 +41,7 @@
                 "checkboxChecked": true,
                 "checkboxText": "${welcome.checkbox}",
                 "showImage": true,
-                "imageHeight": 300,
+                "imageHeight": "300px",
                 "imageUrl": "resource('${app}:images/welcome.jpg')",
                 "infoText": "${welcome.text}",
                 "title": "${welcome.title}"

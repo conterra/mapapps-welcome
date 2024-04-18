@@ -29,8 +29,8 @@
                 "resizable": true,
                 "modal": true,
                 "marginBox": {
-                    "w": "40%",
-                    "h": "60%"
+                    "w": 600,
+                    "h": 580
                 },
                 "windowClass": "noPadding noTitleBarAndWindowTools"
             }
@@ -67,7 +67,7 @@
                 "checkboxChecked": true,
                 "checkboxText": "I agree",
                 "showImage": true,
-                "imageHeight": 300,
+                "imageHeight": "300px",
                 "imageUrl": "",
                 "infoText": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
                 "title": "Willkommen"
