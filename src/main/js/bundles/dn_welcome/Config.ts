@@ -10,7 +10,7 @@ export default class Config {
     checkboxText: string = "";
     checkboxChecked: boolean = false;
     showImage: boolean = true;
-    imageHeight: number = 200;
+    imageHeight: string = "200px";
     imageUrl: string = "";
     infoText: string = "";
     title: string = "Welcome";

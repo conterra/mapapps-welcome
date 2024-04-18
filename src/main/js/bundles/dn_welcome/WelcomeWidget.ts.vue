@@ -20,7 +20,7 @@
         <v-card>
             <v-img
                 v-if="showImage"
-                :height="imageHeight + 'px'"
+                :height="imageHeight"
                 :src="imageUrl"
             />
 
@@ -76,7 +76,7 @@
                 checkboxText: "",
                 showImage: true,
                 imageUrl: "",
-                imageHeight: 150
+                imageHeight: "200px"
             };
         }
     };
