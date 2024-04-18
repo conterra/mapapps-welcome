@@ -18,9 +18,9 @@ module.exports = {
         title: "Welcome Bundle Sample",
         welcome: {
             title: "Welcome",
-            text: "The Welcome Bundle allows you to include a welcome window that opens to launch the app. Two variants are available for each configuration: for displaying a disclaimer text that has to be explicitly confirmed by the user and for displaying information.",
-            checkbox: "I accept",
-            button: "Understood"
+            text: "The <i>Welcome Bundle</i> allows you to include a welcome window that opens when the app starts. This window can be utilized for displaying a disclaimer text that has to be explicitly confirmed by the user or for relevant introductory information.",
+            checkbox: "I accept the conditions",
+            button: "Continue"
         }
     },
     "de": true
