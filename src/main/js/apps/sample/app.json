@@ -33,15 +33,18 @@
     },
     "bundles": {
         "dn_welcome": {
-            "WelcomeWidgetFactory": {
-                "title": "${welcome.title}",
-                "infoText": "${welcome.text}",
+            "Config": {
+                "showButton": true,
                 "buttonText": "${welcome.button}",
+                "buttonDependsOnCheckbox": true,
+                "showCheckbox": true,
+                "checkboxChecked": true,
                 "checkboxText": "${welcome.checkbox}",
-                "imgUrl": "resource('${app}:images/welcome.jpg')",
-                "imgHeight": "300px",
-                "accept": true,
-                "expirationTime": 7
+                "showImage": true,
+                "imageHeight": 300,
+                "imageUrl": "resource('${app}:images/welcome.jpg')",
+                "infoText": "${welcome.text}",
+                "title": "${welcome.title}"
             }
         },
         "banner": {

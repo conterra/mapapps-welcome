@@ -14,3 +14,4 @@
  * limitations under the License.
  */
 export {default as WelcomeWidgetFactory} from "./WelcomeWidgetFactory";
+export {default as Config} from "./Config";

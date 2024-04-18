@@ -19,9 +19,9 @@
     <v-layout>
         <v-card>
             <v-img
-                v-if="imgUrl"
-                :height="imgHeight"
-                :src="imgUrl"
+                v-if="showImage"
+                :height="imageHeight + 'px'"
+                :src="imageUrl"
             />
 
             <v-card-title primary-title>
@@ -35,67 +35,48 @@
 
             <v-card-actions>
                 <v-container
-                    v-if="accept"
                     grid-list-md
                     text-xs-center
                     class="pa-1"
                 >
                     <v-checkbox
-                        v-if="accept"
-                        v-model="checkBox"
+                        v-if="showCheckbox"
+                        v-model="checkboxChecked"
                         :label="checkboxText"
                         class="pa-2"
                         color="primary"
                         hide-details
                     />
                     <v-btn
-                        :disabled="!checkBox"
+                        v-if="showButton"
+                        :disabled="buttonDependsOnCheckbox && !checkboxChecked"
                         ripple
                         color="primary"
                         @click="$emit('close')"
                     >
                         {{ buttonText }}
                     </v-btn>
-                </v-container>
-                <v-container
-                    v-else
-                    grid-list-md
-                    text-xs-center
-                    class="pa-1"
-                >
-                    <v-btn
-                        ripple
-                        color="primary"
-                        @click="$emit('close')"
-                    >
-                        {{ buttonText }}
-                    </v-btn>
-                    <v-checkbox
-                        v-if="!accept"
-                        v-model="checkBox"
-                        :label="checkboxText"
-                        class="pa-2"
-                        color="primary"
-                        hide-details
-                    />
                 </v-container>
             </v-card-actions>
         </v-card>
     </v-layout>
 </template>
 
-<script>
+<script lang="ts">
     export default {
-        data: function () {
+        data: function (): any {
             return {
-                checkBox: false,
-                accept: false,
+                checkboxChecked: false,
+                buttonDependsOnCheckbox: false,
                 title: "",
                 infoText: "",
+                showButton: true,
                 buttonText: "",
+                showCheckbox: true,
                 checkboxText: "",
-                imgUrl: "",
-                imgHeight: "150px"
+                showImage: true,
+                imageUrl: "",
+                imageHeight: 150
             };
         }
     };
