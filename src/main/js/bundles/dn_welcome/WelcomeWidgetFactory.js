@@ -41,7 +41,7 @@ export default class WelcomeWidgetFactory {
         vm.$on('close', () => {
             if (vm.accept) {
                 if (vm.checkBox) {
-                    this._tool.set("active", false);
+                    this.windowToggleTool.set("active", false);
                 }
             } else {
                 if (vm.checkBox) {
@@ -49,7 +49,7 @@ export default class WelcomeWidgetFactory {
                 } else {
                     localStorage.removeItem("doNotShowAgain");
                 }
-                this._tool.set("active", false);
+                this.windowToggleTool.set("active", false);
             }
         });
     }
@@ -63,7 +63,7 @@ export default class WelcomeWidgetFactory {
         if (doNotShowAgain === "1" && !this._properties.accept) {
             this.welcomeWidget.checkBox = true;
         } else {
-            this._tool.set("active", true);
+            this.windowToggleTool.set("active", true);
         }
     }
 

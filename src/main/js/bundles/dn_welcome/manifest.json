@@ -68,13 +68,11 @@
                 "checkboxText": "I accept",
                 "imgUrl": "",
                 "imgHeight": "200px",
-                "accept": true,
-                "expirationTime": 365,
-                "cookieName": "dn_welcome_hide"
+                "accept": true
             },
             "references": [
                 {
-                    "name": "_tool",
+                    "name": "windowToggleTool",
                     "providing": "ct.tools.Tool",
                     "filter": "(id=welcomeToggleTool)"
                 }
