@@ -3,14 +3,15 @@
 The Welcome bundle is a widget for displaying a welcome screen. You can configure it in different ways, e.g. to use it
 as a disclaimer, with an "I-agree" checkbox, or as an introductory message with a "Do-Not-Show-Again"-checkbox.
 
-# Usage
+## Usage
 
 1. Add the bundle "dn_welcome" to the `allowedBundles` property in your `app.json`.
 2. Customize the content of the welcome window as described in the following section.
 
-## Configuration Reference
+## Configuration reference
 
-### `Config` component:
+### `Config` component
+All configuration is performed on the `Config` component as show in the following sample:
 
 ```json
 {
@@ -31,6 +32,9 @@ as a disclaimer, with an "I-agree" checkbox, or as an introductory message with 
     }
 }
 ```
+#### Available properties
+
+All of these properties are optional.
 
 | Property                  | Type    | Possible values         | Default     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 |---------------------------|---------|-------------------------|-------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -46,7 +50,8 @@ as a disclaimer, with an "I-agree" checkbox, or as an introductory message with 
 | `imageUrl`                | String  |                         |             | The URL to the image shown at the top of the welcome window. Besides absolute URLs, you can use a relative URL to address an image inside the app folder: `resource('${app}:images/welcome.jpg')`                                                                                                                                                                                                                                                                                                                     |
 | `imageHeight`             | String  |                         | ```300px``` | The height of the image defined as a valid CSS dimension string.                                                                                                                                                                                                                                                                                                                                                                                                               |
 
-### Template configuration
+
+### Container window configuration
 
 Here is an example configuration from the `app.json` file to customize the containing window for the welcome widget.
 - The `w` and `h` properties of the `marginBox` property are used to define the window's size in pixels.
