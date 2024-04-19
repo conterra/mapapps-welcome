@@ -57,7 +57,7 @@
                         <v-btn
                             v-if="showButton"
                             large
-                            :disabled="buttonDependsOnCheckbox && !checkboxChecked"
+                            :disabled="showCheckbox && buttonDependsOnCheckbox && !checkboxChecked"
                             ripple
                             color="primary"
                             @click="$emit('close')"
