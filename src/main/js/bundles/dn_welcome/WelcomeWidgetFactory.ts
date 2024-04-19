@@ -44,17 +44,17 @@ export default class WelcomeWidgetFactory {
     #initComponent(): void {
         const config = this.#config;
         const vm = this.#widget = new Vue(WelcomeWidget);
-        vm.checkboxChecked = config.checkboxChecked;
-        vm.buttonDependsOnCheckbox = config.buttonDependsOnCheckbox;
-        vm.title = config.title;
+        vm.heading = config.heading;
+        vm.infoText = this.#sanitizeInfoText(config.infoText);
         vm.showButton = config.showButton;
         vm.buttonText = config.buttonText;
+        vm.buttonDependsOnCheckbox = config.buttonDependsOnCheckbox;
         vm.showCheckbox = config.showCheckbox;
         vm.checkboxText = config.checkboxText;
+        vm.checkboxChecked = config.checkboxChecked;
         vm.showImage = config.showImage;
         vm.imageUrl = config.imageUrl;
         vm.imageHeight = config.imageHeight;
-        vm.infoText = this.#sanitizeInfoText(config.infoText);
 
         vm.$on('close', () => {
             if (config.showCheckbox && vm.checkboxChecked) {

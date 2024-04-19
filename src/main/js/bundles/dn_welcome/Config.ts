@@ -19,6 +19,8 @@ export default class Config {
         Object.assign(this, props);
     }
 
+    heading = "Welcome";
+    infoText = "";
     buttonDependsOnCheckbox = false;
     showButton = true;
     buttonText = "";
@@ -28,6 +30,4 @@ export default class Config {
     showImage = true;
     imageHeight = "200px";
     imageUrl = "";
-    infoText = "";
-    title = "Welcome";
 }

@@ -26,10 +26,16 @@
 
             <v-card-title primary-title>
                 <div>
-                    <h3 class="headline mb-0">
-                        {{ title }}
+                    <h3
+                        v-if="heading"
+                        class="headline mb-2"
+                    >
+                        {{ heading }}
                     </h3>
-                    <div v-html="infoText" />
+                    <div
+                        v-if="infoText"
+                        v-html="infoText"
+                    />
                 </div>
             </v-card-title>
             <v-card-actions>
@@ -71,7 +77,7 @@
             return {
                 checkboxChecked: false,
                 buttonDependsOnCheckbox: false,
-                title: "",
+                heading: "",
                 infoText: "",
                 showButton: true,
                 buttonText: "",
