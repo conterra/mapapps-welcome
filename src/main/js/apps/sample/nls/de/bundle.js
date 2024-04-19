@@ -16,9 +16,9 @@
 module.exports = {
     title: "Welcome Bundle Sample",
     welcome: {
-        title: "Willkommen",
-        text: "Das <i>Welcome Bundle</i> ermöglicht das Einbinden eines Fensters, das zum Start der App geöffnet wird. Es kann zur Anzeige eines Disclaimer-Textes, der explizit vom Nutzer bestätigt werden muss oder zur Anzeige von einführenden Informationen verwendet werden.",
-        checkbox: "Dieses Fenster in Zukunft nicht mehr anzeigen",
-        button: "Fortfahren"
+        heading: "Willkommen",
+        infoText: "Das <i>Welcome Bundle</i> ermöglicht das Einbinden eines Fensters, das zum Start der App geöffnet wird. Es kann zur Anzeige eines Disclaimer-Textes, der explizit vom Nutzer bestätigt werden muss oder zur Anzeige von einführenden Informationen verwendet werden.",
+        checkboxText: "Dieses Fenster in Zukunft nicht mehr anzeigen",
+        buttonText: "Fortfahren"
     }
 };

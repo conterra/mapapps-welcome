@@ -17,10 +17,10 @@ module.exports = {
     root: {
         title: "Welcome Bundle Sample",
         welcome: {
-            title: "Welcome",
-            text: "The <i>Welcome Bundle</i> allows you to include a welcome window that opens when the app starts. This window can be utilized for displaying a disclaimer text that has to be explicitly confirmed by the user or for relevant introductory information.",
-            checkbox: "Do not show this window in the future",
-            button: "Continue"
+            heading: "Welcome",
+            infoText: "The <i>Welcome Bundle</i> allows you to include a welcome window that opens when the app starts. This window can be utilized for displaying a disclaimer text that has to be explicitly confirmed by the user or for relevant introductory information.",
+            checkboxText: "Do not show this window in the future",
+            buttonText: "Continue"
         }
     },
     "de": true

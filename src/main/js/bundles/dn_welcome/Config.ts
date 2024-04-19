@@ -21,13 +21,13 @@ export default class Config {
 
     heading = "Welcome";
     infoText = "";
-    buttonDependsOnCheckbox = false;
     showButton = true;
     buttonText = "";
+    buttonDependsOnCheckbox = false;
     showCheckbox = false;
     checkboxText = "";
     checkboxChecked = false;
     showImage = true;
-    imageHeight = "200px";
     imageUrl = "";
+    imageHeight = "200px";
 }

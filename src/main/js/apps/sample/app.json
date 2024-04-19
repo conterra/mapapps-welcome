@@ -34,17 +34,17 @@
     "bundles": {
         "dn_welcome": {
             "Config": {
+                "heading": "${welcome.heading}",
+                "infoText": "${welcome.infoText}",
                 "showButton": true,
-                "buttonText": "${welcome.button}",
+                "buttonText": "${welcome.buttonText}",
                 "buttonDependsOnCheckbox": true,
                 "showCheckbox": true,
                 "checkboxChecked": true,
-                "checkboxText": "${welcome.checkbox}",
+                "checkboxText": "${welcome.checkboxText}",
                 "showImage": true,
                 "imageHeight": "300px",
-                "imageUrl": "resource('${app}:images/welcome.jpg')",
-                "infoText": "${welcome.text}",
-                "title": "${welcome.title}"
+                "imageUrl": "resource('${app}:images/welcome.jpg')"
             }
         },
         "banner": {
