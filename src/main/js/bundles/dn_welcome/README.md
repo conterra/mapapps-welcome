@@ -1,71 +1,86 @@
 # dn_welcome
 
-The Welcome Bundle is a new Widget for displaying a Welcome Screen. You can either configure it as a disclaimer, with a "I agree"-checkbox, or as a general start screen with a "Do-Not-Show-Again"-checkbox.
+The Welcome bundle is a widget for displaying a welcome screen. You can configure it in different ways, e.g. to use it
+as a disclaimer, with an "I-agree" checkbox, or as an introductory message with a "Do-Not-Show-Again"-checkbox.
 
 # Usage
 
-1. First, you need to add the bundle "dn_welcome" to your app.
-2. After that, you can customize the content of the welcome window.
+1. Add the bundle "dn_welcome" to the `allowedBundles` property in your `app.json`.
+2. Customize the content of the welcome window as described in the following section.
 
 ## Configuration Reference
 
-### WelcomeWidgetFactory:
+### `Config` component:
 
 ```json
-"dn_welcome": {
-    "WelcomeWidgetFactory":{
-        "title": "Your title",
-        "infoText": "Your text",
-        "buttonText":"Your button text",
-        "checkboxText": "Your checkbox text",
-        "imgUrl": "Your Image URL",
-        "imgHeight": "150px",
-        "accept": false,
-        "expirationTime": 7,
-        "cookieName": "dn_welcome_hide"
+{
+    "dn_welcome": {
+        "Config": {
+            "heading": "${welcome.heading}",
+            "infoText": "${welcome.infoText}",
+            "showButton": true,
+            "buttonText": "${welcome.buttonText}",
+            "buttonDependsOnCheckbox": true,
+            "showCheckbox": true,
+            "checkboxText": "${welcome.checkboxText}",
+            "checkboxChecked": true,
+            "showImage": true,
+            "imageUrl": "resource('${app}:images/welcome.jpg')",
+            "imageHeight": "300px"
+        }
     }
 }
 ```
 
-| Property                       | Type    | Possible Values               | Default               | Description                                                                                 |
-|--------------------------------|---------|-------------------------------|-----------------------|---------------------------------------------------------------------------------------------|
-| title                          | String  |                               |                       | Welcome window title.                                                                       |
-| infoText                       | String  |                               |                       | Welcome window info text.                                                                   |
-| buttonText                     | String  |                               |                       | Welcome window button text.                                                                 |
-| checkboxText                   | String  |                               |                       | Welcome window checkbox text.                                                               |
-| imgUrl                         | String  |                               |                       | Welcome window image URL.                                                                   |
-| imgHeight                      | String  |                               | ```150px```           | Welcome window image height.                                                                |
-| accept                         | Boolean | ```true``` &#124; ```false``` | ```true```            | Force user to accept. If set to true the window will be transformed to a disclaimer window. |
-| expirationTime                 | Boolean |                               | ```365```             | Expiration time of the cookie in days.                                                      |
-| cookieName                     | String  |                               | ```dn_welcome_hide``` | Name of the cookie. Changing the name will cause the cookie to be displayed again.          |
+| Property                  | Type    | Possible values         | Default     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+|---------------------------|---------|-------------------------|-------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `heading`                 | String  |                         |             | The heading shown below the image.                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| `infoText`                | String  |                         |             | The text displayed in the main content area of the window.                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| `showButton`              | Boolean | `true` &#124; `false`   | `true`      | Whether to show the button. If you still require a way to close the windo without using the button, you can remove `noTitleBarAndWindowTools` CSS class from the window's `windowClass` property. The window title bar containing a "close" button will then become visible. See the [templates bundle documentation](https://demos.conterra.de/mapapps/resources/jsregistry/root/templates/latest/README.md#b%3Dtemplates%3Bv%3D4.17.0%3Bf%3Dtempla%3B) for more information. |
+| `buttonText`              | String  |                         |             | The label of the button.                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| `buttonDependsOnCheckbox` | Boolean | `true` &#124; `false`   | `false`     | If `true`, the button is only enabled when the checkbox is checked. If the checkbox is not checked, the button is greyed out and cannot be clicked. Note: `showCheckbox` must be `true` for this property to have an effect.
+| `showCheckbox`            | Boolean | `true` &#124; `false`   | `true`      | Whether to show the checkbox in the window. Note: The property `buttonDependsOnCheckbox` is ignored, if `showCheckbox` is `false`.                                                                                                                                                                                                                                                                                                                                             |
+| `checkboxText`            | String  |                         |             | The label for the checkbox.                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| `checkboxChecked`         | Boolean | `true` &#124; `false`   | `false`     | Whether the checkbox is already checked when the welcome window shows up.                                                                                                                                                                                                                                                                                                                                                                                                      |
+| `showImage`               | Boolean | `true` &#124; `false`   | `true`      | Whether to show an image at the top of the welcome window.                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| `imageUrl`                | String  |                         |             | The URL to the image shown at the top of the welcome window. Besides absolute URLs, you can use a relative URL to address an image inside the app folder: `resource('${app}:images/welcome.jpg')`                                                                                                                                                                                                                                                                                                                     |
+| `imageHeight`             | String  |                         | ```300px``` | The height of the image defined as a valid CSS dimension string.                                                                                                                                                                                                                                                                                                                                                                                                               |
 
-### template configuration
+### Template configuration
+
+Here is an example configuration from the `app.json` file to customize the containing window for the welcome widget.
+- The `w` and `h` properties of the `marginBox` property are used to define the window's size in pixels.
+- The window gets appended a CSS class `myCustomStyleClass` that you can define in a separate CSS file.
+- The `maximizable` property is `true`, which displays a maximize button in the window's title bar.
+
 ```json
-"templates": {
-    "TemplateModel": {
-    "_templates": [
-        {
-            "name": "seasons",
-            "widgets": [
+{
+    "templates": {
+        "TemplateModel": {
+            "_templates": [
                 {
-                    "widgetRole": "welcomeWidget",
-                        "sublayout": [
-                        "desktop",
-                        "tablet_landscape",
-                        "tablet_portrait"
-                    ],
-                    "window": {
-                        "marginBox": {
-                            "w": your width,
-                            "h": your height
+                    "name": "seasons",
+                    "widgets": [
+                        {
+                            "widgetRole": "welcomeWidget",
+                            "sublayout": [
+                                "desktop",
+                                "tablet_landscape",
+                                "tablet_portrait"
+                            ],
+                            "window": {
+                                "marginBox": {
+                                    "w": "400",
+                                    "h": "600"
+                                },
+                                "windowClass": "myCustomStyleClass",
+                                "maximizable": true
+                            }
                         }
-                    }
+                    ]
                 }
             ]
         }
-    ]
+    }
 }
 ```
-
-### Restrictions
-You have to enable cookies in your browser, if you want to set the information window to do-not-show-again.
