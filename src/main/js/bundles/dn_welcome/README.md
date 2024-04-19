@@ -57,6 +57,7 @@ Here is an example configuration from the `app.json` file to customize the conta
 - The `w` and `h` properties of the `marginBox` property are used to define the window's size in pixels.
 - The window gets appended a CSS class `myCustomStyleClass` that you can define in a separate CSS file.
 - The `maximizable` property is `true`, which displays a maximize button in the window's title bar.
+- When `modal` is `false`, user interactions outside the area of the window will not be blocked.
 
 ```json
 {
@@ -79,7 +80,8 @@ Here is an example configuration from the `app.json` file to customize the conta
                                     "h": "600"
                                 },
                                 "windowClass": "myCustomStyleClass",
-                                "maximizable": true
+                                "maximizable": true,
+                                "modal": false
                             }
                         }
                     ]
