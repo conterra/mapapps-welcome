@@ -34,9 +34,10 @@
     "bundles": {
         "dn_welcome": {
             "Config": {
-                "heading": "${welcome.heading}",
+//                "heading": "${welcome.heading}",
+                "heading": "",
 //                "infoText": "${welcome.infoText}",
-                "infoTextUrl": "resource('${app}:external-test-resources/infotext.html')",
+                "infoTextUrl": "resource('${app}:external-test-resources/infotext-with-heading.html')",
                 "infoText": "",
                 "showButton": true,
                 "buttonText": "${welcome.buttonText}",

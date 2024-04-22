@@ -20,4 +20,6 @@
 
 .dn-welcome-widget__info-text--iframe {
     border: none;
+    width: 100%;
+    height: 185px;
 }
