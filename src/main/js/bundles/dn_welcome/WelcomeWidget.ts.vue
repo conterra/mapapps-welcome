@@ -39,6 +39,12 @@
                     >
                         {{ heading }}
                     </h3>
+                    <iframe
+                        v-if="infoTextUrl"
+                        class="dn-welcome-widget__info-text--iframe"
+                        title="Info Text"
+                        :src="infoTextUrl"
+                    />
                     <div
                         v-if="infoText"
                         class="dn-welcome-widget__info-text"
@@ -87,6 +93,7 @@
             return {
                 heading: "",
                 infoText: "",
+                infoTextUrl: "",
                 showButton: true,
                 buttonText: "",
                 buttonDependsOnCheckbox: false,

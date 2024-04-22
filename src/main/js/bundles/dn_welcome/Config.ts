@@ -21,6 +21,7 @@ export default class Config {
 
     heading = "Welcome";
     infoText = "";
+    infoTextUrl = "";
     showButton = true;
     buttonText = "";
     buttonDependsOnCheckbox = false;

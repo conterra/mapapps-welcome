@@ -35,7 +35,9 @@
         "dn_welcome": {
             "Config": {
                 "heading": "${welcome.heading}",
-                "infoText": "${welcome.infoText}",
+//                "infoText": "${welcome.infoText}",
+                "infoTextUrl": "resource('${app}:external-test-resources/infotext.html')",
+                "infoText": "",
                 "showButton": true,
                 "buttonText": "${welcome.buttonText}",
                 "buttonDependsOnCheckbox": true,

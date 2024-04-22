@@ -46,6 +46,7 @@ export default class WelcomeWidgetFactory {
         const vm = this.#widget = new Vue(WelcomeWidget);
         vm.heading = config.heading;
         vm.infoText = this.#sanitizeInfoText(config.infoText);
+        vm.infoTextUrl = config.infoTextUrl;
         vm.showButton = config.showButton;
         vm.buttonText = config.buttonText;
         vm.buttonDependsOnCheckbox = config.buttonDependsOnCheckbox;
