@@ -16,7 +16,7 @@
 
 -->
 <template>
-    <v-layout>
+    <v-layout class="dn-welcome-widget">
         <v-card>
             <v-img
                 v-if="showImage"
@@ -34,6 +34,7 @@
                     </h3>
                     <div
                         v-if="infoText"
+                        class="dn-welcome-widget__info-text"
                         v-html="infoText"
                     />
                 </div>
@@ -72,21 +73,23 @@
 </template>
 
 <script lang="ts">
-    export default {
+    import Vue from "apprt-vue/Vue";
+
+    export default Vue.extend({
         data: function (): any {
             return {
-                checkboxChecked: false,
-                buttonDependsOnCheckbox: false,
                 heading: "",
                 infoText: "",
                 showButton: true,
                 buttonText: "",
+                buttonDependsOnCheckbox: false,
                 showCheckbox: true,
+                checkboxChecked: false,
                 checkboxText: "",
                 showImage: true,
                 imageUrl: "",
                 imageHeight: "200px"
             };
         }
-    };
+    });
 </script>

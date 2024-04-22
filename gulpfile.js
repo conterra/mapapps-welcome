@@ -107,7 +107,16 @@ mapappsBrowserSync.registerTask({
         npmModules: [
             "mocha",
             "chai",
-            "@conterra/mapapps-mocha-runner"
+            "@conterra/mapapps-mocha-runner",
+            [
+                "@vue/test-utils",
+                {
+                    // need to overwrite main to load it into the browser
+                    main: "dist/vue-test-utils.umd"
+                }
+            ],
+            // required as peer dependency of @vue/test-utils
+            "vue-template-compiler"
         ]
     },
     // prevent reload by browser sync (reload triggered on watch end)

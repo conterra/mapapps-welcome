@@ -24,7 +24,7 @@ export default class WelcomeWidgetFactory {
     #config: Config;
     #windowToggleTool: any;
     #doNotShowStorageKey = "dn_welcome.doNotShow";
-    #widget: Vue | undefined;
+    #widget: any;
 
     constructor(config?: Config) {
         this.#config = config || new Config();
