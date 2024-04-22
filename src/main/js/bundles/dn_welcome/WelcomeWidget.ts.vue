@@ -16,16 +16,23 @@
 
 -->
 <template>
-    <v-layout class="dn-welcome-widget">
-        <v-card>
+    <v-container
+        class="dn-welcome-widget"
+        pa-0
+    >
+        <v-card
+            class="dn_welcome-widget__card-main"
+        >
             <v-img
                 v-if="showImage"
                 :height="imageHeight"
                 :src="imageUrl"
             />
-
             <v-card-title primary-title>
-                <div>
+                <v-container
+                    column
+                    pa-0
+                >
                     <h3
                         v-if="heading"
                         class="headline mb-2"
@@ -37,7 +44,7 @@
                         class="dn-welcome-widget__info-text"
                         v-html="infoText"
                     />
-                </div>
+                </v-container>
             </v-card-title>
             <v-card-actions>
                 <v-container
@@ -69,7 +76,7 @@
                 </v-container>
             </v-card-actions>
         </v-card>
-    </v-layout>
+    </v-container>
 </template>
 
 <script lang="ts">
