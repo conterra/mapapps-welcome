@@ -28,7 +28,7 @@ All configuration is performed on the `Config` component as show in the followin
             "checkboxChecked": true,
             "showImage": true,
             "imageUrl": "resource('${app}:images/welcome.jpg')",
-            "imageHeight": "300px"
+               "imageHeight": "300px"
         }
     }
 }
