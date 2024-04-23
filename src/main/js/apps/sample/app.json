@@ -34,11 +34,11 @@
     "bundles": {
         "dn_welcome": {
             "Config": {
-//                "heading": "${welcome.heading}",
-                "heading": "",
-//                "infoText": "${welcome.infoText}",
-                "infoTextUrl": "resource('${app}:external-test-resources/infotext-with-heading.html')",
-                "infoText": "",
+                "heading": "${welcome.heading}",
+//                "heading": "",
+                "infoText": "${welcome.infoText}",
+//                "infoTextUrl": "resource('${app}:external-test-resources/infotext-with-heading.html')",
+//                "infoText": "",
                 "showButton": true,
                 "buttonText": "${welcome.buttonText}",
                 "buttonDependsOnCheckbox": true,

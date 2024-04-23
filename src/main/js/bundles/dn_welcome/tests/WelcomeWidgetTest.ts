@@ -91,12 +91,26 @@ describe(module.id, function () {
             propName: "infoText",
             propValue: "",
             shouldExist: false
+        },
+        {
+            message: "When 'infoTextUrl' is set, the iframe should be visible",
+            cssClassSelector: ".dn-welcome-widget__info-text--iframe",
+            propName: "infoTextUrl",
+            propValue: "https://www.example.com",
+            shouldExist: true
+        },
+        {
+            message: "When 'infoTextUrl' is not set, the iframe should be invisible",
+            cssClassSelector: ".dn-welcome-widget__info-text--iframe",
+            propName: "infoTextUrl",
+            propValue: "",
+            shouldExist: false
         }
     ];
 
     elementExistenceTestCases.forEach(testCase => {
         it(testCase.message, async function () {
-            const wrapper = mount(WelcomeWidget as any);
+            const wrapper = mount(WelcomeWidget);
             await wrapper.setData({
                 [testCase.propName]: testCase.propValue
             });
@@ -108,7 +122,7 @@ describe(module.id, function () {
     });
 
     it("When 'buttonDependsOnCheckbox' is true and checkbox is not checked, the button should be disabled", async function () {
-        const wrapper = mount(WelcomeWidget as any);
+        const wrapper = mount(WelcomeWidget);
         await wrapper.setData({
             buttonDependsOnCheckbox: true,
             checkboxChecked: false
@@ -119,7 +133,7 @@ describe(module.id, function () {
     });
 
     it("When 'buttonDependsOnCheckbox' is true and checkbox is checked, the button should be enabled", async function () {
-        const wrapper = mount(WelcomeWidget as any);
+        const wrapper = mount(WelcomeWidget);
         await wrapper.setData({
             buttonDependsOnCheckbox: true,
             checkboxChecked: true
@@ -128,5 +142,4 @@ describe(module.id, function () {
         const buttonWrapper = wrapper.findComponent({ name: 'v-btn' });
         assert.isFalse(buttonWrapper.vm.$props.disabled);
     });
-
 });
