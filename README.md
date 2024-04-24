@@ -1,3 +1,5 @@
+[![devnet-bundle-snapshot](https://github.com/conterra/mapapps-welcome/actions/workflows/devnet-bundle-snapshot.yml/badge.svg)](https://github.com/conterra/mapapps-welcome/actions/workflows/devnet-bundle-snapshot.yml)
+![Static Badge](https://img.shields.io/badge/tested_for_map.apps-4.18.0-%20?labelColor=%233E464F&color=%232FC050)
 # Welcome bundle
 The Welcome Bundle is a widget for displaying a welcome screen. You can either configure it as a disclaimer, with a "I agree"-checkbox, or as a general start screen with a "Do-Not-Show-Again"-checkbox.
 
