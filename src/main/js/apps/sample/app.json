@@ -24,9 +24,6 @@
             "toolset",
             "dn_welcome"
         ],
-        "require": [
-            "${app}/app"
-        ],
         "i18n": [
             "bundle"
         ]
