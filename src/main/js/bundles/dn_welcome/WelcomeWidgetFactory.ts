@@ -17,7 +17,6 @@
 import WelcomeWidget from "./WelcomeWidget.ts.vue";
 import Vue from "apprt-vue/Vue";
 import VueDijit from "apprt-vue/VueDijit";
-import {DOMPurify} from "dompurify-bundle";
 import Config from "./Config";
 
 export default class WelcomeWidgetFactory {
@@ -45,7 +44,7 @@ export default class WelcomeWidgetFactory {
         const config = this.#config;
         const vm = this.#widget = new Vue(WelcomeWidget);
         vm.heading = config.heading;
-        vm.infoText = this.#sanitizeInfoText(config.infoText);
+        vm.infoText = config.infoText;
         vm.infoTextUrl = config.infoTextUrl;
         vm.showButton = config.showButton;
         vm.buttonText = config.buttonText;
@@ -72,10 +71,6 @@ export default class WelcomeWidgetFactory {
         if (doNotShowAgain !== "1") {
             this.#windowToggleTool.set("active", true);
         }
-    }
-
-    #sanitizeInfoText(infotext: string): string {
-        return DOMPurify.sanitize(infotext);
     }
 
     set config(config: Config) {

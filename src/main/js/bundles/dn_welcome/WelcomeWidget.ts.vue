@@ -46,9 +46,9 @@
                         :src="infoTextUrl"
                     />
                     <div
-                        v-if="infoText"
+                        v-if="sanitizedInfoText"
                         class="dn-welcome-widget__info-text"
-                        v-html="infoText"
+                        v-html="sanitizedInfoText"
                     />
                 </v-container>
             </v-card-title>
@@ -87,6 +87,7 @@
 
 <script lang="ts">
     import Vue from "apprt-vue/Vue";
+    import {DOMPurify} from "dompurify-bundle";
 
     export default Vue.extend({
         data: function (): any {
@@ -104,6 +105,11 @@
                 imageUrl: "",
                 imageHeight: "200px"
             };
+        },
+        computed: {
+            sanitizedInfoText() {
+                return DOMPurify.sanitize(this.infoText, {USE_PROFILES: {html: true}});
+            }
         }
     });
 </script>
