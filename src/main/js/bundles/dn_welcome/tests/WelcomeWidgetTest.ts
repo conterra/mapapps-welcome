@@ -142,4 +142,73 @@ describe(module.id, function () {
         const buttonWrapper = wrapper.findComponent({ name: 'v-btn' });
         assert.isFalse(buttonWrapper.vm.$props.disabled);
     });
+
+    const sanitizerTests = [
+        {
+            message: "Event attributes should be removed from info text",
+            testInfoText: "Welcome! <p onclick='runEvilCode()'>Click here!</p>",
+            shouldNotInclude: "onclick"
+        },
+        {
+            message: "'script' tags should be removed from info text",
+            testInfoText: "Welcome! <script type=\"text/javascript\">runEvilCode()</script>",
+            shouldNotInclude: "script"
+        },
+        {
+            message: "Uppercase 'SCRIPT' tags should be removed from info text",
+            testInfoText: "Welcome! <SCRIPT type=\"text/javascript\">runEvilCode()</SCRIPT>",
+            shouldNotInclude: "SCRIPT"
+        },
+        {
+            message: "'iframe' tags should be removed from info text",
+            testInfoText: "Welcome! <iframe src='evil.html'></iframe>",
+            shouldNotInclude: "iframe"
+        },
+        {
+            message: "'object' tags should be removed from info text",
+            testInfoText: "Welcome! <object></object>",
+            shouldNotInclude: "object"
+        },
+        {
+            message: "'embed' tags should be removed from info text",
+            testInfoText: "Welcome! <embed></embed>",
+            shouldNotInclude: "embed"
+        },
+        {
+            message: "'i' tags should be preserved in info text",
+            testInfoText: "<i>Welcome!</i>",
+            shouldInclude: "<i>"
+        },
+        {
+            message: "'style' attributes on tags should be preserved in info text",
+            testInfoText: "<p style='font-size: 12px'>Welcome</p>",
+            shouldInclude: "style"
+        }
+    ] as SanitizerTestCase[];
+
+    sanitizerTests.forEach(testCase => {
+        it(testCase.message, async function () {
+            const wrapper = mount(WelcomeWidget);
+            await wrapper.setData({
+                infoText: testCase.testInfoText
+            });
+            const infoTextWrapper = wrapper.find(".dn-welcome-widget__info-text");
+
+            const html = infoTextWrapper.html();
+
+            if (testCase.shouldNotInclude) {
+                assert.notInclude(html, testCase.shouldNotInclude);
+            }
+            if (testCase.shouldInclude) {
+                assert.include(html, testCase.shouldInclude);
+            }
+        });
+    });
 });
+
+interface SanitizerTestCase {
+    message: string;
+    testInfoText: string;
+    shouldNotInclude?: string;
+    shouldInclude?: string;
+}
