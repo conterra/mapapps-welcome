@@ -1,5 +1,5 @@
 ///
-/// Copyright (C) 2023 con terra GmbH (info@conterra.de)
+/// Copyright (C) 2024 con terra GmbH (info@conterra.de)
 ///
 /// Licensed under the Apache License, Version 2.0 (the "License");
 /// you may not use this file except in compliance with the License.
@@ -14,11 +14,6 @@
 /// limitations under the License.
 ///
 
-/*
- * Copyright (C) con terra GmbH
- */
-
-// TODO: This module is really problematic because node's own "module" is also picked up by the compiler
 declare module "module" {
     export const id: string;
 }
