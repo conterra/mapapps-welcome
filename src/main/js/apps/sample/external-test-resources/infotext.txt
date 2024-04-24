@@ -1,0 +1,1 @@
+This is an external resource that is embedded into an iframe.

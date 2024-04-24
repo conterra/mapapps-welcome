@@ -16,27 +16,41 @@
 
 -->
 <template>
-    <v-layout>
-        <v-card>
+    <v-container
+        class="dn-welcome-widget"
+        pa-0
+    >
+        <v-card
+            class="dn_welcome-widget__card-main"
+        >
             <v-img
                 v-if="showImage"
                 :height="imageHeight"
                 :src="imageUrl"
             />
-
             <v-card-title primary-title>
-                <div>
+                <v-container
+                    column
+                    pa-0
+                >
                     <h3
                         v-if="heading"
                         class="headline mb-2"
                     >
                         {{ heading }}
                     </h3>
-                    <div
-                        v-if="infoText"
-                        v-html="infoText"
+                    <iframe
+                        v-if="infoTextUrl"
+                        class="dn-welcome-widget__info-text--iframe"
+                        title="Info Text"
+                        :src="infoTextUrl"
                     />
-                </div>
+                    <div
+                        v-if="sanitizedInfoText"
+                        class="dn-welcome-widget__info-text"
+                        v-html="sanitizedInfoText"
+                    />
+                </v-container>
             </v-card-title>
             <v-card-actions>
                 <v-container
@@ -68,25 +82,34 @@
                 </v-container>
             </v-card-actions>
         </v-card>
-    </v-layout>
+    </v-container>
 </template>
 
 <script lang="ts">
-    export default {
+    import Vue from "apprt-vue/Vue";
+    import {DOMPurify} from "dompurify-bundle";
+
+    export default Vue.extend({
         data: function (): any {
             return {
-                checkboxChecked: false,
-                buttonDependsOnCheckbox: false,
                 heading: "",
                 infoText: "",
+                infoTextUrl: "",
                 showButton: true,
                 buttonText: "",
+                buttonDependsOnCheckbox: false,
                 showCheckbox: true,
+                checkboxChecked: false,
                 checkboxText: "",
                 showImage: true,
                 imageUrl: "",
                 imageHeight: "200px"
             };
+        },
+        computed: {
+            sanitizedInfoText() {
+                return DOMPurify.sanitize(this.infoText, {USE_PROFILES: {html: true}});
+            }
         }
-    };
+    });
 </script>

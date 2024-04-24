@@ -14,4 +14,17 @@
 /// limitations under the License.
 ///
 
-export {default as Config} from "./WelcomeWidgetFactory";
+const i18n = {
+    root: ({
+        bundleName: "Welcome",
+        bundleDescription: "The Welcome Bundle is a widget for displaying a welcome screen with a Do-Not-Show-Again option",
+        tool: {
+            title: "Welcome Info",
+            tooltip: "Welcome Info"
+        }
+    }),
+    "de": true
+};
+
+export type Messages = (typeof i18n)["root"];
+export default i18n;

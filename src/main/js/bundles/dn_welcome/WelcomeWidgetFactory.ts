@@ -17,35 +17,31 @@
 import WelcomeWidget from "./WelcomeWidget.ts.vue";
 import Vue from "apprt-vue/Vue";
 import VueDijit from "apprt-vue/VueDijit";
-import Sanitizer from "arcgishtmlsanitizer";
-import Config from "./Config";
 
 export default class WelcomeWidgetFactory {
-    #config: Config;
-    #windowToggleTool: any;
-    #doNotShowStorageKey = "dn_welcome.doNotShow";
-    #widget: Vue | undefined;
+    private _windowToggleTool: WindowToggleTool | undefined;
+    private doNotShowStorageKey = "dn_welcome.doNotShow";
+    private widget: any;
 
-    constructor(config?: Config) {
-        this.#config = config || new Config();
+    constructor(props: Partial<Config>) {
+        this.widget = this.createWelcomeWidget(props);
     }
 
     activate(): void {
-        this.#initComponent();
-        this.#applySavedDoNotShowWindowState();
+        this.applySavedDoNotShowWindowState();
     }
 
     createInstance(): void | typeof VueDijit {
-        if (this.#widget) {
-            return VueDijit(this.#widget);
+        if (this.widget) {
+            return VueDijit(this.widget);
         }
     }
 
-    #initComponent(): void {
-        const config = this.#config;
-        const vm = this.#widget = new Vue(WelcomeWidget);
+    private createWelcomeWidget(config: Partial<Config>): any {
+        const vm: any = new Vue(WelcomeWidget);
         vm.heading = config.heading;
-        vm.infoText = this.#sanitizeInfoText(config.infoText);
+        vm.infoText = config.infoText;
+        vm.infoTextUrl = config.infoTextUrl;
         vm.showButton = config.showButton;
         vm.buttonText = config.buttonText;
         vm.buttonDependsOnCheckbox = config.buttonDependsOnCheckbox;
@@ -58,30 +54,44 @@ export default class WelcomeWidgetFactory {
 
         vm.$on('close', () => {
             if (config.showCheckbox && vm.checkboxChecked) {
-                localStorage.setItem(this.#doNotShowStorageKey, "1");
+                localStorage.setItem(this.doNotShowStorageKey, "1");
             } else {
-                localStorage.removeItem(this.#doNotShowStorageKey);
+                localStorage.removeItem(this.doNotShowStorageKey);
             }
-            this.#windowToggleTool.set("active", false);
+            this._windowToggleTool?.set("active", false);
         });
+
+        return vm;
     }
 
-    #applySavedDoNotShowWindowState(): void {
-        const doNotShowAgain = localStorage.getItem(this.#doNotShowStorageKey);
+    private applySavedDoNotShowWindowState(): void {
+        const doNotShowAgain = localStorage.getItem(this.doNotShowStorageKey);
         if (doNotShowAgain !== "1") {
-            this.#windowToggleTool.set("active", true);
+            this._windowToggleTool?.set("active", true);
         }
     }
 
-    #sanitizeInfoText(infotext: string): string {
-        return new Sanitizer().sanitize(infotext);
+    set windowToggleTool(tool: WindowToggleTool) {
+        this._windowToggleTool = tool;
     }
+}
 
-    set config(config: Config) {
-        this.#config = config;
-    }
+interface Config {
+    heading: string;
+    infoText: string;
+    infoTextUrl: string;
+    showButton: boolean;
+    buttonText: string;
+    buttonDependsOnCheckbox: boolean;
+    showCheckbox: boolean;
+    checkboxText: string;
+    checkboxChecked: boolean;
+    showImage: boolean;
+    imageUrl: string;
+    imageHeight: string;
+}
 
-    set windowToggleTool(tool: any) {
-        this.#windowToggleTool = tool;
-    }
+
+interface WindowToggleTool {
+    set(propName: "active", value: boolean): void;
 }

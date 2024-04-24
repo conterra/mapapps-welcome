@@ -24,9 +24,6 @@
             "toolset",
             "dn_welcome"
         ],
-        "require": [
-            "${app}/app"
-        ],
         "i18n": [
             "bundle"
         ]
@@ -38,9 +35,9 @@
                 "infoText": "${welcome.infoText}",
                 "showButton": true,
                 "buttonText": "${welcome.buttonText}",
-                "buttonDependsOnCheckbox": true,
+                "buttonDependsOnCheckbox": false,
                 "showCheckbox": true,
-                "checkboxChecked": true,
+                "checkboxChecked": false,
                 "checkboxText": "${welcome.checkboxText}",
                 "showImage": true,
                 "imageHeight": "300px",

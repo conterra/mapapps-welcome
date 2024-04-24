@@ -14,13 +14,7 @@
  * limitations under the License.
  */
 module.exports = {
-    root: ({
-        bundleName: "Welcome",
-        bundleDescription: "The Welcome Bundle is a new widget for displaying a welcome screen with a Do-Not-Show-Again option",
-        tool: {
-            title: "Welcome Info",
-            tooltip: "Welcome Info"
-        }
-    }),
-    "de": true
+    type: "bundle",
+    entryPoints: ["./index"],
+    npmDependencies: ["dompurify"]
 };

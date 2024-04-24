@@ -14,4 +14,15 @@
 /// limitations under the License.
 ///
 
-export {default as Config} from "./WelcomeWidgetFactory";
+import { type Messages } from "../bundle";
+
+const i18n = {
+    bundleName: "Welcome",
+    bundleDescription: "Das Welcome Bundle ist ein Widget mit dem man ein Startfenster konfigurieren kann.",
+    tool: {
+        title: "Welcome Info",
+        tooltip: "Welcome Info"
+    }
+} satisfies Messages;
+
+export default i18n;

@@ -14,20 +14,7 @@
 /// limitations under the License.
 ///
 
-export default class Config {
-    constructor(props?: Partial<Config>) {
-        Object.assign(this, props);
-    }
-
-    heading = "Welcome";
-    infoText = "";
-    showButton = true;
-    buttonText = "";
-    buttonDependsOnCheckbox = false;
-    showCheckbox = false;
-    checkboxText = "";
-    checkboxChecked = false;
-    showImage = true;
-    imageUrl = "";
-    imageHeight = "200px";
+declare module "module" {
+    export const id: string;
 }
+declare module "require";
