@@ -57,9 +57,11 @@
     "components": [
         {
             "name": "Config",
-            "provides": "dn_welcome.Config",
+            "provides": "dijit.Widget",
+            "instanceFactory": true,
             "propertiesConstructor": true,
             "properties": {
+                "widgetRole": "welcomeWidget",
                 "heading": "",
                 "infoText": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
                 "infoTextUrl": "",
@@ -72,20 +74,8 @@
                 "showImage": true,
                 "imageHeight": "300px",
                 "imageUrl": ""
-            }
-        },
-        {
-            "name": "WelcomeWidgetFactory",
-            "provides": "dijit.Widget",
-            "instanceFactory": true,
-            "properties": {
-                "widgetRole": "welcomeWidget"
             },
             "references": [
-                {
-                    "name": "config",
-                    "providing": "dn_welcome.Config"
-                },
                 {
                     "name": "windowToggleTool",
                     "providing": "ct.tools.Tool",

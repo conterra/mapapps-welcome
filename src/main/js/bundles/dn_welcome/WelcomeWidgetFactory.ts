@@ -17,20 +17,17 @@
 import WelcomeWidget from "./WelcomeWidget.ts.vue";
 import Vue from "apprt-vue/Vue";
 import VueDijit from "apprt-vue/VueDijit";
-import Config from "./Config";
 
 export default class WelcomeWidgetFactory {
-    #config: Config;
     #windowToggleTool: any;
     #doNotShowStorageKey = "dn_welcome.doNotShow";
     #widget: any;
 
-    constructor(config?: Config) {
-        this.#config = config || new Config();
+    constructor(props: Partial<Config>) {
+        this.#widget = this.#createWelcomeWidget(props);
     }
 
     activate(): void {
-        this.#initComponent();
         this.#applySavedDoNotShowWindowState();
     }
 
@@ -40,9 +37,8 @@ export default class WelcomeWidgetFactory {
         }
     }
 
-    #initComponent(): void {
-        const config = this.#config;
-        const vm = this.#widget = new Vue(WelcomeWidget);
+    #createWelcomeWidget(config: Partial<Config>): any {
+        const vm: any = new Vue(WelcomeWidget);
         vm.heading = config.heading;
         vm.infoText = config.infoText;
         vm.infoTextUrl = config.infoTextUrl;
@@ -62,22 +58,35 @@ export default class WelcomeWidgetFactory {
             } else {
                 localStorage.removeItem(this.#doNotShowStorageKey);
             }
-            this.#windowToggleTool.set("active", false);
+            this.#windowToggleTool?.set("active", false);
         });
+
+        return vm;
     }
 
     #applySavedDoNotShowWindowState(): void {
         const doNotShowAgain = localStorage.getItem(this.#doNotShowStorageKey);
         if (doNotShowAgain !== "1") {
-            this.#windowToggleTool.set("active", true);
+            this.#windowToggleTool?.set("active", true);
         }
-    }
-
-    set config(config: Config) {
-        this.#config = config;
     }
 
     set windowToggleTool(tool: any) {
         this.#windowToggleTool = tool;
     }
+}
+
+interface Config {
+    heading: string;
+    infoText: string;
+    infoTextUrl: string;
+    showButton: boolean;
+    buttonText: string;
+    buttonDependsOnCheckbox: boolean;
+    showCheckbox: boolean;
+    checkboxText: string;
+    checkboxChecked: boolean;
+    showImage: boolean;
+    imageUrl: string;
+    imageHeight: string;
 }
