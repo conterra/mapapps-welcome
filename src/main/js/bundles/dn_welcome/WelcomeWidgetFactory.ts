@@ -17,7 +17,7 @@
 import WelcomeWidget from "./WelcomeWidget.ts.vue";
 import Vue from "apprt-vue/Vue";
 import VueDijit from "apprt-vue/VueDijit";
-import Sanitizer from "arcgishtmlsanitizer";
+import {DOMPurify} from "dompurify-bundle";
 import Config from "./Config";
 
 export default class WelcomeWidgetFactory {
@@ -75,7 +75,7 @@ export default class WelcomeWidgetFactory {
     }
 
     #sanitizeInfoText(infotext: string): string {
-        return new Sanitizer().sanitize(infotext);
+        return DOMPurify.sanitize(infotext);
     }
 
     set config(config: Config) {

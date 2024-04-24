@@ -1,0 +1,11 @@
+{
+    "name": "dompurify-bundle",
+    "version": "1.4.1-SNAPSHOT",
+    "title": "DOMPurify",
+    "description": "DOMPurify - a DOM-only, super-fast, uber-tolerant XSS sanitizer for HTML, MathML and SVG.",
+    "main": "index",
+    "layer": "",
+    "i18n": [],
+    "vendor": "con terra GmbH",
+    "productName": "devnet-mapapps-welcome"
+}
