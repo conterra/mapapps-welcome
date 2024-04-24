@@ -13,13 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-.ctAppRoot .ctWindow.dn_welcome-widget .vue-base,
-.ctAppRoot .ctWindow.dn_welcome-widget .layout {
-    height: 100%;
-}
-
-.dn-welcome-widget__info-text--iframe {
+.ctWindow .vue-base .dn-welcome-widget__info-text--iframe {
     border: none;
     width: 100%;
     height: 185px;
+}
+
+.ctWindow .vue-base .v-card.dn_welcome-widget__card-main {
+    box-shadow: none;
 }
