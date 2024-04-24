@@ -19,25 +19,25 @@ import Vue from "apprt-vue/Vue";
 import VueDijit from "apprt-vue/VueDijit";
 
 export default class WelcomeWidgetFactory {
-    #windowToggleTool: any;
-    #doNotShowStorageKey = "dn_welcome.doNotShow";
-    #widget: any;
+    private _windowToggleTool: WindowToggleTool | undefined;
+    private doNotShowStorageKey = "dn_welcome.doNotShow";
+    private widget: any;
 
     constructor(props: Partial<Config>) {
-        this.#widget = this.#createWelcomeWidget(props);
+        this.widget = this.createWelcomeWidget(props);
     }
 
     activate(): void {
-        this.#applySavedDoNotShowWindowState();
+        this.applySavedDoNotShowWindowState();
     }
 
     createInstance(): void | typeof VueDijit {
-        if (this.#widget) {
-            return VueDijit(this.#widget);
+        if (this.widget) {
+            return VueDijit(this.widget);
         }
     }
 
-    #createWelcomeWidget(config: Partial<Config>): any {
+    private createWelcomeWidget(config: Partial<Config>): any {
         const vm: any = new Vue(WelcomeWidget);
         vm.heading = config.heading;
         vm.infoText = config.infoText;
@@ -54,25 +54,25 @@ export default class WelcomeWidgetFactory {
 
         vm.$on('close', () => {
             if (config.showCheckbox && vm.checkboxChecked) {
-                localStorage.setItem(this.#doNotShowStorageKey, "1");
+                localStorage.setItem(this.doNotShowStorageKey, "1");
             } else {
-                localStorage.removeItem(this.#doNotShowStorageKey);
+                localStorage.removeItem(this.doNotShowStorageKey);
             }
-            this.#windowToggleTool?.set("active", false);
+            this._windowToggleTool?.set("active", false);
         });
 
         return vm;
     }
 
-    #applySavedDoNotShowWindowState(): void {
-        const doNotShowAgain = localStorage.getItem(this.#doNotShowStorageKey);
+    private applySavedDoNotShowWindowState(): void {
+        const doNotShowAgain = localStorage.getItem(this.doNotShowStorageKey);
         if (doNotShowAgain !== "1") {
-            this.#windowToggleTool?.set("active", true);
+            this._windowToggleTool?.set("active", true);
         }
     }
 
-    set windowToggleTool(tool: any) {
-        this.#windowToggleTool = tool;
+    set windowToggleTool(tool: WindowToggleTool) {
+        this._windowToggleTool = tool;
     }
 }
 
@@ -89,4 +89,9 @@ interface Config {
     showImage: boolean;
     imageUrl: string;
     imageHeight: string;
+}
+
+
+interface WindowToggleTool {
+    set(propName: "active", value: boolean): void;
 }
