@@ -69,7 +69,23 @@ The HTML file is then embedded within an Iframe in the welcome dialog.
 The same is possible for images at the top of the dialog.
 Simply set the `imageUrl` to the URL of an external image, e.g. https://www.example.com/resources/myimage.jpg
 
-#### Available properties
+### Starting an introductory tour with the dn_intro bundle
+
+If you have the `dn_intro` bundle installed and want to start an introductory tour when the user clicks the button in the welcome window, you can set the `startTourOnButtonClick` property to `true`:
+
+```json
+{
+    "dn_welcome": {
+        "Config": {
+            "startTourOnButtonClick": true
+        }
+    }
+}
+```
+
+See the documentation of the [dn_intro](https://github.com/conterra/mapapps-intro/blob/master/src/main/js/bundles/dn_intro/README.md) bundle for more information on how to configure the tour.
+
+### Available properties
 
 All of these properties are optional.
 
@@ -81,6 +97,7 @@ All of these properties are optional.
 | `showButton`              | Boolean | `true` &#124; `false`   | `true`      | Whether to show the button. If you still require a way to close the windo without using the button, you can remove `noTitleBarAndWindowTools` CSS class from the window's `windowClass` property. The window title bar containing a "close" button will then become visible. See the [templates bundle documentation](https://demos.conterra.de/mapapps/resources/jsregistry/root/templates/latest/README.md#b%3Dtemplates%3Bv%3D4.17.0%3Bf%3Dtempla%3B) for more information. |
 | `buttonText`              | String  |                         |             | The label of the button.                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | `buttonDependsOnCheckbox` | Boolean | `true` &#124; `false`   | `false`     | If `true`, the button is only enabled when the checkbox is checked. If the checkbox is not checked, the button is greyed out and cannot be clicked. Note: `showCheckbox` must be `true` for this property to have an effect.
+| `startTourOnButtonClick` | Boolean | `true` &#124; `false`   | `false`     | If `true` and the `dn_intro` bundle is installed, when clicking the button in the welcome window, the tour configured in the dn_intro bundle will be started.
 | `showCheckbox`            | Boolean | `true` &#124; `false`   | `true`      | Whether to show the checkbox in the window. Note: The property `buttonDependsOnCheckbox` is ignored, if `showCheckbox` is `false`.                                                                                                                                                                                                                                                                                                                                             |
 | `checkboxText`            | String  |                         |             | The label for the checkbox.                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | `checkboxChecked`         | Boolean | `true` &#124; `false`   | `false`     | Whether the checkbox is already checked when the welcome window shows up.                                                                                                                                                                                                                                                                                                                                                                                                      |
