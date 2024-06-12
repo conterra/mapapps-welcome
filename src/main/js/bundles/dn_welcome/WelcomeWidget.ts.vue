@@ -74,7 +74,7 @@
                             :disabled="showCheckbox && buttonDependsOnCheckbox && !checkboxChecked"
                             ripple
                             color="primary"
-                            @click="$emit('close')"
+                            @click="$emit('click-button')"
                         >
                             {{ buttonText }}
                         </v-btn>

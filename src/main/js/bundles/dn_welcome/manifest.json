@@ -12,6 +12,9 @@
         "apprt-vuetify": "^4.12.0",
         "dompurify-bundle": "2.0.1-SNAPSHOT"
     },
+    "optionalDependencies": {
+        "dn_intro": "^2.0.5"
+    },
     "CSS-Themes-Extension": [
         {
             "name": "*",
@@ -68,6 +71,7 @@
                 "showButton": true,
                 "buttonText": "",
                 "buttonDependsOnCheckbox": false,
+                "startTourOnButtonClick": false,
                 "showCheckbox": true,
                 "checkboxChecked": false,
                 "checkboxText": "I agree",
@@ -80,6 +84,11 @@
                     "name": "windowToggleTool",
                     "providing": "ct.tools.Tool",
                     "filter": "(id=welcomeToggleTool)"
+                },
+                {
+                    "name": "tour",
+                    "providing": "dn_intro.Tour",
+                    "cardinality": "0..1"
                 }
             ]
         },
