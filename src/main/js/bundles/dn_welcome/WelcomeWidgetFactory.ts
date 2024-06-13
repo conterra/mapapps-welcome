@@ -62,12 +62,7 @@ export default class WelcomeWidgetFactory {
             }
             this._windowToggleTool?.set("active", false);
             if (config.startTourOnButtonClick) {
-                if (!this._tour) {
-                    console.error("dn_intro.Tour component not available." +
-                        "Did you install the latest 'dn_intro' bundle?");
-                } else {
-                    this._tour.startTour();
-                }
+                this.startDnIntroTour();
             }
         });
 
@@ -78,6 +73,15 @@ export default class WelcomeWidgetFactory {
         const doNotShowAgain = localStorage.getItem(this.doNotShowStorageKey);
         if (doNotShowAgain !== "1") {
             this._windowToggleTool?.set("active", true);
+        }
+    }
+
+    private startDnIntroTour(): void {
+        if (!this._tour) {
+            console.error("Could not start tour. 'dn_intro.Tour' component not available. " +
+                "Did you install the latest 'dn_intro' bundle?");
+        } else {
+            this._tour.startTour();
         }
     }
 
