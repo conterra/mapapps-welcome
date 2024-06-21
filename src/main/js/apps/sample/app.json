@@ -36,6 +36,7 @@
                 "showButton": true,
                 "buttonText": "${welcome.buttonText}",
                 "buttonDependsOnCheckbox": false,
+                "startTourOnButtonClick": true,
                 "showCheckbox": true,
                 "checkboxChecked": false,
                 "checkboxText": "${welcome.checkboxText}",

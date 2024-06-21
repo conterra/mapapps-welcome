@@ -17,9 +17,11 @@
 import WelcomeWidget from "./WelcomeWidget.ts.vue";
 import Vue from "apprt-vue/Vue";
 import VueDijit from "apprt-vue/VueDijit";
+import {InjectedReference} from "apprt-core/InjectedReference";
 
 export default class WelcomeWidgetFactory {
     private _windowToggleTool: WindowToggleTool | undefined;
+    private _tour: InjectedReference<Tour>;
     private doNotShowStorageKey = "dn_welcome.doNotShow";
     private widget: any;
 
@@ -52,13 +54,16 @@ export default class WelcomeWidgetFactory {
         vm.imageUrl = config.imageUrl;
         vm.imageHeight = config.imageHeight;
 
-        vm.$on('close', () => {
+        vm.$on('click-button', () => {
             if (config.showCheckbox && vm.checkboxChecked) {
                 localStorage.setItem(this.doNotShowStorageKey, "1");
             } else {
                 localStorage.removeItem(this.doNotShowStorageKey);
             }
             this._windowToggleTool?.set("active", false);
+            if (config.startTourOnButtonClick) {
+                this.startDnIntroTour();
+            }
         });
 
         return vm;
@@ -71,8 +76,21 @@ export default class WelcomeWidgetFactory {
         }
     }
 
+    private startDnIntroTour(): void {
+        if (!this._tour) {
+            console.error("Could not start tour. 'dn_intro.Tour' component not available. " +
+                "Did you install the latest 'dn_intro' bundle?");
+        } else {
+            this._tour.startTour();
+        }
+    }
+
     set windowToggleTool(tool: WindowToggleTool) {
         this._windowToggleTool = tool;
+    }
+
+    set tour(tour: Tour) {
+        this._tour = tour;
     }
 }
 
@@ -83,6 +101,7 @@ interface Config {
     showButton: boolean;
     buttonText: string;
     buttonDependsOnCheckbox: boolean;
+    startTourOnButtonClick: boolean;
     showCheckbox: boolean;
     checkboxText: string;
     checkboxChecked: boolean;
@@ -94,4 +113,8 @@ interface Config {
 
 interface WindowToggleTool {
     set(propName: "active", value: boolean): void;
+}
+
+interface Tour {
+    startTour(): void;
 }
