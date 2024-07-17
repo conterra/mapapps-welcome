@@ -13,7 +13,7 @@
         "dompurify-bundle": "2.1.1-SNAPSHOT"
     },
     "optionalDependencies": {
-        "dn_intro": "^2.0.5"
+        "dn_intro": "^3.0.0"
     },
     "CSS-Themes-Extension": [
         {
