@@ -1,6 +1,6 @@
 {
     "name": "dn_welcome",
-    "version": "2.1.1-SNAPSHOT",
+    "version": "2.1.1",
     "title": "${bundleName}",
     "description": "${bundleDescription}",
     "i18n": ["bundle"],
@@ -10,7 +10,7 @@
         "apprt-vue": "^4.12.0",
         "apprt-binding": "^4.12.0",
         "apprt-vuetify": "^4.12.0",
-        "dompurify-bundle": "2.1.1-SNAPSHOT"
+        "dompurify-bundle": "2.1.1"
     },
     "optionalDependencies": {
         "dn_intro": "^3.0.0"

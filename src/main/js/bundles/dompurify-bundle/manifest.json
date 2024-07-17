@@ -1,6 +1,6 @@
 {
     "name": "dompurify-bundle",
-    "version": "2.1.1-SNAPSHOT",
+    "version": "2.1.1",
     "title": "DOMPurify",
     "description": "DOMPurify - a DOM-only, super-fast, uber-tolerant XSS sanitizer for HTML, MathML and SVG.",
     "main": "index",
