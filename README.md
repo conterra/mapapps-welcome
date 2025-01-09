@@ -11,7 +11,7 @@ https://demos.conterra.de/mapapps/resources/apps/downloads_welcome/index.html
 
 ## Installation guide
 1. Add the bundle `dn_welcome` to your app.
-2. Customize the content of the welcome window as described in the [Documentation](https://github.com/conterra/mapapps-welcome/tree/master/src/main/js/bundles/dn_welcome) of the `dn_welcome` bundle.
+2. Customize the content of the welcome window as described in the [Documentation](https://github.com/conterra/mapapps-welcome/tree/main/src/main/js/bundles/dn_welcome) of the `dn_welcome` bundle.
 
 ## Development guide
 Run the following commands from the project root directory to start a local development server:
