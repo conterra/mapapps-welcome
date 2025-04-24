@@ -108,7 +108,12 @@
         },
         computed: {
             sanitizedInfoText() {
-                return DOMPurify.sanitize(this.infoText, {USE_PROFILES: {html: true}});
+                DOMPurify.addHook('afterSanitizeAttributes', (node) => {
+                    if (node.tagName === 'A' && node.getAttribute('target') === '_blank' || node.getAttribute('target') === 'blank') {
+                        node.setAttribute('rel', 'noopener noreferrer');
+                    }
+                });
+                return DOMPurify.sanitize(this.infoText, {USE_PROFILES: {html: true}, ADD_ATTR: ['target']});
             }
         }
     });
