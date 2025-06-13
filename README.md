@@ -7,7 +7,7 @@ The Welcome Bundle is a widget for displaying a welcome screen. You can either c
 ## Sample app
 https://demos.conterra.de/mapapps/resources/apps/downloads_welcome/index.html
 
-![Screenshot App](https://github.com/conterra/mapapps-welcome/blob/main/screenshot.JPG)
+![Screenshot App](https://github.com/conterra/mapapps-welcome/blob/main/screenshot.png)
 
 ## Installation guide
 1. Add the bundle `dn_welcome` to your app.
