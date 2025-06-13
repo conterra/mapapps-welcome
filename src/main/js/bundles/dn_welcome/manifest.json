@@ -31,11 +31,12 @@
                 "minimizeOnClose": true,
                 "resizable": true,
                 "modal": true,
+                "closable": true,
                 "marginBox": {
                     "w": 600,
-                    "h": 580
+                    "h": 600
                 },
-                "windowClass": "noPadding noTitleBarAndWindowTools"
+                "windowClass": "noPadding"
             }
         },
         {
