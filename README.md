@@ -4,7 +4,7 @@
 The Welcome Bundle is a widget for displaying a welcome screen. You can either configure it as a disclaimer, with a "I agree"-checkbox, or as a general start screen with a "Do-Not-Show-Again"-checkbox.
 
 ## Sample app
-https://demos.conterra.de/mapapps/resources/apps/downloads_welcome/index.html
+https://demos.conterra.de/mapapps/resources/apps/public_demo_welcome/index.html
 
 ![Screenshot App](https://github.com/conterra/mapapps-welcome/blob/main/screenshot.png)
 
