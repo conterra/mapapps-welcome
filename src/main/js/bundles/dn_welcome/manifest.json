@@ -7,15 +7,15 @@
     "vendor": "con terra GmbH",
     "productName": "devnet-mapapps-welcome",
     "dependencies": {
-        "apprt-vue": "^4.12.0",
-        "apprt-binding": "^4.12.0",
-        "apprt-vuetify": "^4.12.0",
+        "apprt-vue": "^4.20.0",
+        "apprt-binding": "^4.20.0",
+        "apprt-vuetify": "^4.20.0",
         "dompurify-bundle": "2.2.1-SNAPSHOT"
     },
     "optionalDependencies": {
         "dn_intro": "^3.0.0"
     },
-    "CSS-Themes-Extension": [
+    "cssThemesExtension": [
         {
             "name": "*",
             "files": ["./css/styles.css"]

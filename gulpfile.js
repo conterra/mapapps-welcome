@@ -16,6 +16,10 @@
 const gulp = require("gulp");
 const mapapps = require('ct-mapapps-gulp-js');
 const mapappsBrowserSync = require("ct-mapapps-browser-sync");
+const dotEnv = require("dotenv");
+// load .env file if it exits
+// the local dev jsregistry will lookup any @@key.property@@ expression, also as environment variable with name "KEY_PROPERTY" for replacement.
+dotEnv.config();
 
 const isProduction = process.env.NODE_ENV === "production";
 console.info(`Configuring gulp build for ${isProduction ? "production" : "development"}`);
@@ -107,16 +111,8 @@ mapappsBrowserSync.registerTask({
         npmModules: [
             "mocha",
             "chai",
-            "@conterra/mapapps-mocha-runner",
-            [
-                "@vue/test-utils",
-                {
-                    // need to overwrite main to load it into the browser
-                    main: "dist/vue-test-utils.umd"
-                }
-            ],
-            // required as peer dependency of @vue/test-utils
-            "vue-template-compiler"
+            "sinon",
+            "@conterra/mapapps-mocha-runner"
         ]
     },
     // prevent reload by browser sync (reload triggered on watch end)
