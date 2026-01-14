@@ -57,6 +57,9 @@ importers:
       dojo-typings:
         specifier: 1.11.11
         version: 1.11.11
+      dompurify:
+        specifier: ~3.3.0
+        version: 3.3.1
       dotenv:
         specifier: 17.2.3
         version: 17.2.3
@@ -2439,6 +2442,9 @@ packages:
 
   dojo-typings@1.11.11:
     resolution: {integrity: sha512-5pWx9QUnQYruPl4SnD1Y8STFBlqnw+Q6ku2Nl2UcULZyHPOPLGZaDLF+hMe7/3lL0OTtQ3VJfW3D+vN17yq6iQ==}
+
+  dompurify@3.3.1:
+    resolution: {integrity: sha512-qkdCKzLNtrgPFP1Vo+98FRzJnBRGe4ffyCea9IwHB1fyxPOeNTHpLKYGd4Uk9xvNoH0ZoOjwZxNptyMwqrId1Q==}
 
   dotenv@17.2.3:
     resolution: {integrity: sha512-JVUnt+DUIzu87TABbhPmNfVdBDt18BLOWjMUFJMSi/Qqg7NTYtabbvSNJGOJ7afbRuv9D/lngizHtP7QyLQ+9w==}
@@ -8158,6 +8164,10 @@ snapshots:
   dojo-typings@1.11.11:
     dependencies:
       '@types/chai': 4.3.20
+
+  dompurify@3.3.1:
+    optionalDependencies:
+      '@types/trusted-types': 2.0.7
 
   dotenv@17.2.3: {}
 

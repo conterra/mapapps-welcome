@@ -29,6 +29,7 @@
         "ct-mapapps-browser-sync": "0.0.47",
         "ct-mapapps-gulp-js": "0.10.15",
         "dojo-typings": "1.11.11",
+        "dompurify": "~3.3.0",
         "dotenv": "17.2.3",
         "eslint": "8.57.1",
         "eslint-config-ct-prodeng": "1.5.0",
