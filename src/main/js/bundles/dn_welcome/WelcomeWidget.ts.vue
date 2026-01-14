@@ -87,7 +87,7 @@
 
 <script lang="ts">
     import Vue from "apprt-vue/Vue";
-    import {DOMPurify} from "dompurify-bundle";
+    import { DOMPurify } from "dompurify-bundle";
 
     export default Vue.extend({
         data: function (): any {
