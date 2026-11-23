@@ -15,5 +15,6 @@
  */
 module.exports = {
     type: "bundle",
-    entryPoints: ["./module"]
+    entryPoints: ["./module"],
+    npmDependencies: ["dompurify"]
 };

@@ -9,8 +9,7 @@
     "dependencies": {
         "apprt-vue": "^4.20.0",
         "apprt-binding": "^4.20.0",
-        "apprt-vuetify": "^4.20.0",
-        "dompurify-bundle": "2.3.3-SNAPSHOT"
+        "apprt-vuetify": "^4.20.0"
     },
     "optionalDependencies": {
         "dn_intro": "^3.0.0"

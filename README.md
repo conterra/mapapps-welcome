@@ -26,3 +26,17 @@ $ mvn compile -Denv=dev -Pinclude-mapapps-deps
 # run unit tests
 $ mvn test -P run-js-tests,include-mapapps-deps
 ```
+
+## License
+
+This project is licensed under the [Apache License 2.0](LICENSE).
+
+### Third-party software
+
+The following third-party software is compiled into the bundles of this project and distributed with them:
+
+| Component | Used in bundle | License |
+|---|---|---|
+| [DOMPurify](https://github.com/cure53/DOMPurify) 3.3.1 | `dn_welcome` | Apache-2.0 OR MPL-2.0 (used under Apache-2.0), Copyright Dr.-Ing. Mario Heiderich, Cure53 |
+
+The license texts are shipped with the bundles in `licenses/<component>/`.

@@ -54,6 +54,9 @@ importers:
       '@arcgis/core':
         specifier: 4.33.14
         version: 4.33.14
+      dompurify:
+        specifier: 3.3.1
+        version: 3.3.1
       vue:
         specifier: 2.7.16
         version: 2.7.16
@@ -97,9 +100,6 @@ importers:
       dojo-typings:
         specifier: 1.11.11
         version: 1.11.11
-      dompurify:
-        specifier: ~3.3.0
-        version: 3.3.3
       dotenv:
         specifier: 17.4.2
         version: 17.4.2
@@ -2803,8 +2803,8 @@ packages:
   dojo-typings@1.11.11:
     resolution: {integrity: sha512-5pWx9QUnQYruPl4SnD1Y8STFBlqnw+Q6ku2Nl2UcULZyHPOPLGZaDLF+hMe7/3lL0OTtQ3VJfW3D+vN17yq6iQ==}
 
-  dompurify@3.3.3:
-    resolution: {integrity: sha512-Oj6pzI2+RqBfFG+qOaOLbFXLQ90ARpcGG6UePL82bJLtdsa6CYJD7nmiU8MW9nQNOtCHV3lZ/Bzq1X0QYbBZCA==}
+  dompurify@3.3.1:
+    resolution: {integrity: sha512-qkdCKzLNtrgPFP1Vo+98FRzJnBRGe4ffyCea9IwHB1fyxPOeNTHpLKYGd4Uk9xvNoH0ZoOjwZxNptyMwqrId1Q==}
 
   dotenv@17.4.2:
     resolution: {integrity: sha512-nI4U3TottKAcAD9LLud4Cb7b2QztQMUEfHbvhTH09bqXTxnSie8WnjPALV/WMCrJZ6UV/qHJ6L03OqO3LcdYZw==}
@@ -8813,7 +8813,7 @@ snapshots:
     dependencies:
       '@types/chai': 4.3.20
 
-  dompurify@3.3.3:
+  dompurify@3.3.1:
     optionalDependencies:
       '@types/trusted-types': 2.0.7
 

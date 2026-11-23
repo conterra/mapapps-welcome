@@ -3,6 +3,8 @@
 The Welcome bundle is a widget for displaying a welcome screen. You can configure it in different ways, e.g. to use it
 as a disclaimer, with an "I-agree" checkbox, or as an introductory message with a "Do-Not-Show-Again"-checkbox.
 
+The info text is sanitized with [DOMPurify](https://github.com/cure53/DOMPurify) (Apache-2.0 or MPL-2.0, used under Apache-2.0, Copyright Dr.-Ing. Mario Heiderich, Cure53), which is compiled into this bundle. Its license text ships with the bundle in `licenses/dompurify/`.
+
 ## Usage
 
 1. Add the bundle "dn_welcome" to the `allowedBundles` property in your `app.json`.
